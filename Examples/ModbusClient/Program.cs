@@ -97,6 +97,8 @@ namespace ModbusClient
                 else
                     client = new(Parameters.NetworkSettings.IpAddress.Value, Parameters.NetworkSettings.Port.Value, Protocol.Tcp, Parameters.NetworkSettings.StationAddress.Value);
 
+                client.ReadTimeout = Parameters.Timeout.Value;
+
                 switch (command)
                 {
                     case ModbusCommand.ReadCoils:

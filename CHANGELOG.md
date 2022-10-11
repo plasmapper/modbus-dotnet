@@ -12,3 +12,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - FunctionCode enum naming.
 - Timeout property to ReadTimeout property.
+
+### Fixed
+- ReadTimeout setting in examples.

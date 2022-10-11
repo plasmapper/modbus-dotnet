@@ -89,6 +89,8 @@ namespace ModbusSpeedTest
                         else
                             client = new(Parameters.NetworkSettings.IpAddress.Value, Parameters.NetworkSettings.Port.Value, Protocol.Tcp, Parameters.NetworkSettings.StationAddress.Value);
 
+                        client.ReadTimeout = Parameters.Timeout.Value;
+
                         while (Parameters.Start.Value)
                         {
                             int transactionStartTime = Environment.TickCount;

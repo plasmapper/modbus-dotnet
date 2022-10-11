@@ -35,9 +35,9 @@ namespace ModbusMemoryTest
         public static SerialSettings SerialSettings { get; } = new();
         public static NetworkSettings NetworkSettings { get; } = new();
 
-        public static ValueNode<ushort> NumberOfCoils { get; } = new(1);
-        public static ValueNode<ushort> NumberOfHoldingRegisters { get; } = new(1);
-        public static ValueNode<ushort> NumberOfIterations { get; } = new(1);
+        public static ValueNode<ushort> NumberOfCoils { get; } = new(800);
+        public static ValueNode<ushort> NumberOfHoldingRegisters { get; } = new(50);
+        public static ValueNode<ushort> NumberOfIterations { get; } = new(100);
         public static ValueNode<bool> Start { get; } = new();
 
         public static ValueNode<string> Command { get; } = new();
@@ -83,6 +83,8 @@ namespace ModbusMemoryTest
                         }
                         else
                             client = new(Parameters.NetworkSettings.IpAddress.Value, Parameters.NetworkSettings.Port.Value, Protocol.Tcp, Parameters.NetworkSettings.StationAddress.Value);
+
+                        client.ReadTimeout = Parameters.Timeout.Value;
 
                         var random = new Random();
 
