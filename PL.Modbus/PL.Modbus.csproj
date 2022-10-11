@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -13,8 +13,18 @@
     <RepositoryUrl>https://github.com/plasmapper/modbus-dotnet</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>modbus;client</PackageTags>
-    <PackageReleaseNotes>Initial release.</PackageReleaseNotes>
+    <PackageReleaseNotes>Added
+- ExceptionCode enum.
+- DelayAfterRead property.
+
+Changed
+- FunctionCode enum naming.
+- Timeout property to ReadTimeout property.
+
+Fixed
+- ReadTimeout setting in examples.</PackageReleaseNotes>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <VersionPrefix>2.0.1</VersionPrefix>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
