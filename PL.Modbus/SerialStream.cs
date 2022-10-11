@@ -41,7 +41,8 @@ namespace PL.Modbus
             _serialPort.ReadTimeout = 1;
             try
             {
-                _serialPort.ReadByte();
+                while (true)
+                    _serialPort.ReadByte();
             }
             catch { }
         }

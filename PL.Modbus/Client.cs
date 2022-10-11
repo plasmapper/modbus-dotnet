@@ -155,12 +155,17 @@ namespace PL.Modbus
                     _stream.Read(2).CopyTo(responseBuffer, rtuData.Length + 2);
                 }
 
-                if (DelayAfterRead > 0)
-                    Thread.Sleep(DelayAfterRead);
-
                 if ((_protocol == Protocol.Rtu && Utility.Crc(responseBuffer, responseBuffer.Length) != 0) ||
                     (_protocol == Protocol.Ascii && Utility.Lrc(responseBuffer, responseBuffer.Length) != 0))
-                    throw new ("Modbus CRC error.");
+                {
+                    _stream.ReadAvailableData();
+                    if (DelayAfterRead > 0)
+                        Thread.Sleep(DelayAfterRead);
+                    throw new("Modbus CRC error.");
+                }                    
+
+                if (DelayAfterRead > 0)
+                    Thread.Sleep(DelayAfterRead);
 
                 if (responseFunctionCode > 127)
                     throw new Exception((ExceptionCode)responseBuffer[2]);

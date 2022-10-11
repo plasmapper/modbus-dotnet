@@ -38,7 +38,8 @@ namespace PL.Modbus
             _tcpClient.ReceiveTimeout = 1;
             try
             {
-                _tcpClient.GetStream().ReadByte();
+                while (true)
+                    _tcpClient.GetStream().ReadByte();
             }
             catch { }
         }
