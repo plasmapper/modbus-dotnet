@@ -16,12 +16,12 @@
     public enum FunctionCode : byte
     {
         ReadCoils = 1,
-        ReadDI = 2,
-        ReadHR = 3,
-        ReadIR = 4,
+        ReadDiscreteInputs = 2,
+        ReadHoldingRegisters = 3,
+        ReadInputRegisters = 4,
         WriteSingleCoil = 5,
-        WriteSingleHR = 6,
+        WriteSingleHoldingRegister = 6,
         WriteMultipleCoils = 15,
-        WriteMultipleHR = 16
+        WriteMultipleHoldingRegisters = 16
     }
 }
