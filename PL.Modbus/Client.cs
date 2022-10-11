@@ -56,6 +56,11 @@ namespace PL.Modbus
             set => _stream.ReadTimeout = value;
         }
 
+        /// <summary>
+        /// Gets and sets the delay between the end of the read operation and unlocking the stream, ms.
+        /// </summary>
+        public int DelayAfterRead = 0;
+
         public void Dispose()
         {
             _stream.Close();
@@ -133,7 +138,12 @@ namespace PL.Modbus
                 byte responseFunctionCode = responseBuffer[1];
 
                 if (responseError || responseAddress != _stationAddress || (responseFunctionCode & 127) != functionCode)
-                    throw new ("Modbus response error.");
+                {
+                    _stream.ReadAvailableData();
+                    if (DelayAfterRead > 0)
+                        Thread.Sleep(DelayAfterRead);
+                    throw new("Modbus response error.");
+                }                    
 
                 if (_protocol == Protocol.Rtu)
                 {
@@ -144,6 +154,9 @@ namespace PL.Modbus
                     rtuData.CopyTo(responseBuffer, 2);
                     _stream.Read(2).CopyTo(responseBuffer, rtuData.Length + 2);
                 }
+
+                if (DelayAfterRead > 0)
+                    Thread.Sleep(DelayAfterRead);
 
                 if ((_protocol == Protocol.Rtu && Utility.Crc(responseBuffer, responseBuffer.Length) != 0) ||
                     (_protocol == Protocol.Ascii && Utility.Lrc(responseBuffer, responseBuffer.Length) != 0))
@@ -354,6 +367,9 @@ namespace PL.Modbus
                     return Read(4);
             }
 
+            _stream.ReadAvailableData();
+            if (DelayAfterRead > 0)
+                Thread.Sleep(DelayAfterRead);
             throw new("Unknown Modbus function code.");
         }
 

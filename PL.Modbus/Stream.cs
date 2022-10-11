@@ -18,6 +18,8 @@
             return buffer.ToArray();
         }
 
+        public abstract void ReadAvailableData();
+
         public abstract void Write(byte[] buffer);
 
         public abstract void Open();

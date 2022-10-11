@@ -34,12 +34,23 @@ namespace PL.Modbus
             return buffer;
         }
 
+        public override void ReadAvailableData()
+        {
+            if (_serialPort.BytesToRead == 0)
+                return;
+            _serialPort.ReadTimeout = 1;
+            try
+            {
+                _serialPort.ReadByte();
+            }
+            catch { }
+        }
+
         public override void Write(byte[] buffer)
         {
+            ReadAvailableData();
             if (DelayBeforeWrite > 0)
                 Thread.Sleep(DelayBeforeWrite);
-            byte[] bytesToRead = new byte[_serialPort.BytesToRead];
-            _serialPort.Read(bytesToRead, 0, bytesToRead.Length);
             _serialPort.Write(buffer, 0, buffer.Length);
         }
 

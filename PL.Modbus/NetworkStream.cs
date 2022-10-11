@@ -1,4 +1,5 @@
-﻿using System.Net.Sockets;
+﻿using System.IO.Ports;
+using System.Net.Sockets;
 
 namespace PL.Modbus
 {
@@ -30,8 +31,21 @@ namespace PL.Modbus
             return buffer;
         }
 
+        public override void ReadAvailableData()
+        {
+            if (!_tcpClient.GetStream().DataAvailable)
+                return;
+            _tcpClient.ReceiveTimeout = 1;
+            try
+            {
+                _tcpClient.GetStream().ReadByte();
+            }
+            catch { }
+        }
+
         public override void Write(byte[] buffer)
         {
+            ReadAvailableData();
             if (DelayBeforeWrite > 0)
                 Thread.Sleep(DelayBeforeWrite);
             _tcpClient.GetStream().Write(buffer, 0, buffer.Length);
