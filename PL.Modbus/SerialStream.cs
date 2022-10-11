@@ -24,7 +24,7 @@ namespace PL.Modbus
         {
             byte[] buffer = new byte[byteCount];
             int offset = 0;
-            _serialPort.ReadTimeout = _serialPort.BaudRate == 0 ? Timeout : Timeout + byteCount * 11 * 1000 / _serialPort.BaudRate;
+            _serialPort.ReadTimeout = _serialPort.BaudRate == 0 ? ReadTimeout : ReadTimeout + byteCount * 11 * 1000 / _serialPort.BaudRate;
             while (byteCount > 0)
             {
                 int bytesRead = _serialPort.Read(buffer, offset, byteCount);
@@ -40,7 +40,6 @@ namespace PL.Modbus
                 Thread.Sleep(DelayBeforeWrite);
             byte[] bytesToRead = new byte[_serialPort.BytesToRead];
             _serialPort.Read(bytesToRead, 0, bytesToRead.Length);
-            _serialPort.WriteTimeout = _serialPort.BaudRate == 0 ? Timeout : Timeout + buffer.Length * 11 * 1000 / _serialPort.BaudRate;
             _serialPort.Write(buffer, 0, buffer.Length);
         }
 

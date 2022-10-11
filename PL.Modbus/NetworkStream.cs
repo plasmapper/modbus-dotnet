@@ -16,7 +16,6 @@ namespace PL.Modbus
         /// </summary>
         /// <param name="ipAddress">IP address.</param>
         /// <param name="port">Port.</param>
-        /// <param name="timeout">Read/write timeout, ms.</param>
         public NetworkStream(string ipAddress, ushort port)
         {
             _ipAddress = ipAddress;
@@ -26,7 +25,7 @@ namespace PL.Modbus
         public override byte[] Read(int byteCount)
         {
             byte[] buffer = new byte[byteCount];
-            _tcpClient.ReceiveTimeout = Timeout;
+            _tcpClient.ReceiveTimeout = ReadTimeout;
             _tcpClient.GetStream().Read(buffer, 0, byteCount);
             return buffer;
         }
@@ -35,7 +34,6 @@ namespace PL.Modbus
         {
             if (DelayBeforeWrite > 0)
                 Thread.Sleep(DelayBeforeWrite);
-            _tcpClient.SendTimeout = Timeout;
             _tcpClient.GetStream().Write(buffer, 0, buffer.Length);
         }
 

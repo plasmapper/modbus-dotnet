@@ -2,7 +2,7 @@
 {
     internal abstract class Stream
     {
-        public int Timeout { get; set; } = 300;
+        public int ReadTimeout { get; set; } = 300;
 
         public int DelayBeforeWrite { get; set; } = 0;
 

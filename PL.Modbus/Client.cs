@@ -48,12 +48,12 @@ namespace PL.Modbus
         }
 
         /// <summary>
-        /// Gets and sets stream read/write timeout, ms.
+        /// Gets and sets stream read timeout, ms.
         /// </summary>
-        public int Timeout
+        public int ReadTimeout
         {
-            get => _stream.Timeout;
-            set => _stream.Timeout = value;
+            get => _stream.ReadTimeout;
+            set => _stream.ReadTimeout = value;
         }
 
         public void Dispose()
