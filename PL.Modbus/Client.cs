@@ -150,7 +150,7 @@ namespace PL.Modbus
                     throw new ("Modbus CRC error.");
 
                 if (responseFunctionCode > 127)
-                    throw new Exception(responseBuffer[2]);
+                    throw new Exception((ExceptionCode)responseBuffer[2]);
 
                 switch (_protocol)
                 {

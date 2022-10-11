@@ -15,36 +15,38 @@ namespace PL.Modbus
         /// Initializes a new instance of the Exception class.
         /// </summary>
         /// <param name="code">Modbus exception code.</param>
-        public Exception(byte code) : base($"Modbus exception code {code} ({CodeToMessage(code)}).") => Code = code;
+        public Exception(ExceptionCode code) : base($"Modbus exception code {(byte)code} ({CodeToMessage(code)}).") => Code = code;
 
         /// <summary>
         /// Modbus exception code.
         /// </summary>
-        public byte Code { get; set; }
+        public ExceptionCode Code { get; set; }
 
-        private static string CodeToMessage(byte code)
+        private static string CodeToMessage(ExceptionCode code)
         {
             switch (code)
             {
-                case 1:
+                case ExceptionCode.NoException:
+                    return "No exception";
+                case ExceptionCode.IllegalFunction:
                     return "Illegal Function";
-                case 2:
+                case ExceptionCode.IllegalDataAddress:
                     return "Illegal Data Address";
-                case 3:
+                case ExceptionCode.IllegalDataValue:
                     return "Illegal Data Value";
-                case 4:
+                case ExceptionCode.ServerDeviceFailure:
                     return "Server Device Failure";
-                case 5:
+                case ExceptionCode.Acknowledge:
                     return "Acknowledge";
-                case 6:
+                case ExceptionCode.ServerDeviceBusy:
                     return "Server Device Busy";
-                case 7:
+                case ExceptionCode.NegativeAcknowledge:
                     return "Negative Acknowledge";
-                case 8:
+                case ExceptionCode.MemoryParityError:
                     return "Memory Parity Error";
-                case 10:
+                case ExceptionCode.GatewayPathUnavailable:
                     return "Gateway Path Unavailable";
-                case 11:
+                case ExceptionCode.GatewayTargetDeviceFailedToRespond:
                     return "Gateway Target Device Failed to Respond";
                 default:
                     return "Unknown";
