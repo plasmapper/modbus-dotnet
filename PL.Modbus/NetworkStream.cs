@@ -60,6 +60,7 @@ namespace PL.Modbus
                 _tcpClient = new();
                 if (!_tcpClient.ConnectAsync(_ipAddress, _port).Wait(ConnectTimeout))
                     throw new SocketException(10060);
+                _tcpClient.NoDelay = true;
             }                
         }
 
