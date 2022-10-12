@@ -14,17 +14,12 @@
     <RepositoryType>git</RepositoryType>
     <PackageTags>modbus;client</PackageTags>
     <PackageReleaseNotes>Added
-- ExceptionCode enum.
-- DelayAfterRead property.
+- ConnectTimeout property.
 
 Changed
-- FunctionCode enum naming.
-- Timeout property to ReadTimeout property.
-
-Fixed
-- ReadTimeout setting in examples.</PackageReleaseNotes>
+- Disabled Nagle's algorithm.</PackageReleaseNotes>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <VersionPrefix>2.0.1</VersionPrefix>
+    <VersionPrefix>2.1.0</VersionPrefix>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
