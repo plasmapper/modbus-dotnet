@@ -2,6 +2,8 @@
 {
     internal abstract class Stream
     {
+        public int ConnectTimeout { get; set; } = 1000;
+
         public int ReadTimeout { get; set; } = 300;
 
         public int DelayBeforeWrite { get; set; } = 0;

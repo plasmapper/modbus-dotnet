@@ -57,7 +57,9 @@ namespace PL.Modbus
             if (!_tcpClient.Connected)
             {
                 _tcpClient.Dispose();
-                _tcpClient = new(_ipAddress, _port);
+                _tcpClient = new();
+                if (!_tcpClient.ConnectAsync(_ipAddress, _port).Wait(ConnectTimeout))
+                    throw new SocketException(10060);
             }                
         }
 

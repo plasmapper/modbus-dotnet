@@ -48,6 +48,15 @@ namespace PL.Modbus
         }
 
         /// <summary>
+        /// Gets and sets connect timeout, ms.
+        /// </summary>
+        public int ConnectTimeout
+        {
+            get => _stream.ConnectTimeout;
+            set => _stream.ConnectTimeout = value;
+        }
+
+        /// <summary>
         /// Gets and sets stream read timeout, ms.
         /// </summary>
         public int ReadTimeout

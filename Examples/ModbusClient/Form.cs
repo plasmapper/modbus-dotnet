@@ -31,7 +31,8 @@ namespace ModbusClient
                 flowLayoutPanelNetworkSettings.Visible = Parameters.Interface.Value == PL.Modbus.Interface.Network;
             });
 
-            _bindings.Add(Parameters.Timeout, textBoxTimeout);
+            _bindings.Add(Parameters.ConnectTimeout, textBoxConnectTimeout);
+            _bindings.Add(Parameters.ReadTimeout, textBoxReadTimeout);
             _bindings.Add(Parameters.Hex, checkBoxHex);
             _bindings[^1].NodeValueChanged += (s, e) =>
             {

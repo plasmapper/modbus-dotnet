@@ -33,9 +33,12 @@
             this.flowLayoutPanel6 = new System.Windows.Forms.FlowLayoutPanel();
             this.label3 = new System.Windows.Forms.Label();
             this.comboBoxInterface = new System.Windows.Forms.ComboBox();
+            this.flowLayoutPanel8 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label25 = new System.Windows.Forms.Label();
+            this.textBoxConnectTimeout = new System.Windows.Forms.TextBox();
             this.flowLayoutPanel7 = new System.Windows.Forms.FlowLayoutPanel();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBoxTimeout = new System.Windows.Forms.TextBox();
+            this.textBoxReadTimeout = new System.Windows.Forms.TextBox();
             this.checkBoxHex = new System.Windows.Forms.CheckBox();
             this.flowLayoutPanelSerialSettings = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel9 = new System.Windows.Forms.FlowLayoutPanel();
@@ -143,6 +146,7 @@
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel5.SuspendLayout();
             this.flowLayoutPanel6.SuspendLayout();
+            this.flowLayoutPanel8.SuspendLayout();
             this.flowLayoutPanel7.SuspendLayout();
             this.flowLayoutPanelSerialSettings.SuspendLayout();
             this.flowLayoutPanel9.SuspendLayout();
@@ -210,11 +214,12 @@
             this.flowLayoutPanel5.AutoSize = true;
             this.flowLayoutPanel5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.flowLayoutPanel5.Controls.Add(this.flowLayoutPanel6);
+            this.flowLayoutPanel5.Controls.Add(this.flowLayoutPanel8);
             this.flowLayoutPanel5.Controls.Add(this.flowLayoutPanel7);
             this.flowLayoutPanel5.Controls.Add(this.checkBoxHex);
             this.flowLayoutPanel5.Location = new System.Drawing.Point(3, 3);
             this.flowLayoutPanel5.Name = "flowLayoutPanel5";
-            this.flowLayoutPanel5.Size = new System.Drawing.Size(300, 50);
+            this.flowLayoutPanel5.Size = new System.Drawing.Size(441, 50);
             this.flowLayoutPanel5.TabIndex = 0;
             // 
             // flowLayoutPanel6
@@ -250,16 +255,44 @@
             this.comboBoxInterface.Size = new System.Drawing.Size(90, 23);
             this.comboBoxInterface.TabIndex = 4;
             // 
+            // flowLayoutPanel8
+            // 
+            this.flowLayoutPanel8.AutoSize = true;
+            this.flowLayoutPanel8.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.flowLayoutPanel8.Controls.Add(this.label25);
+            this.flowLayoutPanel8.Controls.Add(this.textBoxConnectTimeout);
+            this.flowLayoutPanel8.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flowLayoutPanel8.Location = new System.Drawing.Point(105, 3);
+            this.flowLayoutPanel8.Name = "flowLayoutPanel8";
+            this.flowLayoutPanel8.Size = new System.Drawing.Size(125, 44);
+            this.flowLayoutPanel8.TabIndex = 6;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(3, 0);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(119, 15);
+            this.label25.TabIndex = 0;
+            this.label25.Text = "Connect timeout, ms";
+            // 
+            // textBoxConnectTimeout
+            // 
+            this.textBoxConnectTimeout.Location = new System.Drawing.Point(3, 18);
+            this.textBoxConnectTimeout.Name = "textBoxConnectTimeout";
+            this.textBoxConnectTimeout.Size = new System.Drawing.Size(90, 23);
+            this.textBoxConnectTimeout.TabIndex = 3;
+            // 
             // flowLayoutPanel7
             // 
             this.flowLayoutPanel7.AutoSize = true;
             this.flowLayoutPanel7.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.flowLayoutPanel7.Controls.Add(this.label4);
-            this.flowLayoutPanel7.Controls.Add(this.textBoxTimeout);
+            this.flowLayoutPanel7.Controls.Add(this.textBoxReadTimeout);
             this.flowLayoutPanel7.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel7.Location = new System.Drawing.Point(105, 3);
+            this.flowLayoutPanel7.Location = new System.Drawing.Point(236, 3);
             this.flowLayoutPanel7.Name = "flowLayoutPanel7";
-            this.flowLayoutPanel7.Size = new System.Drawing.Size(96, 44);
+            this.flowLayoutPanel7.Size = new System.Drawing.Size(106, 44);
             this.flowLayoutPanel7.TabIndex = 4;
             // 
             // label4
@@ -267,22 +300,22 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(3, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(73, 15);
+            this.label4.Size = new System.Drawing.Size(100, 15);
             this.label4.TabIndex = 0;
-            this.label4.Text = "Timeout, ms";
+            this.label4.Text = "Read timeout, ms";
             // 
-            // textBoxTimeout
+            // textBoxReadTimeout
             // 
-            this.textBoxTimeout.Location = new System.Drawing.Point(3, 18);
-            this.textBoxTimeout.Name = "textBoxTimeout";
-            this.textBoxTimeout.Size = new System.Drawing.Size(90, 23);
-            this.textBoxTimeout.TabIndex = 3;
+            this.textBoxReadTimeout.Location = new System.Drawing.Point(3, 18);
+            this.textBoxReadTimeout.Name = "textBoxReadTimeout";
+            this.textBoxReadTimeout.Size = new System.Drawing.Size(90, 23);
+            this.textBoxReadTimeout.TabIndex = 3;
             // 
             // checkBoxHex
             // 
             this.checkBoxHex.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.checkBoxHex.Appearance = System.Windows.Forms.Appearance.Button;
-            this.checkBoxHex.Location = new System.Drawing.Point(207, 22);
+            this.checkBoxHex.Location = new System.Drawing.Point(348, 22);
             this.checkBoxHex.Name = "checkBoxHex";
             this.checkBoxHex.Size = new System.Drawing.Size(90, 25);
             this.checkBoxHex.TabIndex = 5;
@@ -1389,6 +1422,8 @@
             this.flowLayoutPanel5.PerformLayout();
             this.flowLayoutPanel6.ResumeLayout(false);
             this.flowLayoutPanel6.PerformLayout();
+            this.flowLayoutPanel8.ResumeLayout(false);
+            this.flowLayoutPanel8.PerformLayout();
             this.flowLayoutPanel7.ResumeLayout(false);
             this.flowLayoutPanel7.PerformLayout();
             this.flowLayoutPanelSerialSettings.ResumeLayout(false);
@@ -1491,7 +1526,7 @@
         private ComboBox comboBoxInterface;
         private FlowLayoutPanel flowLayoutPanel7;
         private Label label4;
-        private TextBox textBoxTimeout;
+        private TextBox textBoxReadTimeout;
         private CheckBox checkBoxHex;
         private FlowLayoutPanel flowLayoutPanelSerialSettings;
         private FlowLayoutPanel flowLayoutPanel9;
@@ -1596,5 +1631,8 @@
         private Button buttonInputRegistersRead;
         private Button dummy;
         private DataGridViewTextBoxColumn columnInputRegisters;
+        private FlowLayoutPanel flowLayoutPanel8;
+        private Label label25;
+        private TextBox textBoxConnectTimeout;
     }
 }

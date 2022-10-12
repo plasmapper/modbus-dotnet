@@ -40,7 +40,8 @@ namespace ModbusClient
     internal static class Parameters
     {
         public static ValueNode<Interface> Interface { get; } = new(PL.Modbus.Interface.Serial);
-        public static ValueNode<int> Timeout { get; } = new(300);
+        public static ValueNode<int> ConnectTimeout { get; } = new(1000);
+        public static ValueNode<int> ReadTimeout { get; } = new(300);
         public static ValueNode<bool> Hex { get; } = new();
 
         public static SerialSettings SerialSettings { get; } = new();
@@ -97,7 +98,8 @@ namespace ModbusClient
                 else
                     client = new(Parameters.NetworkSettings.IpAddress.Value, Parameters.NetworkSettings.Port.Value, Protocol.Tcp, Parameters.NetworkSettings.StationAddress.Value);
 
-                client.ReadTimeout = Parameters.Timeout.Value;
+                client.ConnectTimeout = Parameters.ConnectTimeout.Value;
+                client.ReadTimeout = Parameters.ReadTimeout.Value;
 
                 switch (command)
                 {
