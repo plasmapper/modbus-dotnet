@@ -1,4 +1,7 @@
-﻿namespace PL.Modbus
+﻿using System;
+using System.Collections.Generic;
+
+namespace PL.Modbus
 {
     internal abstract class Stream
     {
@@ -12,7 +15,7 @@
 
         public byte[] ReadTo(byte termByte)
         {
-            List<byte> buffer = new();
+            List<byte> buffer = new List<byte>();
             do
             {
                 buffer.Add(Read(1)[0]);

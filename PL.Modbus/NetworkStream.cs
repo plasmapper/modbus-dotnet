@@ -1,4 +1,5 @@
-﻿using System.IO.Ports;
+﻿using System;
+using System.Threading;
 using System.Net.Sockets;
 
 namespace PL.Modbus
@@ -10,7 +11,7 @@ namespace PL.Modbus
     {
         private readonly string _ipAddress;
         private readonly ushort _port;
-        private TcpClient _tcpClient = new();
+        private TcpClient _tcpClient = new TcpClient();
 
         /// <summary>
         /// Initializes a new instance of the NetworkStream class.
@@ -57,7 +58,7 @@ namespace PL.Modbus
             if (!_tcpClient.Connected)
             {
                 _tcpClient.Dispose();
-                _tcpClient = new();
+                _tcpClient = new TcpClient();
                 if (!_tcpClient.ConnectAsync(_ipAddress, _port).Wait(ConnectTimeout))
                     throw new SocketException(10060);
                 _tcpClient.NoDelay = true;

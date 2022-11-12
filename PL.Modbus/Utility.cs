@@ -81,13 +81,13 @@ namespace PL.Modbus
         public static List<AddressRange> SplitAddressRange(ushort address, ushort numberOfItems, ushort maxNumberOfItems)
         {
             if (numberOfItems == 0)
-                return new() { new() { Address = address, NumberOfItems = numberOfItems } };
+                return new List<AddressRange>() { new AddressRange() { Address = address, NumberOfItems = numberOfItems } };
 
-            List<AddressRange> addressRangeList = new();
+            List<AddressRange> addressRangeList = new List<AddressRange>();
             int count = (numberOfItems - 1) / maxNumberOfItems + 1;
             for (int i = 0; i < count; i++)
             {
-                addressRangeList.Add(new()
+                addressRangeList.Add(new AddressRange()
                 {
                     Address = (ushort)(address + i * maxNumberOfItems),
                     NumberOfItems = i < (count - 1) ? maxNumberOfItems : (ushort)((numberOfItems - 1) % maxNumberOfItems + 1)

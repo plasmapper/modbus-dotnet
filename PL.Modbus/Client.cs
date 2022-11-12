@@ -1,5 +1,9 @@
-﻿using System.Text;
+﻿using System;
+using System.Text;
+using System.Threading;
 using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 using System.IO.Ports;
 
 namespace PL.Modbus
@@ -115,9 +119,9 @@ namespace PL.Modbus
                         _stream.Write(commandBuffer);
                         
                         string responseString = Encoding.ASCII.GetString(_stream.ReadTo((byte)'\n'));
-                        if (responseString[0] != ':' || responseString[^2..] != "\r\n")
+                        if (responseString[0] != ':' || responseString.Substring(responseString.Length - 2) != "\r\n")
                             responseError = true;
-                        responseBuffer = Utility.AsciiStringToByteArray(responseString[1..^2]);
+                        responseBuffer = Utility.AsciiStringToByteArray(responseString.Substring(1, responseString.Length - 3));
                         break;
 
                     case Protocol.Tcp:
@@ -151,7 +155,7 @@ namespace PL.Modbus
                     _stream.ReadAvailableData();
                     if (DelayAfterRead > 0)
                         Thread.Sleep(DelayAfterRead);
-                    throw new("Modbus response error.");
+                    throw new System.Exception("Modbus response error.");
                 }                    
 
                 if (_protocol == Protocol.Rtu)
@@ -170,7 +174,7 @@ namespace PL.Modbus
                     _stream.ReadAvailableData();
                     if (DelayAfterRead > 0)
                         Thread.Sleep(DelayAfterRead);
-                    throw new("Modbus CRC error.");
+                    throw new System.Exception("Modbus CRC error.");
                 }                    
 
                 if (DelayAfterRead > 0)
@@ -182,11 +186,11 @@ namespace PL.Modbus
                 switch (_protocol)
                 {
                     case Protocol.Rtu:
-                        return responseBuffer[2..^2];
+                        return responseBuffer.Skip(2).Take(responseBuffer.Length - 4).ToArray();
                     case Protocol.Ascii:
-                        return responseBuffer[2..^1];
+                        return responseBuffer.Skip(2).Take(responseBuffer.Length - 3).ToArray();
                     default:
-                        return responseBuffer[2..];
+                        return responseBuffer.Skip(2).ToArray();
                 }
             }
         }
@@ -384,12 +388,12 @@ namespace PL.Modbus
             _stream.ReadAvailableData();
             if (DelayAfterRead > 0)
                 Thread.Sleep(DelayAfterRead);
-            throw new("Unknown Modbus function code.");
+            throw new System.Exception("Unknown Modbus function code.");
         }
 
         private List<bool> ReadBits(byte functionCode, ushort address, ushort numberOfBits)
         {
-            List<bool> bits = new();
+            List<bool> bits = new List<bool>();
             foreach (var addressRange in Utility.SplitAddressRange(address, numberOfBits, 2000))
             {
                 byte[] commandData = new byte[4];
@@ -398,7 +402,7 @@ namespace PL.Modbus
                 BitConverter.GetBytes(addressRange.NumberOfItems).CopyTo(commandData, 2);
                 Array.Reverse(commandData, 2, 2);
 
-                BitArray responseData = new(Command(functionCode, commandData)[1..]);
+                BitArray responseData = new BitArray(Command(functionCode, commandData).Skip(1).ToArray());
 
                 int maxIndex = Math.Min(addressRange.NumberOfItems, responseData.Length);
                 for (int j = 0; j < maxIndex; j++)
@@ -409,7 +413,7 @@ namespace PL.Modbus
 
         private List<ushort> ReadRegisters(byte functionCode, ushort address, ushort numberOfRegisters)
         {
-            List<ushort> registers = new();
+            List<ushort> registers = new List<ushort>();
             foreach (var addressRange in Utility.SplitAddressRange(address, numberOfRegisters, 125))
             {
                 byte[] commandData = new byte[4];
@@ -418,7 +422,7 @@ namespace PL.Modbus
                 BitConverter.GetBytes(addressRange.NumberOfItems).CopyTo(commandData, 2);
                 Array.Reverse(commandData, 2, 2);
 
-                byte[] responseData = Command(functionCode, commandData)[1..];
+                byte[] responseData = Command(functionCode, commandData).Skip(1).ToArray();
 
                 int maxIndex = Math.Min(addressRange.NumberOfItems * 2, responseData.Length / 2 * 2);
                 for (int j = 0; j < maxIndex; j+=2)

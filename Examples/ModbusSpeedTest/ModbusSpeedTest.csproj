@@ -11,7 +11,7 @@
   <ItemGroup>
     <PackageReference Include="PL.Tree" Version="1.0.0" />
     <PackageReference Include="PL.Tree.WinForms" Version="1.0.0" />
-    <PackageReference Include="System.IO.Ports" Version="6.0.0" />
+    <PackageReference Include="System.IO.Ports" Version="7.0.0" />
   </ItemGroup>
 
   <ItemGroup>

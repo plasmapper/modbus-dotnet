@@ -1,4 +1,6 @@
-﻿using System.IO.Ports;
+﻿using System;
+using System.Threading;
+using System.IO.Ports;
 
 namespace PL.Modbus
 {
