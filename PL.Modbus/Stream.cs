@@ -3,13 +3,32 @@ using System.Collections.Generic;
 
 namespace PL.Modbus
 {
-    internal abstract class Stream
+    internal abstract class Stream : IDisposable
     {
+        private bool _disposed = false;
+
         public int ConnectTimeout { get; set; } = 1000;
 
         public int ReadTimeout { get; set; } = 300;
 
         public int DelayBeforeWrite { get; set; } = 0;
+
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
+        }
+
+        protected virtual void Dispose(bool disposing)
+        {
+            if (_disposed)
+                return;
+
+            if (disposing)
+                Close();
+
+            _disposed = true;
+        }
 
         public abstract byte[] Read(int byteCount);
 

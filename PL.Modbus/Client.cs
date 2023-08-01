@@ -13,6 +13,7 @@ namespace PL.Modbus
     /// </summary>
     public class Client : IDisposable
     {
+        private bool _disposed = false;
         private readonly Protocol _protocol;
         private readonly byte _stationAddress;
 
@@ -76,8 +77,19 @@ namespace PL.Modbus
 
         public void Dispose()
         {
-            _stream.Close();
+            Dispose(true);
             GC.SuppressFinalize(this);
+        }
+
+        protected virtual void Dispose(bool disposing)
+        {
+            if (_disposed)
+                return;
+
+            if (disposing)
+                _stream.Dispose();
+
+            _disposed = true;
         }
 
         /// <summary>

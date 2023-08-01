@@ -11,10 +11,10 @@
     <RepositoryUrl>https://github.com/plasmapper/modbus-dotnet</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>modbus;client</PackageTags>
-    <PackageReleaseNotes>Changed
-- .NET 6.0 target to .NET Standard 2.0.</PackageReleaseNotes>
+    <PackageReleaseNotes>Fixed
+- IDisposable implementation</PackageReleaseNotes>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <VersionPrefix>2.2.0</VersionPrefix>
+    <VersionPrefix>2.2.1</VersionPrefix>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
