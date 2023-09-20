@@ -68,11 +68,20 @@ namespace PL.Modbus
         public override void Close() =>
             _tcpClient.Dispose();
 
-        public override IDisposable Lock() => new DisposableLock();
+        public override IDisposable Lock() => new NetworkStreamLock(this);
 
-        private class DisposableLock : IDisposable
+        private class NetworkStreamLock : IDisposable
         {
-            public void Dispose() { }
+            NetworkStream _networkStream;
+
+            public NetworkStreamLock(NetworkStream networkStream)
+            {
+                _networkStream = networkStream;
+                Monitor.Enter(_networkStream);
+            }
+
+            public void Dispose() =>
+                Monitor.Exit(_networkStream);
         }
     }
 }

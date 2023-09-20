@@ -12,9 +12,9 @@
     <RepositoryType>git</RepositoryType>
     <PackageTags>modbus;client</PackageTags>
     <PackageReleaseNotes>Fixed
-- IDisposable implementation</PackageReleaseNotes>
+- Missing NetworkStream lock.</PackageReleaseNotes>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <VersionPrefix>2.2.1</VersionPrefix>
+    <VersionPrefix>2.2.2</VersionPrefix>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
