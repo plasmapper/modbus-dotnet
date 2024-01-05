@@ -14,10 +14,9 @@ namespace PL.Modbus
     public class Client : IDisposable
     {
         private bool _disposed = false;
-        private readonly Protocol _protocol;
-        private readonly byte _stationAddress;
-
-        private readonly Stream _stream;
+        private Stream _stream;
+        private Protocol _protocol;
+        private byte _stationAddress;
 
         private ushort _tcpTransactionId = 0;
 
@@ -50,6 +49,51 @@ namespace PL.Modbus
             _stationAddress = stationAddress;
             if (protocol == Protocol.Rtu)
                 _stream.DelayBeforeWrite = 2;
+        }
+
+        /// <summary>
+        /// Gets and sets the data stream.
+        /// </summary>
+        public Stream Stream
+        {
+            get => _stream;
+            set
+            {
+                lock (this)
+                {
+                    _stream = value;
+                }
+            }
+        }
+
+        /// <summary>
+        /// Gets and sets the protocol.
+        /// </summary>
+        public Protocol Protocol
+        {
+            get => _protocol;
+            set
+            {
+                lock (this)
+                {
+                    _protocol = value;
+                }
+            }
+        }
+
+        /// <summary>
+        /// Gets and sets the server station address.
+        /// </summary>
+        public byte StationAddress
+        {
+            get => _stationAddress;
+            set
+            {
+                lock (this)
+                {
+                    _stationAddress = value;
+                }
+            }
         }
 
         /// <summary>
@@ -96,113 +140,116 @@ namespace PL.Modbus
         /// Executes Modbus command.
         /// </summary>
         /// <param name="functionCode">Modbus function code.</param>
-        /// <param name="data">Modbus data.</param>
-        /// <returns></returns>
+        /// <param name="data">Request data.</param>
+        /// <returns>Response data.</returns>
         public virtual byte[] Command(byte functionCode, byte[] data)
         {
-            using (_stream.Lock())
+            lock (this)
             {
-                _stream.Open();
-
-                byte[] commandBuffer;
-                byte[] responseBuffer = Array.Empty<byte>();
-                bool responseError = false;
-
-                switch (_protocol)
+                using (_stream.Lock())
                 {
-                    case Protocol.Rtu:
-                        commandBuffer = new byte[data.Length + 4];
-                        commandBuffer[0] = _stationAddress;
-                        commandBuffer[1] = functionCode;
-                        data.CopyTo(commandBuffer, 2);
-                        BitConverter.GetBytes(Utility.Crc(commandBuffer, data.Length + 2)).CopyTo(commandBuffer, data.Length + 2);
-                        _stream.Write(commandBuffer);
-                        
-                        responseBuffer = _stream.Read(2);
-                        break;
+                    _stream.Open();
 
-                    case Protocol.Ascii:
-                        commandBuffer = new byte[data.Length + 3];
-                        commandBuffer[0] = _stationAddress;
-                        commandBuffer[1] = functionCode;
-                        data.CopyTo(commandBuffer, 2);
-                        commandBuffer[data.Length + 2] = Utility.Lrc(commandBuffer, data.Length + 2);
-                        commandBuffer = Encoding.ASCII.GetBytes(":" + Utility.ByteArrayToAsciiString(commandBuffer) + "\r\n");
-                        _stream.Write(commandBuffer);
-                        
-                        string responseString = Encoding.ASCII.GetString(_stream.ReadTo((byte)'\n'));
-                        if (responseString[0] != ':' || responseString.Substring(responseString.Length - 2) != "\r\n")
-                            responseError = true;
-                        responseBuffer = Utility.AsciiStringToByteArray(responseString.Substring(1, responseString.Length - 3));
-                        break;
+                    byte[] commandBuffer;
+                    byte[] responseBuffer = Array.Empty<byte>();
+                    bool responseError = false;
 
-                    case Protocol.Tcp:
-                        commandBuffer = new byte[data.Length + 8];
-                        BitConverter.GetBytes(_tcpTransactionId).CopyTo(commandBuffer, 0);
-                        Array.Reverse(commandBuffer, 0, 2);
-                        commandBuffer[2] = 0;
-                        commandBuffer[3] = 0;
-                        BitConverter.GetBytes(data.Length + 2).CopyTo(commandBuffer, 4);
-                        Array.Reverse(commandBuffer, 4, 2);
-                        commandBuffer[6] = _stationAddress;
-                        commandBuffer[7] = functionCode;
-                        data.CopyTo(commandBuffer, 8);
-                        _stream.Write(commandBuffer);
+                    switch (_protocol)
+                    {
+                        case Protocol.Rtu:
+                            commandBuffer = new byte[data.Length + 4];
+                            commandBuffer[0] = _stationAddress;
+                            commandBuffer[1] = functionCode;
+                            data.CopyTo(commandBuffer, 2);
+                            BitConverter.GetBytes(Utility.Crc(commandBuffer, data.Length + 2)).CopyTo(commandBuffer, data.Length + 2);
+                            _stream.Write(commandBuffer);
 
-                        byte[] responseHeader = _stream.Read(6);
-                        Array.Reverse(responseHeader, 0, 2);
-                        if (BitConverter.ToUInt16(responseHeader, 0) != _tcpTransactionId || BitConverter.ToUInt16(responseHeader, 2) != 0)
-                            responseError = true;
-                        Array.Reverse(responseHeader, 4, 2);
-                        responseBuffer = _stream.Read(BitConverter.ToUInt16(responseHeader, 4));
-                        _tcpTransactionId++;
-                        break;
-                }
+                            responseBuffer = _stream.Read(2);
+                            break;
 
-                byte responseAddress = responseBuffer[0];
-                byte responseFunctionCode = responseBuffer[1];
+                        case Protocol.Ascii:
+                            commandBuffer = new byte[data.Length + 3];
+                            commandBuffer[0] = _stationAddress;
+                            commandBuffer[1] = functionCode;
+                            data.CopyTo(commandBuffer, 2);
+                            commandBuffer[data.Length + 2] = Utility.Lrc(commandBuffer, data.Length + 2);
+                            commandBuffer = Encoding.ASCII.GetBytes(":" + Utility.ByteArrayToAsciiString(commandBuffer) + "\r\n");
+                            _stream.Write(commandBuffer);
 
-                if (responseError || responseAddress != _stationAddress || (responseFunctionCode & 127) != functionCode)
-                {
-                    _stream.ReadAvailableData();
+                            string responseString = Encoding.ASCII.GetString(_stream.ReadTo((byte)'\n'));
+                            if (responseString[0] != ':' || responseString.Substring(responseString.Length - 2) != "\r\n")
+                                responseError = true;
+                            responseBuffer = Utility.AsciiStringToByteArray(responseString.Substring(1, responseString.Length - 3));
+                            break;
+
+                        case Protocol.Tcp:
+                            commandBuffer = new byte[data.Length + 8];
+                            BitConverter.GetBytes(_tcpTransactionId).CopyTo(commandBuffer, 0);
+                            Array.Reverse(commandBuffer, 0, 2);
+                            commandBuffer[2] = 0;
+                            commandBuffer[3] = 0;
+                            BitConverter.GetBytes(data.Length + 2).CopyTo(commandBuffer, 4);
+                            Array.Reverse(commandBuffer, 4, 2);
+                            commandBuffer[6] = _stationAddress;
+                            commandBuffer[7] = functionCode;
+                            data.CopyTo(commandBuffer, 8);
+                            _stream.Write(commandBuffer);
+
+                            byte[] responseHeader = _stream.Read(6);
+                            Array.Reverse(responseHeader, 0, 2);
+                            if (BitConverter.ToUInt16(responseHeader, 0) != _tcpTransactionId || BitConverter.ToUInt16(responseHeader, 2) != 0)
+                                responseError = true;
+                            Array.Reverse(responseHeader, 4, 2);
+                            responseBuffer = _stream.Read(BitConverter.ToUInt16(responseHeader, 4));
+                            _tcpTransactionId++;
+                            break;
+                    }
+
+                    byte responseAddress = responseBuffer[0];
+                    byte responseFunctionCode = responseBuffer[1];
+
+                    if (responseError || responseAddress != _stationAddress || (responseFunctionCode & 127) != functionCode)
+                    {
+                        _stream.ReadAvailableData();
+                        if (DelayAfterRead > 0)
+                            Thread.Sleep(DelayAfterRead);
+                        throw new System.Exception("Modbus response error.");
+                    }
+
+                    if (_protocol == Protocol.Rtu)
+                    {
+                        byte[] rtuData = responseFunctionCode > 127 ? _stream.Read(1) : ReadRtuData(functionCode);
+                        responseBuffer = new byte[rtuData.Length + 4];
+                        responseBuffer[0] = responseAddress;
+                        responseBuffer[1] = responseFunctionCode;
+                        rtuData.CopyTo(responseBuffer, 2);
+                        _stream.Read(2).CopyTo(responseBuffer, rtuData.Length + 2);
+                    }
+
+                    if ((_protocol == Protocol.Rtu && Utility.Crc(responseBuffer, responseBuffer.Length) != 0) ||
+                        (_protocol == Protocol.Ascii && Utility.Lrc(responseBuffer, responseBuffer.Length) != 0))
+                    {
+                        _stream.ReadAvailableData();
+                        if (DelayAfterRead > 0)
+                            Thread.Sleep(DelayAfterRead);
+                        throw new System.Exception("Modbus CRC error.");
+                    }
+
                     if (DelayAfterRead > 0)
                         Thread.Sleep(DelayAfterRead);
-                    throw new System.Exception("Modbus response error.");
-                }                    
 
-                if (_protocol == Protocol.Rtu)
-                {
-                    byte[] rtuData = responseFunctionCode > 127 ? _stream.Read(1) : ReadRtuData(functionCode);
-                    responseBuffer = new byte[rtuData.Length + 4];
-                    responseBuffer[0] = responseAddress;
-                    responseBuffer[1] = responseFunctionCode;
-                    rtuData.CopyTo(responseBuffer, 2);
-                    _stream.Read(2).CopyTo(responseBuffer, rtuData.Length + 2);
-                }
+                    if (responseFunctionCode > 127)
+                        throw new Exception((ExceptionCode)responseBuffer[2]);
 
-                if ((_protocol == Protocol.Rtu && Utility.Crc(responseBuffer, responseBuffer.Length) != 0) ||
-                    (_protocol == Protocol.Ascii && Utility.Lrc(responseBuffer, responseBuffer.Length) != 0))
-                {
-                    _stream.ReadAvailableData();
-                    if (DelayAfterRead > 0)
-                        Thread.Sleep(DelayAfterRead);
-                    throw new System.Exception("Modbus CRC error.");
-                }                    
-
-                if (DelayAfterRead > 0)
-                    Thread.Sleep(DelayAfterRead);
-
-                if (responseFunctionCode > 127)
-                    throw new Exception((ExceptionCode)responseBuffer[2]);
-
-                switch (_protocol)
-                {
-                    case Protocol.Rtu:
-                        return responseBuffer.Skip(2).Take(responseBuffer.Length - 4).ToArray();
-                    case Protocol.Ascii:
-                        return responseBuffer.Skip(2).Take(responseBuffer.Length - 3).ToArray();
-                    default:
-                        return responseBuffer.Skip(2).ToArray();
+                    switch (_protocol)
+                    {
+                        case Protocol.Rtu:
+                            return responseBuffer.Skip(2).Take(responseBuffer.Length - 4).ToArray();
+                        case Protocol.Ascii:
+                            return responseBuffer.Skip(2).Take(responseBuffer.Length - 3).ToArray();
+                        default:
+                            return responseBuffer.Skip(2).ToArray();
+                    }
                 }
             }
         }
@@ -319,17 +366,23 @@ namespace PL.Modbus
             if (address + values.Count > 0x10000)
                 throw new ArgumentException("Coil address range should be inside 0..65535.");
 
-            foreach (var addressRange in Utility.SplitAddressRange(address, (ushort)values.Count, 1968))
+            lock (this)
             {
-                byte byteCount = (byte)((addressRange.NumberOfItems - 1) / 8 + 1);
-                byte[] commandData = new byte[byteCount + 5];
-                BitConverter.GetBytes(addressRange.Address).CopyTo(commandData, 0);
-                Array.Reverse(commandData, 0, 2);
-                BitConverter.GetBytes(addressRange.NumberOfItems).CopyTo(commandData, 2);
-                Array.Reverse(commandData, 2, 2);
-                commandData[4] = byteCount;
-                new BitArray(values.GetRange(addressRange.Address - address, addressRange.NumberOfItems).ToArray()).CopyTo(commandData, 5);
-                Command(15, commandData);
+                using (_stream.Lock())
+                {
+                    foreach (var addressRange in Utility.SplitAddressRange(address, (ushort)values.Count, 1968))
+                    {
+                        byte byteCount = (byte)((addressRange.NumberOfItems - 1) / 8 + 1);
+                        byte[] commandData = new byte[byteCount + 5];
+                        BitConverter.GetBytes(addressRange.Address).CopyTo(commandData, 0);
+                        Array.Reverse(commandData, 0, 2);
+                        BitConverter.GetBytes(addressRange.NumberOfItems).CopyTo(commandData, 2);
+                        Array.Reverse(commandData, 2, 2);
+                        commandData[4] = byteCount;
+                        new BitArray(values.GetRange(addressRange.Address - address, addressRange.NumberOfItems).ToArray()).CopyTo(commandData, 5);
+                        Command(15, commandData);
+                    }
+                }
             }
         }
 
@@ -347,21 +400,27 @@ namespace PL.Modbus
             if (address + values.Count > 0x10000)
                 throw new ArgumentException("Holding register address range should be inside 0..65535.");
 
-            foreach (var addressRange in Utility.SplitAddressRange(address, (ushort)values.Count, 123))
+            lock (this)
             {
-                byte byteCount = (byte)(addressRange.NumberOfItems * 2);
-                byte[] commandData = new byte[byteCount + 5];
-                BitConverter.GetBytes(addressRange.Address).CopyTo(commandData, 0);
-                Array.Reverse(commandData, 0, 2);
-                BitConverter.GetBytes(addressRange.NumberOfItems).CopyTo(commandData, 2);
-                Array.Reverse(commandData, 2, 2);
-                commandData[4] = byteCount;
-                for (int i = 0; i < addressRange.NumberOfItems; i++)
+                using (_stream.Lock())
                 {
-                    BitConverter.GetBytes(values[i]).CopyTo(commandData, 5 + i * 2);
-                    Array.Reverse(commandData, 5 + i * 2, 2);
+                    foreach (var addressRange in Utility.SplitAddressRange(address, (ushort)values.Count, 123))
+                    {
+                        byte byteCount = (byte)(addressRange.NumberOfItems * 2);
+                        byte[] commandData = new byte[byteCount + 5];
+                        BitConverter.GetBytes(addressRange.Address).CopyTo(commandData, 0);
+                        Array.Reverse(commandData, 0, 2);
+                        BitConverter.GetBytes(addressRange.NumberOfItems).CopyTo(commandData, 2);
+                        Array.Reverse(commandData, 2, 2);
+                        commandData[4] = byteCount;
+                        for (int i = 0; i < addressRange.NumberOfItems; i++)
+                        {
+                            BitConverter.GetBytes(values[i]).CopyTo(commandData, 5 + i * 2);
+                            Array.Reverse(commandData, 5 + i * 2, 2);
+                        }
+                        Command(16, commandData);
+                    }
                 }
-                Command(16, commandData);
             }
         }
 
@@ -405,45 +464,57 @@ namespace PL.Modbus
 
         private List<bool> ReadBits(byte functionCode, ushort address, ushort numberOfBits)
         {
-            List<bool> bits = new List<bool>();
-            foreach (var addressRange in Utility.SplitAddressRange(address, numberOfBits, 2000))
+            lock (this)
             {
-                byte[] commandData = new byte[4];
-                BitConverter.GetBytes(addressRange.Address).CopyTo(commandData, 0);
-                Array.Reverse(commandData, 0, 2);
-                BitConverter.GetBytes(addressRange.NumberOfItems).CopyTo(commandData, 2);
-                Array.Reverse(commandData, 2, 2);
+                using (_stream.Lock())
+                {
+                    List<bool> bits = new List<bool>();
+                    foreach (var addressRange in Utility.SplitAddressRange(address, numberOfBits, 2000))
+                    {
+                        byte[] commandData = new byte[4];
+                        BitConverter.GetBytes(addressRange.Address).CopyTo(commandData, 0);
+                        Array.Reverse(commandData, 0, 2);
+                        BitConverter.GetBytes(addressRange.NumberOfItems).CopyTo(commandData, 2);
+                        Array.Reverse(commandData, 2, 2);
 
-                BitArray responseData = new BitArray(Command(functionCode, commandData).Skip(1).ToArray());
+                        BitArray responseData = new BitArray(Command(functionCode, commandData).Skip(1).ToArray());
 
-                int maxIndex = Math.Min(addressRange.NumberOfItems, responseData.Length);
-                for (int j = 0; j < maxIndex; j++)
-                    bits.Add(responseData[j]);
+                        int maxIndex = Math.Min(addressRange.NumberOfItems, responseData.Length);
+                        for (int j = 0; j < maxIndex; j++)
+                            bits.Add(responseData[j]);
+                    }
+                    return bits;
+                }
             }
-            return bits;
         }
 
         private List<ushort> ReadRegisters(byte functionCode, ushort address, ushort numberOfRegisters)
         {
-            List<ushort> registers = new List<ushort>();
-            foreach (var addressRange in Utility.SplitAddressRange(address, numberOfRegisters, 125))
+            lock (this)
             {
-                byte[] commandData = new byte[4];
-                BitConverter.GetBytes(addressRange.Address).CopyTo(commandData, 0);
-                Array.Reverse(commandData, 0, 2);
-                BitConverter.GetBytes(addressRange.NumberOfItems).CopyTo(commandData, 2);
-                Array.Reverse(commandData, 2, 2);
-
-                byte[] responseData = Command(functionCode, commandData).Skip(1).ToArray();
-
-                int maxIndex = Math.Min(addressRange.NumberOfItems * 2, responseData.Length / 2 * 2);
-                for (int j = 0; j < maxIndex; j+=2)
+                using (_stream.Lock())
                 {
-                    Array.Reverse(responseData, j, 2);
-                    registers.Add(BitConverter.ToUInt16(responseData, j));
+                    List<ushort> registers = new List<ushort>();
+                    foreach (var addressRange in Utility.SplitAddressRange(address, numberOfRegisters, 125))
+                    {
+                        byte[] commandData = new byte[4];
+                        BitConverter.GetBytes(addressRange.Address).CopyTo(commandData, 0);
+                        Array.Reverse(commandData, 0, 2);
+                        BitConverter.GetBytes(addressRange.NumberOfItems).CopyTo(commandData, 2);
+                        Array.Reverse(commandData, 2, 2);
+
+                        byte[] responseData = Command(functionCode, commandData).Skip(1).ToArray();
+
+                        int maxIndex = Math.Min(addressRange.NumberOfItems * 2, responseData.Length / 2 * 2);
+                        for (int j = 0; j < maxIndex; j += 2)
+                        {
+                            Array.Reverse(responseData, j, 2);
+                            registers.Add(BitConverter.ToUInt16(responseData, j));
+                        }
+                    }
+                    return registers;
                 }
             }
-            return registers;
         }
     }    
 }

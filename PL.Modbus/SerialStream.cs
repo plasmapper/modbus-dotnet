@@ -7,7 +7,7 @@ namespace PL.Modbus
     /// <summary>
     /// Modbus data stream that uses SerialPort.
     /// </summary>
-    internal class SerialStream : Stream
+    public class SerialStream : Stream
     {
         private readonly SerialPort _serialPort;
 

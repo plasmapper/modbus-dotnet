@@ -7,7 +7,7 @@ namespace PL.Modbus
     /// <summary>
     /// Modbus data stream that uses TcpClient.
     /// </summary>
-    internal class NetworkStream : Stream
+    public class NetworkStream : Stream
     {
         private readonly string _ipAddress;
         private readonly ushort _port;

@@ -3,7 +3,10 @@ using System.Collections.Generic;
 
 namespace PL.Modbus
 {
-    internal abstract class Stream : IDisposable
+    /// <summary>
+    /// Modbus data stream.
+    /// </summary>
+    public abstract class Stream : IDisposable
     {
         private bool _disposed = false;
 
