@@ -14,6 +14,8 @@ namespace PL.Modbus
 
         public int ReadTimeout { get; set; } = 300;
 
+        public int WriteTimeout { get; set; } = 300;
+
         public int DelayBeforeWrite { get; set; } = 0;
 
         public void Dispose()

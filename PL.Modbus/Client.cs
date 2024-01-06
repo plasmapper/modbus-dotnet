@@ -104,25 +104,22 @@ namespace PL.Modbus
         /// <summary>
         /// Gets and sets connect timeout, ms.
         /// </summary>
-        public int ConnectTimeout
-        {
-            get => _stream.ConnectTimeout;
-            set => _stream.ConnectTimeout = value;
-        }
+        public int ConnectTimeout { get; set; } = 1000;
 
         /// <summary>
-        /// Gets and sets stream read timeout, ms.
+        /// Gets and sets read timeout, ms.
         /// </summary>
-        public int ReadTimeout
-        {
-            get => _stream.ReadTimeout;
-            set => _stream.ReadTimeout = value;
-        }
+        public int ReadTimeout { get; set; } = 300;
+
+        /// <summary>
+        /// Gets and sets write timeout, ms.
+        /// </summary>
+        public int WriteTimeout { get; set; } = 300;
 
         /// <summary>
         /// Gets and sets the delay between the end of the read operation and unlocking the stream, ms.
         /// </summary>
-        public int DelayAfterRead = 0;
+        public int DelayAfterRead { get; set; } = 0;
 
         public void Dispose()
         {
@@ -153,6 +150,10 @@ namespace PL.Modbus
             {
                 using (_stream.Lock())
                 {
+                    _stream.ConnectTimeout = ConnectTimeout;
+                    _stream.ReadTimeout = ReadTimeout;
+                    _stream.WriteTimeout = WriteTimeout;
+
                     _stream.Open();
 
                     byte[] commandBuffer;

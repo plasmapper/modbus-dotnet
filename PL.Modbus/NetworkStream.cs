@@ -50,6 +50,7 @@ namespace PL.Modbus
             ReadAvailableData();
             if (DelayBeforeWrite > 0)
                 Thread.Sleep(DelayBeforeWrite);
+            _tcpClient.SendTimeout = WriteTimeout;
             _tcpClient.GetStream().Write(buffer, 0, buffer.Length);
         }
 

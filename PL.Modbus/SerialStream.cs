@@ -54,6 +54,7 @@ namespace PL.Modbus
             ReadAvailableData();
             if (DelayBeforeWrite > 0)
                 Thread.Sleep(DelayBeforeWrite);
+            Port.WriteTimeout = Port.BaudRate == 0 ? WriteTimeout : WriteTimeout + buffer.Length * 11 * 1000 / Port.BaudRate;
             Port.Write(buffer, 0, buffer.Length);
         }
 
