@@ -11,10 +11,10 @@
     <RepositoryUrl>https://github.com/plasmapper/modbus-dotnet</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>modbus;client</PackageTags>
-    <PackageReleaseNotes>Added
-- Properties for communication settings.</PackageReleaseNotes>
+    <PackageReleaseNotes>Fixed
+- Setting stream delay after stream change.</PackageReleaseNotes>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <VersionPrefix>2.3.0</VersionPrefix>
+    <VersionPrefix>2.3.1</VersionPrefix>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

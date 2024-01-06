@@ -5,6 +5,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.IO.Ports;
+using System.Net;
 
 namespace PL.Modbus
 {
@@ -28,11 +29,9 @@ namespace PL.Modbus
         /// <param name="stationAddress">Server station address.</param>
         public Client(SerialPort serialPort, Protocol protocol = Protocol.Rtu, byte stationAddress = 1)
         {
-            _stream = new SerialStream(serialPort);
             _protocol = protocol;
             _stationAddress = stationAddress;
-            if (protocol == Protocol.Rtu)
-                _stream.DelayBeforeWrite = serialPort.BaudRate < 19200 ? 28000 / serialPort.BaudRate : 2;
+            Stream = new SerialStream(serialPort);
         }
 
         /// <summary>
@@ -44,11 +43,9 @@ namespace PL.Modbus
         /// <param name="stationAddress">Server station address.</param>
         public Client(string ipAddress, ushort port = 502, Protocol protocol = Protocol.Tcp, byte stationAddress = 255)
         {
-            _stream = new NetworkStream(ipAddress, port);
             _protocol = protocol;
             _stationAddress = stationAddress;
-            if (protocol == Protocol.Rtu)
-                _stream.DelayBeforeWrite = 2;
+            Stream = new NetworkStream(ipAddress, port);
         }
 
         /// <summary>
@@ -62,6 +59,14 @@ namespace PL.Modbus
                 lock (this)
                 {
                     _stream = value;
+
+                    if (Protocol == Protocol.Rtu)
+                    {
+                        if (_stream is SerialStream serialStream)
+                            _stream.DelayBeforeWrite = serialStream.Port.BaudRate < 19200 ? 28000 / serialStream.Port.BaudRate : 2;
+                        else
+                            _stream.DelayBeforeWrite = 2;
+                    }
                 }
             }
         }

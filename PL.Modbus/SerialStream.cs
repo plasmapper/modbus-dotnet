@@ -9,13 +9,13 @@ namespace PL.Modbus
     /// </summary>
     public class SerialStream : Stream
     {
-        private readonly SerialPort _serialPort;
-
         /// <summary>
         /// Initializes a new instance of the SerialStream class.
         /// </summary>
-        /// <param name="serialPort">Serial port.</param>
-        public SerialStream(SerialPort serialPort) => _serialPort = serialPort;
+        /// <param name="port">Serial port.</param>
+        public SerialStream(SerialPort port) => Port = port;
+
+        public SerialPort Port { get; }
 
         /// <summary>
         /// Reads data from a serial stream. Timeout is increased depending on the number of bytes to read and baud rate.
@@ -26,10 +26,10 @@ namespace PL.Modbus
         {
             byte[] buffer = new byte[byteCount];
             int offset = 0;
-            _serialPort.ReadTimeout = _serialPort.BaudRate == 0 ? ReadTimeout : ReadTimeout + byteCount * 11 * 1000 / _serialPort.BaudRate;
+            Port.ReadTimeout = Port.BaudRate == 0 ? ReadTimeout : ReadTimeout + byteCount * 11 * 1000 / Port.BaudRate;
             while (byteCount > 0)
             {
-                int bytesRead = _serialPort.Read(buffer, offset, byteCount);
+                int bytesRead = Port.Read(buffer, offset, byteCount);
                 offset += bytesRead;
                 byteCount -= bytesRead;
             }     
@@ -38,13 +38,13 @@ namespace PL.Modbus
 
         public override void ReadAvailableData()
         {
-            if (_serialPort.BytesToRead == 0)
+            if (Port.BytesToRead == 0)
                 return;
-            _serialPort.ReadTimeout = 1;
+            Port.ReadTimeout = 1;
             try
             {
                 while (true)
-                    _serialPort.ReadByte();
+                    Port.ReadByte();
             }
             catch { }
         }
@@ -54,18 +54,18 @@ namespace PL.Modbus
             ReadAvailableData();
             if (DelayBeforeWrite > 0)
                 Thread.Sleep(DelayBeforeWrite);
-            _serialPort.Write(buffer, 0, buffer.Length);
+            Port.Write(buffer, 0, buffer.Length);
         }
 
         public override void Open()
         {
-            if (!_serialPort.IsOpen)
-                _serialPort.Open();
+            if (!Port.IsOpen)
+                Port.Open();
         }
 
         public override void Close() { }
 
-        public override IDisposable Lock() => new SerialPortLock(_serialPort);
+        public override IDisposable Lock() => new SerialPortLock(Port);
 
         private class SerialPortLock : IDisposable
         {
