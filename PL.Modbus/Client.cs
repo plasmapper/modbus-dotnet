@@ -435,7 +435,7 @@ namespace PL.Modbus
         /// </summary>
         /// <param name="byteCount">Number of bytes to read.</param>
         /// <returns>Data buffer.</returns>
-        protected byte[] Read(byte byteCount) => _stream.Read(byteCount);
+        protected byte[] Read(int byteCount) => _stream.Read(byteCount);
 
         /// <summary>
         /// Reads response data when using Modbus RTU protocol.
