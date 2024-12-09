@@ -28,1493 +28,1509 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanel5 = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanel6 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.comboBoxInterface = new System.Windows.Forms.ComboBox();
-            this.flowLayoutPanel8 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label25 = new System.Windows.Forms.Label();
-            this.textBoxConnectTimeout = new System.Windows.Forms.TextBox();
-            this.flowLayoutPanel7 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBoxReadTimeout = new System.Windows.Forms.TextBox();
-            this.checkBoxHex = new System.Windows.Forms.CheckBox();
-            this.flowLayoutPanelSerialSettings = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanel9 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.comboBoxSerialSettingsPortName = new System.Windows.Forms.ComboBox();
-            this.flowLayoutPanel11 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.comboBoxSerialSettingsProtocol = new System.Windows.Forms.ComboBox();
-            this.flowLayoutPanel10 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBoxSerialSettingsStationAddress = new System.Windows.Forms.TextBox();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBoxSerialSettingsBaudRate = new System.Windows.Forms.TextBox();
-            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBoxSerialSettingsDataBits = new System.Windows.Forms.TextBox();
-            this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label8 = new System.Windows.Forms.Label();
-            this.comboBoxSerialSettingsParity = new System.Windows.Forms.ComboBox();
-            this.flowLayoutPanel12 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label9 = new System.Windows.Forms.Label();
-            this.comboBoxSerialSettingsStopBits = new System.Windows.Forms.ComboBox();
-            this.flowLayoutPanel13 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label10 = new System.Windows.Forms.Label();
-            this.comboBoxSerialSettingsHandshake = new System.Windows.Forms.ComboBox();
-            this.flowLayoutPanelNetworkSettings = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanel17 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label13 = new System.Windows.Forms.Label();
-            this.textBoxNetworkSettingsIpAddress = new System.Windows.Forms.TextBox();
-            this.flowLayoutPanel18 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label14 = new System.Windows.Forms.Label();
-            this.textBoxNetworkSettingsPort = new System.Windows.Forms.TextBox();
-            this.flowLayoutPanel19 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label15 = new System.Windows.Forms.Label();
-            this.textBoxNetworkSettingsStationAddress = new System.Windows.Forms.TextBox();
-            this.flowLayoutPanel15 = new System.Windows.Forms.FlowLayoutPanel();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.flowLayoutPanel22 = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanel23 = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanel24 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label17 = new System.Windows.Forms.Label();
-            this.textBoxCoilsAddress = new System.Windows.Forms.TextBox();
-            this.flowLayoutPanel25 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label18 = new System.Windows.Forms.Label();
-            this.textBoxCoilsCount = new System.Windows.Forms.TextBox();
-            this.buttonCoilsRead = new System.Windows.Forms.Button();
-            this.buttonCoilsWrite = new System.Windows.Forms.Button();
-            this.dataGridViewCoilsValues = new System.Windows.Forms.DataGridView();
-            this.columnCoils = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.flowLayoutPanel20 = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanel21 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label11 = new System.Windows.Forms.Label();
-            this.textBoxCoilAddress = new System.Windows.Forms.TextBox();
-            this.checkBoxCoilValue = new System.Windows.Forms.CheckBox();
-            this.buttonCoilWrite = new System.Windows.Forms.Button();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.flowLayoutPanel16 = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanel26 = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanel27 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label12 = new System.Windows.Forms.Label();
-            this.textBoxDiscreteInputsAddress = new System.Windows.Forms.TextBox();
-            this.flowLayoutPanel28 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label16 = new System.Windows.Forms.Label();
-            this.textBoxDiscreteInputsCount = new System.Windows.Forms.TextBox();
-            this.buttonDiscreteInputsRead = new System.Windows.Forms.Button();
-            this.dataGridViewDiscreteInputsValues = new System.Windows.Forms.DataGridView();
-            this.columnDiscreteInputs = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.flowLayoutPanel29 = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanel30 = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanel31 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label19 = new System.Windows.Forms.Label();
-            this.textBoxHoldingRegistersAddress = new System.Windows.Forms.TextBox();
-            this.flowLayoutPanel32 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label20 = new System.Windows.Forms.Label();
-            this.textBoxHoldingRegistersCount = new System.Windows.Forms.TextBox();
-            this.buttonHoldingRegistersRead = new System.Windows.Forms.Button();
-            this.buttonHoldingRegistersWrite = new System.Windows.Forms.Button();
-            this.dataGridViewHoldingRegistersValues = new System.Windows.Forms.DataGridView();
-            this.columnHoldingRegisters = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.flowLayoutPanel33 = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanel34 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label21 = new System.Windows.Forms.Label();
-            this.textBoxHoldingRegisterAddress = new System.Windows.Forms.TextBox();
-            this.flowLayoutPanel39 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label24 = new System.Windows.Forms.Label();
-            this.textBoxHoldingRegisterValue = new System.Windows.Forms.TextBox();
-            this.buttonHoldingRegisterWrite = new System.Windows.Forms.Button();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.flowLayoutPanel35 = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanel36 = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanel37 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label22 = new System.Windows.Forms.Label();
-            this.textBoxInputRegistersAddress = new System.Windows.Forms.TextBox();
-            this.flowLayoutPanel38 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label23 = new System.Windows.Forms.Label();
-            this.textBoxInputRegistersCount = new System.Windows.Forms.TextBox();
-            this.buttonInputRegistersRead = new System.Windows.Forms.Button();
-            this.dataGridViewInputRegistersValues = new System.Windows.Forms.DataGridView();
-            this.columnInputRegisters = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dummy = new System.Windows.Forms.Button();
-            this.flowLayoutPanel1.SuspendLayout();
-            this.flowLayoutPanel5.SuspendLayout();
-            this.flowLayoutPanel6.SuspendLayout();
-            this.flowLayoutPanel8.SuspendLayout();
-            this.flowLayoutPanel7.SuspendLayout();
-            this.flowLayoutPanelSerialSettings.SuspendLayout();
-            this.flowLayoutPanel9.SuspendLayout();
-            this.flowLayoutPanel11.SuspendLayout();
-            this.flowLayoutPanel10.SuspendLayout();
-            this.flowLayoutPanel2.SuspendLayout();
-            this.flowLayoutPanel3.SuspendLayout();
-            this.flowLayoutPanel4.SuspendLayout();
-            this.flowLayoutPanel12.SuspendLayout();
-            this.flowLayoutPanel13.SuspendLayout();
-            this.flowLayoutPanelNetworkSettings.SuspendLayout();
-            this.flowLayoutPanel17.SuspendLayout();
-            this.flowLayoutPanel18.SuspendLayout();
-            this.flowLayoutPanel19.SuspendLayout();
-            this.flowLayoutPanel15.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.flowLayoutPanel22.SuspendLayout();
-            this.flowLayoutPanel23.SuspendLayout();
-            this.flowLayoutPanel24.SuspendLayout();
-            this.flowLayoutPanel25.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCoilsValues)).BeginInit();
-            this.groupBox2.SuspendLayout();
-            this.flowLayoutPanel20.SuspendLayout();
-            this.flowLayoutPanel21.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            this.flowLayoutPanel16.SuspendLayout();
-            this.flowLayoutPanel26.SuspendLayout();
-            this.flowLayoutPanel27.SuspendLayout();
-            this.flowLayoutPanel28.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDiscreteInputsValues)).BeginInit();
-            this.groupBox4.SuspendLayout();
-            this.flowLayoutPanel29.SuspendLayout();
-            this.flowLayoutPanel30.SuspendLayout();
-            this.flowLayoutPanel31.SuspendLayout();
-            this.flowLayoutPanel32.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHoldingRegistersValues)).BeginInit();
-            this.groupBox5.SuspendLayout();
-            this.flowLayoutPanel33.SuspendLayout();
-            this.flowLayoutPanel34.SuspendLayout();
-            this.flowLayoutPanel39.SuspendLayout();
-            this.groupBox6.SuspendLayout();
-            this.flowLayoutPanel35.SuspendLayout();
-            this.flowLayoutPanel36.SuspendLayout();
-            this.flowLayoutPanel37.SuspendLayout();
-            this.flowLayoutPanel38.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInputRegistersValues)).BeginInit();
-            this.SuspendLayout();
+            flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            flowLayoutPanel5 = new System.Windows.Forms.FlowLayoutPanel();
+            flowLayoutPanel6 = new System.Windows.Forms.FlowLayoutPanel();
+            label3 = new System.Windows.Forms.Label();
+            comboBoxInterface = new System.Windows.Forms.ComboBox();
+            flowLayoutPanel8 = new System.Windows.Forms.FlowLayoutPanel();
+            label25 = new System.Windows.Forms.Label();
+            textBoxConnectTimeout = new System.Windows.Forms.TextBox();
+            flowLayoutPanel7 = new System.Windows.Forms.FlowLayoutPanel();
+            label4 = new System.Windows.Forms.Label();
+            textBoxReadTimeout = new System.Windows.Forms.TextBox();
+            checkBoxHex = new System.Windows.Forms.CheckBox();
+            flowLayoutPanelSerialSettings = new System.Windows.Forms.FlowLayoutPanel();
+            flowLayoutPanel9 = new System.Windows.Forms.FlowLayoutPanel();
+            label5 = new System.Windows.Forms.Label();
+            comboBoxSerialSettingsPortName = new System.Windows.Forms.ComboBox();
+            flowLayoutPanel11 = new System.Windows.Forms.FlowLayoutPanel();
+            label7 = new System.Windows.Forms.Label();
+            comboBoxSerialSettingsProtocol1 = new System.Windows.Forms.ComboBox();
+            flowLayoutPanel10 = new System.Windows.Forms.FlowLayoutPanel();
+            label6 = new System.Windows.Forms.Label();
+            textBoxSerialSettingsStationAddress = new System.Windows.Forms.TextBox();
+            flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            label1 = new System.Windows.Forms.Label();
+            textBoxSerialSettingsBaudRate = new System.Windows.Forms.TextBox();
+            flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
+            label2 = new System.Windows.Forms.Label();
+            textBoxSerialSettingsDataBits = new System.Windows.Forms.TextBox();
+            flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
+            label8 = new System.Windows.Forms.Label();
+            comboBoxSerialSettingsParity = new System.Windows.Forms.ComboBox();
+            flowLayoutPanel12 = new System.Windows.Forms.FlowLayoutPanel();
+            label9 = new System.Windows.Forms.Label();
+            comboBoxSerialSettingsStopBits = new System.Windows.Forms.ComboBox();
+            flowLayoutPanel13 = new System.Windows.Forms.FlowLayoutPanel();
+            label10 = new System.Windows.Forms.Label();
+            comboBoxSerialSettingsHandshake = new System.Windows.Forms.ComboBox();
+            flowLayoutPanelNetworkSettings = new System.Windows.Forms.FlowLayoutPanel();
+            flowLayoutPanel17 = new System.Windows.Forms.FlowLayoutPanel();
+            label13 = new System.Windows.Forms.Label();
+            textBoxNetworkSettingsIpAddress = new System.Windows.Forms.TextBox();
+            flowLayoutPanel18 = new System.Windows.Forms.FlowLayoutPanel();
+            label14 = new System.Windows.Forms.Label();
+            textBoxNetworkSettingsPort = new System.Windows.Forms.TextBox();
+            flowLayoutPanel14 = new System.Windows.Forms.FlowLayoutPanel();
+            label26 = new System.Windows.Forms.Label();
+            comboBoxSerialSettingsProtocol2 = new System.Windows.Forms.ComboBox();
+            flowLayoutPanel19 = new System.Windows.Forms.FlowLayoutPanel();
+            label15 = new System.Windows.Forms.Label();
+            textBoxNetworkSettingsStationAddress = new System.Windows.Forms.TextBox();
+            flowLayoutPanel15 = new System.Windows.Forms.FlowLayoutPanel();
+            groupBox1 = new System.Windows.Forms.GroupBox();
+            flowLayoutPanel22 = new System.Windows.Forms.FlowLayoutPanel();
+            flowLayoutPanel23 = new System.Windows.Forms.FlowLayoutPanel();
+            flowLayoutPanel24 = new System.Windows.Forms.FlowLayoutPanel();
+            label17 = new System.Windows.Forms.Label();
+            textBoxCoilsAddress = new System.Windows.Forms.TextBox();
+            flowLayoutPanel25 = new System.Windows.Forms.FlowLayoutPanel();
+            label18 = new System.Windows.Forms.Label();
+            textBoxCoilsCount = new System.Windows.Forms.TextBox();
+            buttonCoilsRead = new System.Windows.Forms.Button();
+            buttonCoilsWrite = new System.Windows.Forms.Button();
+            dataGridViewCoilsValues = new System.Windows.Forms.DataGridView();
+            columnCoils = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            groupBox2 = new System.Windows.Forms.GroupBox();
+            flowLayoutPanel20 = new System.Windows.Forms.FlowLayoutPanel();
+            flowLayoutPanel21 = new System.Windows.Forms.FlowLayoutPanel();
+            label11 = new System.Windows.Forms.Label();
+            textBoxCoilAddress = new System.Windows.Forms.TextBox();
+            checkBoxCoilValue = new System.Windows.Forms.CheckBox();
+            buttonCoilWrite = new System.Windows.Forms.Button();
+            groupBox3 = new System.Windows.Forms.GroupBox();
+            flowLayoutPanel16 = new System.Windows.Forms.FlowLayoutPanel();
+            flowLayoutPanel26 = new System.Windows.Forms.FlowLayoutPanel();
+            flowLayoutPanel27 = new System.Windows.Forms.FlowLayoutPanel();
+            label12 = new System.Windows.Forms.Label();
+            textBoxDiscreteInputsAddress = new System.Windows.Forms.TextBox();
+            flowLayoutPanel28 = new System.Windows.Forms.FlowLayoutPanel();
+            label16 = new System.Windows.Forms.Label();
+            textBoxDiscreteInputsCount = new System.Windows.Forms.TextBox();
+            buttonDiscreteInputsRead = new System.Windows.Forms.Button();
+            dataGridViewDiscreteInputsValues = new System.Windows.Forms.DataGridView();
+            columnDiscreteInputs = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            groupBox4 = new System.Windows.Forms.GroupBox();
+            flowLayoutPanel29 = new System.Windows.Forms.FlowLayoutPanel();
+            flowLayoutPanel30 = new System.Windows.Forms.FlowLayoutPanel();
+            flowLayoutPanel31 = new System.Windows.Forms.FlowLayoutPanel();
+            label19 = new System.Windows.Forms.Label();
+            textBoxHoldingRegistersAddress = new System.Windows.Forms.TextBox();
+            flowLayoutPanel32 = new System.Windows.Forms.FlowLayoutPanel();
+            label20 = new System.Windows.Forms.Label();
+            textBoxHoldingRegistersCount = new System.Windows.Forms.TextBox();
+            buttonHoldingRegistersRead = new System.Windows.Forms.Button();
+            buttonHoldingRegistersWrite = new System.Windows.Forms.Button();
+            dataGridViewHoldingRegistersValues = new System.Windows.Forms.DataGridView();
+            columnHoldingRegisters = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            groupBox5 = new System.Windows.Forms.GroupBox();
+            flowLayoutPanel33 = new System.Windows.Forms.FlowLayoutPanel();
+            flowLayoutPanel34 = new System.Windows.Forms.FlowLayoutPanel();
+            label21 = new System.Windows.Forms.Label();
+            textBoxHoldingRegisterAddress = new System.Windows.Forms.TextBox();
+            flowLayoutPanel39 = new System.Windows.Forms.FlowLayoutPanel();
+            label24 = new System.Windows.Forms.Label();
+            textBoxHoldingRegisterValue = new System.Windows.Forms.TextBox();
+            buttonHoldingRegisterWrite = new System.Windows.Forms.Button();
+            groupBox6 = new System.Windows.Forms.GroupBox();
+            flowLayoutPanel35 = new System.Windows.Forms.FlowLayoutPanel();
+            flowLayoutPanel36 = new System.Windows.Forms.FlowLayoutPanel();
+            flowLayoutPanel37 = new System.Windows.Forms.FlowLayoutPanel();
+            label22 = new System.Windows.Forms.Label();
+            textBoxInputRegistersAddress = new System.Windows.Forms.TextBox();
+            flowLayoutPanel38 = new System.Windows.Forms.FlowLayoutPanel();
+            label23 = new System.Windows.Forms.Label();
+            textBoxInputRegistersCount = new System.Windows.Forms.TextBox();
+            buttonInputRegistersRead = new System.Windows.Forms.Button();
+            dataGridViewInputRegistersValues = new System.Windows.Forms.DataGridView();
+            columnInputRegisters = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dummy = new System.Windows.Forms.Button();
+            flowLayoutPanel1.SuspendLayout();
+            flowLayoutPanel5.SuspendLayout();
+            flowLayoutPanel6.SuspendLayout();
+            flowLayoutPanel8.SuspendLayout();
+            flowLayoutPanel7.SuspendLayout();
+            flowLayoutPanelSerialSettings.SuspendLayout();
+            flowLayoutPanel9.SuspendLayout();
+            flowLayoutPanel11.SuspendLayout();
+            flowLayoutPanel10.SuspendLayout();
+            flowLayoutPanel2.SuspendLayout();
+            flowLayoutPanel3.SuspendLayout();
+            flowLayoutPanel4.SuspendLayout();
+            flowLayoutPanel12.SuspendLayout();
+            flowLayoutPanel13.SuspendLayout();
+            flowLayoutPanelNetworkSettings.SuspendLayout();
+            flowLayoutPanel17.SuspendLayout();
+            flowLayoutPanel18.SuspendLayout();
+            flowLayoutPanel14.SuspendLayout();
+            flowLayoutPanel19.SuspendLayout();
+            flowLayoutPanel15.SuspendLayout();
+            groupBox1.SuspendLayout();
+            flowLayoutPanel22.SuspendLayout();
+            flowLayoutPanel23.SuspendLayout();
+            flowLayoutPanel24.SuspendLayout();
+            flowLayoutPanel25.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewCoilsValues).BeginInit();
+            groupBox2.SuspendLayout();
+            flowLayoutPanel20.SuspendLayout();
+            flowLayoutPanel21.SuspendLayout();
+            groupBox3.SuspendLayout();
+            flowLayoutPanel16.SuspendLayout();
+            flowLayoutPanel26.SuspendLayout();
+            flowLayoutPanel27.SuspendLayout();
+            flowLayoutPanel28.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewDiscreteInputsValues).BeginInit();
+            groupBox4.SuspendLayout();
+            flowLayoutPanel29.SuspendLayout();
+            flowLayoutPanel30.SuspendLayout();
+            flowLayoutPanel31.SuspendLayout();
+            flowLayoutPanel32.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewHoldingRegistersValues).BeginInit();
+            groupBox5.SuspendLayout();
+            flowLayoutPanel33.SuspendLayout();
+            flowLayoutPanel34.SuspendLayout();
+            flowLayoutPanel39.SuspendLayout();
+            groupBox6.SuspendLayout();
+            flowLayoutPanel35.SuspendLayout();
+            flowLayoutPanel36.SuspendLayout();
+            flowLayoutPanel37.SuspendLayout();
+            flowLayoutPanel38.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewInputRegistersValues).BeginInit();
+            SuspendLayout();
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.AutoSize = true;
-            this.flowLayoutPanel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.flowLayoutPanel1.Controls.Add(this.flowLayoutPanel5);
-            this.flowLayoutPanel1.Controls.Add(this.flowLayoutPanelSerialSettings);
-            this.flowLayoutPanel1.Controls.Add(this.flowLayoutPanelNetworkSettings);
-            this.flowLayoutPanel1.Controls.Add(this.flowLayoutPanel15);
-            this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(948, 473);
-            this.flowLayoutPanel1.TabIndex = 0;
+            flowLayoutPanel1.AutoSize = true;
+            flowLayoutPanel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            flowLayoutPanel1.Controls.Add(flowLayoutPanel5);
+            flowLayoutPanel1.Controls.Add(flowLayoutPanelSerialSettings);
+            flowLayoutPanel1.Controls.Add(flowLayoutPanelNetworkSettings);
+            flowLayoutPanel1.Controls.Add(flowLayoutPanel15);
+            flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            flowLayoutPanel1.Name = "flowLayoutPanel1";
+            flowLayoutPanel1.Size = new System.Drawing.Size(948, 473);
+            flowLayoutPanel1.TabIndex = 0;
             // 
             // flowLayoutPanel5
             // 
-            this.flowLayoutPanel5.AutoSize = true;
-            this.flowLayoutPanel5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.flowLayoutPanel5.Controls.Add(this.flowLayoutPanel6);
-            this.flowLayoutPanel5.Controls.Add(this.flowLayoutPanel8);
-            this.flowLayoutPanel5.Controls.Add(this.flowLayoutPanel7);
-            this.flowLayoutPanel5.Controls.Add(this.checkBoxHex);
-            this.flowLayoutPanel5.Location = new System.Drawing.Point(3, 3);
-            this.flowLayoutPanel5.Name = "flowLayoutPanel5";
-            this.flowLayoutPanel5.Size = new System.Drawing.Size(441, 50);
-            this.flowLayoutPanel5.TabIndex = 0;
+            flowLayoutPanel5.AutoSize = true;
+            flowLayoutPanel5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            flowLayoutPanel5.Controls.Add(flowLayoutPanel6);
+            flowLayoutPanel5.Controls.Add(flowLayoutPanel8);
+            flowLayoutPanel5.Controls.Add(flowLayoutPanel7);
+            flowLayoutPanel5.Controls.Add(checkBoxHex);
+            flowLayoutPanel5.Location = new System.Drawing.Point(3, 3);
+            flowLayoutPanel5.Name = "flowLayoutPanel5";
+            flowLayoutPanel5.Size = new System.Drawing.Size(441, 50);
+            flowLayoutPanel5.TabIndex = 0;
             // 
             // flowLayoutPanel6
             // 
-            this.flowLayoutPanel6.AutoSize = true;
-            this.flowLayoutPanel6.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.flowLayoutPanel6.Controls.Add(this.label3);
-            this.flowLayoutPanel6.Controls.Add(this.comboBoxInterface);
-            this.flowLayoutPanel6.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel6.Location = new System.Drawing.Point(3, 3);
-            this.flowLayoutPanel6.Name = "flowLayoutPanel6";
-            this.flowLayoutPanel6.Size = new System.Drawing.Size(96, 44);
-            this.flowLayoutPanel6.TabIndex = 3;
+            flowLayoutPanel6.AutoSize = true;
+            flowLayoutPanel6.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            flowLayoutPanel6.Controls.Add(label3);
+            flowLayoutPanel6.Controls.Add(comboBoxInterface);
+            flowLayoutPanel6.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            flowLayoutPanel6.Location = new System.Drawing.Point(3, 3);
+            flowLayoutPanel6.Name = "flowLayoutPanel6";
+            flowLayoutPanel6.Size = new System.Drawing.Size(96, 44);
+            flowLayoutPanel6.TabIndex = 3;
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(53, 15);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Interface";
+            label3.AutoSize = true;
+            label3.Location = new System.Drawing.Point(3, 0);
+            label3.Name = "label3";
+            label3.Size = new System.Drawing.Size(53, 15);
+            label3.TabIndex = 0;
+            label3.Text = "Interface";
             // 
             // comboBoxInterface
             // 
-            this.comboBoxInterface.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxInterface.FormattingEnabled = true;
-            this.comboBoxInterface.Items.AddRange(new object[] {
-            "Serial",
-            "Network"});
-            this.comboBoxInterface.Location = new System.Drawing.Point(3, 18);
-            this.comboBoxInterface.Name = "comboBoxInterface";
-            this.comboBoxInterface.Size = new System.Drawing.Size(90, 23);
-            this.comboBoxInterface.TabIndex = 4;
+            comboBoxInterface.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            comboBoxInterface.FormattingEnabled = true;
+            comboBoxInterface.Items.AddRange(new object[] { "Serial", "Network" });
+            comboBoxInterface.Location = new System.Drawing.Point(3, 18);
+            comboBoxInterface.Name = "comboBoxInterface";
+            comboBoxInterface.Size = new System.Drawing.Size(90, 23);
+            comboBoxInterface.TabIndex = 4;
             // 
             // flowLayoutPanel8
             // 
-            this.flowLayoutPanel8.AutoSize = true;
-            this.flowLayoutPanel8.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.flowLayoutPanel8.Controls.Add(this.label25);
-            this.flowLayoutPanel8.Controls.Add(this.textBoxConnectTimeout);
-            this.flowLayoutPanel8.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel8.Location = new System.Drawing.Point(105, 3);
-            this.flowLayoutPanel8.Name = "flowLayoutPanel8";
-            this.flowLayoutPanel8.Size = new System.Drawing.Size(125, 44);
-            this.flowLayoutPanel8.TabIndex = 6;
+            flowLayoutPanel8.AutoSize = true;
+            flowLayoutPanel8.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            flowLayoutPanel8.Controls.Add(label25);
+            flowLayoutPanel8.Controls.Add(textBoxConnectTimeout);
+            flowLayoutPanel8.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            flowLayoutPanel8.Location = new System.Drawing.Point(105, 3);
+            flowLayoutPanel8.Name = "flowLayoutPanel8";
+            flowLayoutPanel8.Size = new System.Drawing.Size(125, 44);
+            flowLayoutPanel8.TabIndex = 6;
             // 
             // label25
             // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(3, 0);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(119, 15);
-            this.label25.TabIndex = 0;
-            this.label25.Text = "Connect timeout, ms";
+            label25.AutoSize = true;
+            label25.Location = new System.Drawing.Point(3, 0);
+            label25.Name = "label25";
+            label25.Size = new System.Drawing.Size(119, 15);
+            label25.TabIndex = 0;
+            label25.Text = "Connect timeout, ms";
             // 
             // textBoxConnectTimeout
             // 
-            this.textBoxConnectTimeout.Location = new System.Drawing.Point(3, 18);
-            this.textBoxConnectTimeout.Name = "textBoxConnectTimeout";
-            this.textBoxConnectTimeout.Size = new System.Drawing.Size(90, 23);
-            this.textBoxConnectTimeout.TabIndex = 3;
+            textBoxConnectTimeout.Location = new System.Drawing.Point(3, 18);
+            textBoxConnectTimeout.Name = "textBoxConnectTimeout";
+            textBoxConnectTimeout.Size = new System.Drawing.Size(90, 23);
+            textBoxConnectTimeout.TabIndex = 3;
             // 
             // flowLayoutPanel7
             // 
-            this.flowLayoutPanel7.AutoSize = true;
-            this.flowLayoutPanel7.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.flowLayoutPanel7.Controls.Add(this.label4);
-            this.flowLayoutPanel7.Controls.Add(this.textBoxReadTimeout);
-            this.flowLayoutPanel7.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel7.Location = new System.Drawing.Point(236, 3);
-            this.flowLayoutPanel7.Name = "flowLayoutPanel7";
-            this.flowLayoutPanel7.Size = new System.Drawing.Size(106, 44);
-            this.flowLayoutPanel7.TabIndex = 4;
+            flowLayoutPanel7.AutoSize = true;
+            flowLayoutPanel7.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            flowLayoutPanel7.Controls.Add(label4);
+            flowLayoutPanel7.Controls.Add(textBoxReadTimeout);
+            flowLayoutPanel7.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            flowLayoutPanel7.Location = new System.Drawing.Point(236, 3);
+            flowLayoutPanel7.Name = "flowLayoutPanel7";
+            flowLayoutPanel7.Size = new System.Drawing.Size(106, 44);
+            flowLayoutPanel7.TabIndex = 4;
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(3, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(100, 15);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Read timeout, ms";
+            label4.AutoSize = true;
+            label4.Location = new System.Drawing.Point(3, 0);
+            label4.Name = "label4";
+            label4.Size = new System.Drawing.Size(100, 15);
+            label4.TabIndex = 0;
+            label4.Text = "Read timeout, ms";
             // 
             // textBoxReadTimeout
             // 
-            this.textBoxReadTimeout.Location = new System.Drawing.Point(3, 18);
-            this.textBoxReadTimeout.Name = "textBoxReadTimeout";
-            this.textBoxReadTimeout.Size = new System.Drawing.Size(90, 23);
-            this.textBoxReadTimeout.TabIndex = 3;
+            textBoxReadTimeout.Location = new System.Drawing.Point(3, 18);
+            textBoxReadTimeout.Name = "textBoxReadTimeout";
+            textBoxReadTimeout.Size = new System.Drawing.Size(90, 23);
+            textBoxReadTimeout.TabIndex = 3;
             // 
             // checkBoxHex
             // 
-            this.checkBoxHex.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.checkBoxHex.Appearance = System.Windows.Forms.Appearance.Button;
-            this.checkBoxHex.Location = new System.Drawing.Point(348, 22);
-            this.checkBoxHex.Name = "checkBoxHex";
-            this.checkBoxHex.Size = new System.Drawing.Size(90, 25);
-            this.checkBoxHex.TabIndex = 5;
-            this.checkBoxHex.Text = "checkBox1";
-            this.checkBoxHex.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.checkBoxHex.UseVisualStyleBackColor = true;
+            checkBoxHex.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
+            checkBoxHex.Appearance = System.Windows.Forms.Appearance.Button;
+            checkBoxHex.Location = new System.Drawing.Point(348, 22);
+            checkBoxHex.Name = "checkBoxHex";
+            checkBoxHex.Size = new System.Drawing.Size(90, 25);
+            checkBoxHex.TabIndex = 5;
+            checkBoxHex.Text = "checkBox1";
+            checkBoxHex.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            checkBoxHex.UseVisualStyleBackColor = true;
             // 
             // flowLayoutPanelSerialSettings
             // 
-            this.flowLayoutPanelSerialSettings.AutoSize = true;
-            this.flowLayoutPanelSerialSettings.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.flowLayoutPanelSerialSettings.Controls.Add(this.flowLayoutPanel9);
-            this.flowLayoutPanelSerialSettings.Controls.Add(this.flowLayoutPanel11);
-            this.flowLayoutPanelSerialSettings.Controls.Add(this.flowLayoutPanel10);
-            this.flowLayoutPanelSerialSettings.Controls.Add(this.flowLayoutPanel2);
-            this.flowLayoutPanelSerialSettings.Controls.Add(this.flowLayoutPanel3);
-            this.flowLayoutPanelSerialSettings.Controls.Add(this.flowLayoutPanel4);
-            this.flowLayoutPanelSerialSettings.Controls.Add(this.flowLayoutPanel12);
-            this.flowLayoutPanelSerialSettings.Controls.Add(this.flowLayoutPanel13);
-            this.flowLayoutPanelSerialSettings.Location = new System.Drawing.Point(3, 59);
-            this.flowLayoutPanelSerialSettings.Name = "flowLayoutPanelSerialSettings";
-            this.flowLayoutPanelSerialSettings.Size = new System.Drawing.Size(816, 50);
-            this.flowLayoutPanelSerialSettings.TabIndex = 1;
+            flowLayoutPanelSerialSettings.AutoSize = true;
+            flowLayoutPanelSerialSettings.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            flowLayoutPanelSerialSettings.Controls.Add(flowLayoutPanel9);
+            flowLayoutPanelSerialSettings.Controls.Add(flowLayoutPanel11);
+            flowLayoutPanelSerialSettings.Controls.Add(flowLayoutPanel10);
+            flowLayoutPanelSerialSettings.Controls.Add(flowLayoutPanel2);
+            flowLayoutPanelSerialSettings.Controls.Add(flowLayoutPanel3);
+            flowLayoutPanelSerialSettings.Controls.Add(flowLayoutPanel4);
+            flowLayoutPanelSerialSettings.Controls.Add(flowLayoutPanel12);
+            flowLayoutPanelSerialSettings.Controls.Add(flowLayoutPanel13);
+            flowLayoutPanelSerialSettings.Location = new System.Drawing.Point(3, 59);
+            flowLayoutPanelSerialSettings.Name = "flowLayoutPanelSerialSettings";
+            flowLayoutPanelSerialSettings.Size = new System.Drawing.Size(816, 50);
+            flowLayoutPanelSerialSettings.TabIndex = 1;
             // 
             // flowLayoutPanel9
             // 
-            this.flowLayoutPanel9.AutoSize = true;
-            this.flowLayoutPanel9.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.flowLayoutPanel9.Controls.Add(this.label5);
-            this.flowLayoutPanel9.Controls.Add(this.comboBoxSerialSettingsPortName);
-            this.flowLayoutPanel9.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel9.Location = new System.Drawing.Point(3, 3);
-            this.flowLayoutPanel9.Name = "flowLayoutPanel9";
-            this.flowLayoutPanel9.Size = new System.Drawing.Size(96, 44);
-            this.flowLayoutPanel9.TabIndex = 3;
+            flowLayoutPanel9.AutoSize = true;
+            flowLayoutPanel9.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            flowLayoutPanel9.Controls.Add(label5);
+            flowLayoutPanel9.Controls.Add(comboBoxSerialSettingsPortName);
+            flowLayoutPanel9.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            flowLayoutPanel9.Location = new System.Drawing.Point(3, 3);
+            flowLayoutPanel9.Name = "flowLayoutPanel9";
+            flowLayoutPanel9.Size = new System.Drawing.Size(96, 44);
+            flowLayoutPanel9.TabIndex = 3;
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(3, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(29, 15);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Port";
+            label5.AutoSize = true;
+            label5.Location = new System.Drawing.Point(3, 0);
+            label5.Name = "label5";
+            label5.Size = new System.Drawing.Size(29, 15);
+            label5.TabIndex = 0;
+            label5.Text = "Port";
             // 
             // comboBoxSerialSettingsPortName
             // 
-            this.comboBoxSerialSettingsPortName.FormattingEnabled = true;
-            this.comboBoxSerialSettingsPortName.Location = new System.Drawing.Point(3, 18);
-            this.comboBoxSerialSettingsPortName.Name = "comboBoxSerialSettingsPortName";
-            this.comboBoxSerialSettingsPortName.Size = new System.Drawing.Size(90, 23);
-            this.comboBoxSerialSettingsPortName.TabIndex = 3;
+            comboBoxSerialSettingsPortName.FormattingEnabled = true;
+            comboBoxSerialSettingsPortName.Location = new System.Drawing.Point(3, 18);
+            comboBoxSerialSettingsPortName.Name = "comboBoxSerialSettingsPortName";
+            comboBoxSerialSettingsPortName.Size = new System.Drawing.Size(90, 23);
+            comboBoxSerialSettingsPortName.TabIndex = 3;
             // 
             // flowLayoutPanel11
             // 
-            this.flowLayoutPanel11.AutoSize = true;
-            this.flowLayoutPanel11.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.flowLayoutPanel11.Controls.Add(this.label7);
-            this.flowLayoutPanel11.Controls.Add(this.comboBoxSerialSettingsProtocol);
-            this.flowLayoutPanel11.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel11.Location = new System.Drawing.Point(105, 3);
-            this.flowLayoutPanel11.Name = "flowLayoutPanel11";
-            this.flowLayoutPanel11.Size = new System.Drawing.Size(96, 44);
-            this.flowLayoutPanel11.TabIndex = 5;
+            flowLayoutPanel11.AutoSize = true;
+            flowLayoutPanel11.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            flowLayoutPanel11.Controls.Add(label7);
+            flowLayoutPanel11.Controls.Add(comboBoxSerialSettingsProtocol1);
+            flowLayoutPanel11.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            flowLayoutPanel11.Location = new System.Drawing.Point(105, 3);
+            flowLayoutPanel11.Name = "flowLayoutPanel11";
+            flowLayoutPanel11.Size = new System.Drawing.Size(96, 44);
+            flowLayoutPanel11.TabIndex = 5;
             // 
             // label7
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(3, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(52, 15);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "Protocol";
+            label7.AutoSize = true;
+            label7.Location = new System.Drawing.Point(3, 0);
+            label7.Name = "label7";
+            label7.Size = new System.Drawing.Size(52, 15);
+            label7.TabIndex = 0;
+            label7.Text = "Protocol";
             // 
-            // comboBoxSerialSettingsProtocol
+            // comboBoxSerialSettingsProtocol1
             // 
-            this.comboBoxSerialSettingsProtocol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxSerialSettingsProtocol.FormattingEnabled = true;
-            this.comboBoxSerialSettingsProtocol.Items.AddRange(new object[] {
-            "RTU",
-            "ASCII"});
-            this.comboBoxSerialSettingsProtocol.Location = new System.Drawing.Point(3, 18);
-            this.comboBoxSerialSettingsProtocol.Name = "comboBoxSerialSettingsProtocol";
-            this.comboBoxSerialSettingsProtocol.Size = new System.Drawing.Size(90, 23);
-            this.comboBoxSerialSettingsProtocol.TabIndex = 3;
+            comboBoxSerialSettingsProtocol1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            comboBoxSerialSettingsProtocol1.FormattingEnabled = true;
+            comboBoxSerialSettingsProtocol1.Items.AddRange(new object[] { "RTU", "ASCII", "TCP" });
+            comboBoxSerialSettingsProtocol1.Location = new System.Drawing.Point(3, 18);
+            comboBoxSerialSettingsProtocol1.Name = "comboBoxSerialSettingsProtocol1";
+            comboBoxSerialSettingsProtocol1.Size = new System.Drawing.Size(90, 23);
+            comboBoxSerialSettingsProtocol1.TabIndex = 3;
             // 
             // flowLayoutPanel10
             // 
-            this.flowLayoutPanel10.AutoSize = true;
-            this.flowLayoutPanel10.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.flowLayoutPanel10.Controls.Add(this.label6);
-            this.flowLayoutPanel10.Controls.Add(this.textBoxSerialSettingsStationAddress);
-            this.flowLayoutPanel10.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel10.Location = new System.Drawing.Point(207, 3);
-            this.flowLayoutPanel10.Name = "flowLayoutPanel10";
-            this.flowLayoutPanel10.Size = new System.Drawing.Size(96, 44);
-            this.flowLayoutPanel10.TabIndex = 4;
+            flowLayoutPanel10.AutoSize = true;
+            flowLayoutPanel10.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            flowLayoutPanel10.Controls.Add(label6);
+            flowLayoutPanel10.Controls.Add(textBoxSerialSettingsStationAddress);
+            flowLayoutPanel10.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            flowLayoutPanel10.Location = new System.Drawing.Point(207, 3);
+            flowLayoutPanel10.Name = "flowLayoutPanel10";
+            flowLayoutPanel10.Size = new System.Drawing.Size(96, 44);
+            flowLayoutPanel10.TabIndex = 4;
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(3, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(87, 15);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Station address";
+            label6.AutoSize = true;
+            label6.Location = new System.Drawing.Point(3, 0);
+            label6.Name = "label6";
+            label6.Size = new System.Drawing.Size(87, 15);
+            label6.TabIndex = 0;
+            label6.Text = "Station address";
             // 
             // textBoxSerialSettingsStationAddress
             // 
-            this.textBoxSerialSettingsStationAddress.Location = new System.Drawing.Point(3, 18);
-            this.textBoxSerialSettingsStationAddress.Name = "textBoxSerialSettingsStationAddress";
-            this.textBoxSerialSettingsStationAddress.Size = new System.Drawing.Size(90, 23);
-            this.textBoxSerialSettingsStationAddress.TabIndex = 3;
+            textBoxSerialSettingsStationAddress.Location = new System.Drawing.Point(3, 18);
+            textBoxSerialSettingsStationAddress.Name = "textBoxSerialSettingsStationAddress";
+            textBoxSerialSettingsStationAddress.Size = new System.Drawing.Size(90, 23);
+            textBoxSerialSettingsStationAddress.TabIndex = 3;
             // 
             // flowLayoutPanel2
             // 
-            this.flowLayoutPanel2.AutoSize = true;
-            this.flowLayoutPanel2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.flowLayoutPanel2.Controls.Add(this.label1);
-            this.flowLayoutPanel2.Controls.Add(this.textBoxSerialSettingsBaudRate);
-            this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(309, 3);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(96, 44);
-            this.flowLayoutPanel2.TabIndex = 6;
+            flowLayoutPanel2.AutoSize = true;
+            flowLayoutPanel2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            flowLayoutPanel2.Controls.Add(label1);
+            flowLayoutPanel2.Controls.Add(textBoxSerialSettingsBaudRate);
+            flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            flowLayoutPanel2.Location = new System.Drawing.Point(309, 3);
+            flowLayoutPanel2.Name = "flowLayoutPanel2";
+            flowLayoutPanel2.Size = new System.Drawing.Size(96, 44);
+            flowLayoutPanel2.TabIndex = 6;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 15);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Baud rate";
+            label1.AutoSize = true;
+            label1.Location = new System.Drawing.Point(3, 0);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(57, 15);
+            label1.TabIndex = 0;
+            label1.Text = "Baud rate";
             // 
             // textBoxSerialSettingsBaudRate
             // 
-            this.textBoxSerialSettingsBaudRate.Location = new System.Drawing.Point(3, 18);
-            this.textBoxSerialSettingsBaudRate.Name = "textBoxSerialSettingsBaudRate";
-            this.textBoxSerialSettingsBaudRate.Size = new System.Drawing.Size(90, 23);
-            this.textBoxSerialSettingsBaudRate.TabIndex = 3;
+            textBoxSerialSettingsBaudRate.Location = new System.Drawing.Point(3, 18);
+            textBoxSerialSettingsBaudRate.Name = "textBoxSerialSettingsBaudRate";
+            textBoxSerialSettingsBaudRate.Size = new System.Drawing.Size(90, 23);
+            textBoxSerialSettingsBaudRate.TabIndex = 3;
             // 
             // flowLayoutPanel3
             // 
-            this.flowLayoutPanel3.AutoSize = true;
-            this.flowLayoutPanel3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.flowLayoutPanel3.Controls.Add(this.label2);
-            this.flowLayoutPanel3.Controls.Add(this.textBoxSerialSettingsDataBits);
-            this.flowLayoutPanel3.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(411, 3);
-            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(96, 44);
-            this.flowLayoutPanel3.TabIndex = 7;
+            flowLayoutPanel3.AutoSize = true;
+            flowLayoutPanel3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            flowLayoutPanel3.Controls.Add(label2);
+            flowLayoutPanel3.Controls.Add(textBoxSerialSettingsDataBits);
+            flowLayoutPanel3.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            flowLayoutPanel3.Location = new System.Drawing.Point(411, 3);
+            flowLayoutPanel3.Name = "flowLayoutPanel3";
+            flowLayoutPanel3.Size = new System.Drawing.Size(96, 44);
+            flowLayoutPanel3.TabIndex = 7;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 15);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Data bits";
+            label2.AutoSize = true;
+            label2.Location = new System.Drawing.Point(3, 0);
+            label2.Name = "label2";
+            label2.Size = new System.Drawing.Size(53, 15);
+            label2.TabIndex = 0;
+            label2.Text = "Data bits";
             // 
             // textBoxSerialSettingsDataBits
             // 
-            this.textBoxSerialSettingsDataBits.Location = new System.Drawing.Point(3, 18);
-            this.textBoxSerialSettingsDataBits.Name = "textBoxSerialSettingsDataBits";
-            this.textBoxSerialSettingsDataBits.Size = new System.Drawing.Size(90, 23);
-            this.textBoxSerialSettingsDataBits.TabIndex = 3;
+            textBoxSerialSettingsDataBits.Location = new System.Drawing.Point(3, 18);
+            textBoxSerialSettingsDataBits.Name = "textBoxSerialSettingsDataBits";
+            textBoxSerialSettingsDataBits.Size = new System.Drawing.Size(90, 23);
+            textBoxSerialSettingsDataBits.TabIndex = 3;
             // 
             // flowLayoutPanel4
             // 
-            this.flowLayoutPanel4.AutoSize = true;
-            this.flowLayoutPanel4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.flowLayoutPanel4.Controls.Add(this.label8);
-            this.flowLayoutPanel4.Controls.Add(this.comboBoxSerialSettingsParity);
-            this.flowLayoutPanel4.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel4.Location = new System.Drawing.Point(513, 3);
-            this.flowLayoutPanel4.Name = "flowLayoutPanel4";
-            this.flowLayoutPanel4.Size = new System.Drawing.Size(96, 44);
-            this.flowLayoutPanel4.TabIndex = 8;
+            flowLayoutPanel4.AutoSize = true;
+            flowLayoutPanel4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            flowLayoutPanel4.Controls.Add(label8);
+            flowLayoutPanel4.Controls.Add(comboBoxSerialSettingsParity);
+            flowLayoutPanel4.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            flowLayoutPanel4.Location = new System.Drawing.Point(513, 3);
+            flowLayoutPanel4.Name = "flowLayoutPanel4";
+            flowLayoutPanel4.Size = new System.Drawing.Size(96, 44);
+            flowLayoutPanel4.TabIndex = 8;
             // 
             // label8
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(3, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(37, 15);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "Parity";
+            label8.AutoSize = true;
+            label8.Location = new System.Drawing.Point(3, 0);
+            label8.Name = "label8";
+            label8.Size = new System.Drawing.Size(37, 15);
+            label8.TabIndex = 0;
+            label8.Text = "Parity";
             // 
             // comboBoxSerialSettingsParity
             // 
-            this.comboBoxSerialSettingsParity.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxSerialSettingsParity.FormattingEnabled = true;
-            this.comboBoxSerialSettingsParity.Items.AddRange(new object[] {
-            "None",
-            "Odd",
-            "Even",
-            "Mark",
-            "Space"});
-            this.comboBoxSerialSettingsParity.Location = new System.Drawing.Point(3, 18);
-            this.comboBoxSerialSettingsParity.Name = "comboBoxSerialSettingsParity";
-            this.comboBoxSerialSettingsParity.Size = new System.Drawing.Size(90, 23);
-            this.comboBoxSerialSettingsParity.TabIndex = 3;
+            comboBoxSerialSettingsParity.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            comboBoxSerialSettingsParity.FormattingEnabled = true;
+            comboBoxSerialSettingsParity.Items.AddRange(new object[] { "None", "Odd", "Even", "Mark", "Space" });
+            comboBoxSerialSettingsParity.Location = new System.Drawing.Point(3, 18);
+            comboBoxSerialSettingsParity.Name = "comboBoxSerialSettingsParity";
+            comboBoxSerialSettingsParity.Size = new System.Drawing.Size(90, 23);
+            comboBoxSerialSettingsParity.TabIndex = 3;
             // 
             // flowLayoutPanel12
             // 
-            this.flowLayoutPanel12.AutoSize = true;
-            this.flowLayoutPanel12.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.flowLayoutPanel12.Controls.Add(this.label9);
-            this.flowLayoutPanel12.Controls.Add(this.comboBoxSerialSettingsStopBits);
-            this.flowLayoutPanel12.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel12.Location = new System.Drawing.Point(615, 3);
-            this.flowLayoutPanel12.Name = "flowLayoutPanel12";
-            this.flowLayoutPanel12.Size = new System.Drawing.Size(96, 44);
-            this.flowLayoutPanel12.TabIndex = 9;
+            flowLayoutPanel12.AutoSize = true;
+            flowLayoutPanel12.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            flowLayoutPanel12.Controls.Add(label9);
+            flowLayoutPanel12.Controls.Add(comboBoxSerialSettingsStopBits);
+            flowLayoutPanel12.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            flowLayoutPanel12.Location = new System.Drawing.Point(615, 3);
+            flowLayoutPanel12.Name = "flowLayoutPanel12";
+            flowLayoutPanel12.Size = new System.Drawing.Size(96, 44);
+            flowLayoutPanel12.TabIndex = 9;
             // 
             // label9
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(3, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(53, 15);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "Stop bits";
+            label9.AutoSize = true;
+            label9.Location = new System.Drawing.Point(3, 0);
+            label9.Name = "label9";
+            label9.Size = new System.Drawing.Size(53, 15);
+            label9.TabIndex = 0;
+            label9.Text = "Stop bits";
             // 
             // comboBoxSerialSettingsStopBits
             // 
-            this.comboBoxSerialSettingsStopBits.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxSerialSettingsStopBits.FormattingEnabled = true;
-            this.comboBoxSerialSettingsStopBits.Items.AddRange(new object[] {
-            "None",
-            "1.0",
-            "2.0",
-            "1.5"});
-            this.comboBoxSerialSettingsStopBits.Location = new System.Drawing.Point(3, 18);
-            this.comboBoxSerialSettingsStopBits.Name = "comboBoxSerialSettingsStopBits";
-            this.comboBoxSerialSettingsStopBits.Size = new System.Drawing.Size(90, 23);
-            this.comboBoxSerialSettingsStopBits.TabIndex = 3;
+            comboBoxSerialSettingsStopBits.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            comboBoxSerialSettingsStopBits.FormattingEnabled = true;
+            comboBoxSerialSettingsStopBits.Items.AddRange(new object[] { "None", "1.0", "2.0", "1.5" });
+            comboBoxSerialSettingsStopBits.Location = new System.Drawing.Point(3, 18);
+            comboBoxSerialSettingsStopBits.Name = "comboBoxSerialSettingsStopBits";
+            comboBoxSerialSettingsStopBits.Size = new System.Drawing.Size(90, 23);
+            comboBoxSerialSettingsStopBits.TabIndex = 3;
             // 
             // flowLayoutPanel13
             // 
-            this.flowLayoutPanel13.AutoSize = true;
-            this.flowLayoutPanel13.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.flowLayoutPanel13.Controls.Add(this.label10);
-            this.flowLayoutPanel13.Controls.Add(this.comboBoxSerialSettingsHandshake);
-            this.flowLayoutPanel13.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel13.Location = new System.Drawing.Point(717, 3);
-            this.flowLayoutPanel13.Name = "flowLayoutPanel13";
-            this.flowLayoutPanel13.Size = new System.Drawing.Size(96, 44);
-            this.flowLayoutPanel13.TabIndex = 10;
+            flowLayoutPanel13.AutoSize = true;
+            flowLayoutPanel13.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            flowLayoutPanel13.Controls.Add(label10);
+            flowLayoutPanel13.Controls.Add(comboBoxSerialSettingsHandshake);
+            flowLayoutPanel13.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            flowLayoutPanel13.Location = new System.Drawing.Point(717, 3);
+            flowLayoutPanel13.Name = "flowLayoutPanel13";
+            flowLayoutPanel13.Size = new System.Drawing.Size(96, 44);
+            flowLayoutPanel13.TabIndex = 10;
             // 
             // label10
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(3, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(66, 15);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "Handshake";
+            label10.AutoSize = true;
+            label10.Location = new System.Drawing.Point(3, 0);
+            label10.Name = "label10";
+            label10.Size = new System.Drawing.Size(66, 15);
+            label10.TabIndex = 0;
+            label10.Text = "Handshake";
             // 
             // comboBoxSerialSettingsHandshake
             // 
-            this.comboBoxSerialSettingsHandshake.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxSerialSettingsHandshake.FormattingEnabled = true;
-            this.comboBoxSerialSettingsHandshake.Items.AddRange(new object[] {
-            "None",
-            "XON/XOFF",
-            "RTS",
-            "RTS XON/XOFF"});
-            this.comboBoxSerialSettingsHandshake.Location = new System.Drawing.Point(3, 18);
-            this.comboBoxSerialSettingsHandshake.Name = "comboBoxSerialSettingsHandshake";
-            this.comboBoxSerialSettingsHandshake.Size = new System.Drawing.Size(90, 23);
-            this.comboBoxSerialSettingsHandshake.TabIndex = 3;
+            comboBoxSerialSettingsHandshake.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            comboBoxSerialSettingsHandshake.FormattingEnabled = true;
+            comboBoxSerialSettingsHandshake.Items.AddRange(new object[] { "None", "XON/XOFF", "RTS", "RTS XON/XOFF" });
+            comboBoxSerialSettingsHandshake.Location = new System.Drawing.Point(3, 18);
+            comboBoxSerialSettingsHandshake.Name = "comboBoxSerialSettingsHandshake";
+            comboBoxSerialSettingsHandshake.Size = new System.Drawing.Size(90, 23);
+            comboBoxSerialSettingsHandshake.TabIndex = 3;
             // 
             // flowLayoutPanelNetworkSettings
             // 
-            this.flowLayoutPanelNetworkSettings.AutoSize = true;
-            this.flowLayoutPanelNetworkSettings.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.flowLayoutPanelNetworkSettings.Controls.Add(this.flowLayoutPanel17);
-            this.flowLayoutPanelNetworkSettings.Controls.Add(this.flowLayoutPanel18);
-            this.flowLayoutPanelNetworkSettings.Controls.Add(this.flowLayoutPanel19);
-            this.flowLayoutPanelNetworkSettings.Location = new System.Drawing.Point(3, 115);
-            this.flowLayoutPanelNetworkSettings.Name = "flowLayoutPanelNetworkSettings";
-            this.flowLayoutPanelNetworkSettings.Size = new System.Drawing.Size(306, 50);
-            this.flowLayoutPanelNetworkSettings.TabIndex = 2;
+            flowLayoutPanelNetworkSettings.AutoSize = true;
+            flowLayoutPanelNetworkSettings.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            flowLayoutPanelNetworkSettings.Controls.Add(flowLayoutPanel17);
+            flowLayoutPanelNetworkSettings.Controls.Add(flowLayoutPanel18);
+            flowLayoutPanelNetworkSettings.Controls.Add(flowLayoutPanel14);
+            flowLayoutPanelNetworkSettings.Controls.Add(flowLayoutPanel19);
+            flowLayoutPanelNetworkSettings.Location = new System.Drawing.Point(3, 115);
+            flowLayoutPanelNetworkSettings.Name = "flowLayoutPanelNetworkSettings";
+            flowLayoutPanelNetworkSettings.Size = new System.Drawing.Size(408, 50);
+            flowLayoutPanelNetworkSettings.TabIndex = 2;
             // 
             // flowLayoutPanel17
             // 
-            this.flowLayoutPanel17.AutoSize = true;
-            this.flowLayoutPanel17.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.flowLayoutPanel17.Controls.Add(this.label13);
-            this.flowLayoutPanel17.Controls.Add(this.textBoxNetworkSettingsIpAddress);
-            this.flowLayoutPanel17.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel17.Location = new System.Drawing.Point(3, 3);
-            this.flowLayoutPanel17.Name = "flowLayoutPanel17";
-            this.flowLayoutPanel17.Size = new System.Drawing.Size(96, 44);
-            this.flowLayoutPanel17.TabIndex = 4;
+            flowLayoutPanel17.AutoSize = true;
+            flowLayoutPanel17.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            flowLayoutPanel17.Controls.Add(label13);
+            flowLayoutPanel17.Controls.Add(textBoxNetworkSettingsIpAddress);
+            flowLayoutPanel17.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            flowLayoutPanel17.Location = new System.Drawing.Point(3, 3);
+            flowLayoutPanel17.Name = "flowLayoutPanel17";
+            flowLayoutPanel17.Size = new System.Drawing.Size(96, 44);
+            flowLayoutPanel17.TabIndex = 4;
             // 
             // label13
             // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(3, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(60, 15);
-            this.label13.TabIndex = 0;
-            this.label13.Text = "IP address";
+            label13.AutoSize = true;
+            label13.Location = new System.Drawing.Point(3, 0);
+            label13.Name = "label13";
+            label13.Size = new System.Drawing.Size(60, 15);
+            label13.TabIndex = 0;
+            label13.Text = "IP address";
             // 
             // textBoxNetworkSettingsIpAddress
             // 
-            this.textBoxNetworkSettingsIpAddress.Location = new System.Drawing.Point(3, 18);
-            this.textBoxNetworkSettingsIpAddress.Name = "textBoxNetworkSettingsIpAddress";
-            this.textBoxNetworkSettingsIpAddress.Size = new System.Drawing.Size(90, 23);
-            this.textBoxNetworkSettingsIpAddress.TabIndex = 3;
+            textBoxNetworkSettingsIpAddress.Location = new System.Drawing.Point(3, 18);
+            textBoxNetworkSettingsIpAddress.Name = "textBoxNetworkSettingsIpAddress";
+            textBoxNetworkSettingsIpAddress.Size = new System.Drawing.Size(90, 23);
+            textBoxNetworkSettingsIpAddress.TabIndex = 3;
             // 
             // flowLayoutPanel18
             // 
-            this.flowLayoutPanel18.AutoSize = true;
-            this.flowLayoutPanel18.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.flowLayoutPanel18.Controls.Add(this.label14);
-            this.flowLayoutPanel18.Controls.Add(this.textBoxNetworkSettingsPort);
-            this.flowLayoutPanel18.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel18.Location = new System.Drawing.Point(105, 3);
-            this.flowLayoutPanel18.Name = "flowLayoutPanel18";
-            this.flowLayoutPanel18.Size = new System.Drawing.Size(96, 44);
-            this.flowLayoutPanel18.TabIndex = 6;
+            flowLayoutPanel18.AutoSize = true;
+            flowLayoutPanel18.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            flowLayoutPanel18.Controls.Add(label14);
+            flowLayoutPanel18.Controls.Add(textBoxNetworkSettingsPort);
+            flowLayoutPanel18.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            flowLayoutPanel18.Location = new System.Drawing.Point(105, 3);
+            flowLayoutPanel18.Name = "flowLayoutPanel18";
+            flowLayoutPanel18.Size = new System.Drawing.Size(96, 44);
+            flowLayoutPanel18.TabIndex = 6;
             // 
             // label14
             // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(3, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(29, 15);
-            this.label14.TabIndex = 0;
-            this.label14.Text = "Port";
+            label14.AutoSize = true;
+            label14.Location = new System.Drawing.Point(3, 0);
+            label14.Name = "label14";
+            label14.Size = new System.Drawing.Size(29, 15);
+            label14.TabIndex = 0;
+            label14.Text = "Port";
             // 
             // textBoxNetworkSettingsPort
             // 
-            this.textBoxNetworkSettingsPort.Location = new System.Drawing.Point(3, 18);
-            this.textBoxNetworkSettingsPort.Name = "textBoxNetworkSettingsPort";
-            this.textBoxNetworkSettingsPort.Size = new System.Drawing.Size(90, 23);
-            this.textBoxNetworkSettingsPort.TabIndex = 3;
+            textBoxNetworkSettingsPort.Location = new System.Drawing.Point(3, 18);
+            textBoxNetworkSettingsPort.Name = "textBoxNetworkSettingsPort";
+            textBoxNetworkSettingsPort.Size = new System.Drawing.Size(90, 23);
+            textBoxNetworkSettingsPort.TabIndex = 3;
+            // 
+            // flowLayoutPanel14
+            // 
+            flowLayoutPanel14.AutoSize = true;
+            flowLayoutPanel14.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            flowLayoutPanel14.Controls.Add(label26);
+            flowLayoutPanel14.Controls.Add(comboBoxSerialSettingsProtocol2);
+            flowLayoutPanel14.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            flowLayoutPanel14.Location = new System.Drawing.Point(207, 3);
+            flowLayoutPanel14.Name = "flowLayoutPanel14";
+            flowLayoutPanel14.Size = new System.Drawing.Size(96, 44);
+            flowLayoutPanel14.TabIndex = 8;
+            // 
+            // label26
+            // 
+            label26.AutoSize = true;
+            label26.Location = new System.Drawing.Point(3, 0);
+            label26.Name = "label26";
+            label26.Size = new System.Drawing.Size(52, 15);
+            label26.TabIndex = 0;
+            label26.Text = "Protocol";
+            // 
+            // comboBoxSerialSettingsProtocol2
+            // 
+            comboBoxSerialSettingsProtocol2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            comboBoxSerialSettingsProtocol2.FormattingEnabled = true;
+            comboBoxSerialSettingsProtocol2.Items.AddRange(new object[] { "RTU", "ASCII", "TCP" });
+            comboBoxSerialSettingsProtocol2.Location = new System.Drawing.Point(3, 18);
+            comboBoxSerialSettingsProtocol2.Name = "comboBoxSerialSettingsProtocol2";
+            comboBoxSerialSettingsProtocol2.Size = new System.Drawing.Size(90, 23);
+            comboBoxSerialSettingsProtocol2.TabIndex = 3;
             // 
             // flowLayoutPanel19
             // 
-            this.flowLayoutPanel19.AutoSize = true;
-            this.flowLayoutPanel19.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.flowLayoutPanel19.Controls.Add(this.label15);
-            this.flowLayoutPanel19.Controls.Add(this.textBoxNetworkSettingsStationAddress);
-            this.flowLayoutPanel19.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel19.Location = new System.Drawing.Point(207, 3);
-            this.flowLayoutPanel19.Name = "flowLayoutPanel19";
-            this.flowLayoutPanel19.Size = new System.Drawing.Size(96, 44);
-            this.flowLayoutPanel19.TabIndex = 7;
+            flowLayoutPanel19.AutoSize = true;
+            flowLayoutPanel19.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            flowLayoutPanel19.Controls.Add(label15);
+            flowLayoutPanel19.Controls.Add(textBoxNetworkSettingsStationAddress);
+            flowLayoutPanel19.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            flowLayoutPanel19.Location = new System.Drawing.Point(309, 3);
+            flowLayoutPanel19.Name = "flowLayoutPanel19";
+            flowLayoutPanel19.Size = new System.Drawing.Size(96, 44);
+            flowLayoutPanel19.TabIndex = 7;
             // 
             // label15
             // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(3, 0);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(87, 15);
-            this.label15.TabIndex = 0;
-            this.label15.Text = "Station address";
+            label15.AutoSize = true;
+            label15.Location = new System.Drawing.Point(3, 0);
+            label15.Name = "label15";
+            label15.Size = new System.Drawing.Size(87, 15);
+            label15.TabIndex = 0;
+            label15.Text = "Station address";
             // 
             // textBoxNetworkSettingsStationAddress
             // 
-            this.textBoxNetworkSettingsStationAddress.Location = new System.Drawing.Point(3, 18);
-            this.textBoxNetworkSettingsStationAddress.Name = "textBoxNetworkSettingsStationAddress";
-            this.textBoxNetworkSettingsStationAddress.Size = new System.Drawing.Size(90, 23);
-            this.textBoxNetworkSettingsStationAddress.TabIndex = 3;
+            textBoxNetworkSettingsStationAddress.Location = new System.Drawing.Point(3, 18);
+            textBoxNetworkSettingsStationAddress.Name = "textBoxNetworkSettingsStationAddress";
+            textBoxNetworkSettingsStationAddress.Size = new System.Drawing.Size(90, 23);
+            textBoxNetworkSettingsStationAddress.TabIndex = 3;
             // 
             // flowLayoutPanel15
             // 
-            this.flowLayoutPanel15.AutoSize = true;
-            this.flowLayoutPanel15.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.flowLayoutPanel15.Controls.Add(this.groupBox1);
-            this.flowLayoutPanel15.Controls.Add(this.groupBox2);
-            this.flowLayoutPanel15.Controls.Add(this.groupBox3);
-            this.flowLayoutPanel15.Controls.Add(this.groupBox4);
-            this.flowLayoutPanel15.Controls.Add(this.groupBox5);
-            this.flowLayoutPanel15.Controls.Add(this.groupBox6);
-            this.flowLayoutPanel15.Location = new System.Drawing.Point(3, 171);
-            this.flowLayoutPanel15.Name = "flowLayoutPanel15";
-            this.flowLayoutPanel15.Size = new System.Drawing.Size(942, 299);
-            this.flowLayoutPanel15.TabIndex = 3;
+            flowLayoutPanel15.AutoSize = true;
+            flowLayoutPanel15.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            flowLayoutPanel15.Controls.Add(groupBox1);
+            flowLayoutPanel15.Controls.Add(groupBox2);
+            flowLayoutPanel15.Controls.Add(groupBox3);
+            flowLayoutPanel15.Controls.Add(groupBox4);
+            flowLayoutPanel15.Controls.Add(groupBox5);
+            flowLayoutPanel15.Controls.Add(groupBox6);
+            flowLayoutPanel15.Location = new System.Drawing.Point(3, 171);
+            flowLayoutPanel15.Name = "flowLayoutPanel15";
+            flowLayoutPanel15.Size = new System.Drawing.Size(942, 299);
+            flowLayoutPanel15.TabIndex = 3;
             // 
             // groupBox1
             // 
-            this.groupBox1.AutoSize = true;
-            this.groupBox1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.groupBox1.Controls.Add(this.flowLayoutPanel22);
-            this.groupBox1.Location = new System.Drawing.Point(3, 3);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(165, 293);
-            this.groupBox1.TabIndex = 8;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Coils";
+            groupBox1.AutoSize = true;
+            groupBox1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            groupBox1.Controls.Add(flowLayoutPanel22);
+            groupBox1.Location = new System.Drawing.Point(3, 3);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new System.Drawing.Size(165, 293);
+            groupBox1.TabIndex = 8;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "Coils";
             // 
             // flowLayoutPanel22
             // 
-            this.flowLayoutPanel22.AutoSize = true;
-            this.flowLayoutPanel22.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.flowLayoutPanel22.Controls.Add(this.flowLayoutPanel23);
-            this.flowLayoutPanel22.Controls.Add(this.dataGridViewCoilsValues);
-            this.flowLayoutPanel22.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel22.Location = new System.Drawing.Point(3, 19);
-            this.flowLayoutPanel22.Name = "flowLayoutPanel22";
-            this.flowLayoutPanel22.Size = new System.Drawing.Size(159, 271);
-            this.flowLayoutPanel22.TabIndex = 0;
+            flowLayoutPanel22.AutoSize = true;
+            flowLayoutPanel22.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            flowLayoutPanel22.Controls.Add(flowLayoutPanel23);
+            flowLayoutPanel22.Controls.Add(dataGridViewCoilsValues);
+            flowLayoutPanel22.Dock = System.Windows.Forms.DockStyle.Fill;
+            flowLayoutPanel22.Location = new System.Drawing.Point(3, 19);
+            flowLayoutPanel22.Name = "flowLayoutPanel22";
+            flowLayoutPanel22.Size = new System.Drawing.Size(159, 271);
+            flowLayoutPanel22.TabIndex = 0;
             // 
             // flowLayoutPanel23
             // 
-            this.flowLayoutPanel23.AutoSize = true;
-            this.flowLayoutPanel23.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.flowLayoutPanel23.Controls.Add(this.flowLayoutPanel24);
-            this.flowLayoutPanel23.Controls.Add(this.flowLayoutPanel25);
-            this.flowLayoutPanel23.Controls.Add(this.buttonCoilsRead);
-            this.flowLayoutPanel23.Controls.Add(this.buttonCoilsWrite);
-            this.flowLayoutPanel23.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel23.Location = new System.Drawing.Point(3, 3);
-            this.flowLayoutPanel23.Name = "flowLayoutPanel23";
-            this.flowLayoutPanel23.Size = new System.Drawing.Size(102, 158);
-            this.flowLayoutPanel23.TabIndex = 1;
+            flowLayoutPanel23.AutoSize = true;
+            flowLayoutPanel23.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            flowLayoutPanel23.Controls.Add(flowLayoutPanel24);
+            flowLayoutPanel23.Controls.Add(flowLayoutPanel25);
+            flowLayoutPanel23.Controls.Add(buttonCoilsRead);
+            flowLayoutPanel23.Controls.Add(buttonCoilsWrite);
+            flowLayoutPanel23.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            flowLayoutPanel23.Location = new System.Drawing.Point(3, 3);
+            flowLayoutPanel23.Name = "flowLayoutPanel23";
+            flowLayoutPanel23.Size = new System.Drawing.Size(102, 158);
+            flowLayoutPanel23.TabIndex = 1;
             // 
             // flowLayoutPanel24
             // 
-            this.flowLayoutPanel24.AutoSize = true;
-            this.flowLayoutPanel24.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.flowLayoutPanel24.Controls.Add(this.label17);
-            this.flowLayoutPanel24.Controls.Add(this.textBoxCoilsAddress);
-            this.flowLayoutPanel24.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel24.Location = new System.Drawing.Point(3, 3);
-            this.flowLayoutPanel24.Name = "flowLayoutPanel24";
-            this.flowLayoutPanel24.Size = new System.Drawing.Size(96, 44);
-            this.flowLayoutPanel24.TabIndex = 7;
+            flowLayoutPanel24.AutoSize = true;
+            flowLayoutPanel24.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            flowLayoutPanel24.Controls.Add(label17);
+            flowLayoutPanel24.Controls.Add(textBoxCoilsAddress);
+            flowLayoutPanel24.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            flowLayoutPanel24.Location = new System.Drawing.Point(3, 3);
+            flowLayoutPanel24.Name = "flowLayoutPanel24";
+            flowLayoutPanel24.Size = new System.Drawing.Size(96, 44);
+            flowLayoutPanel24.TabIndex = 7;
             // 
             // label17
             // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(3, 0);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(49, 15);
-            this.label17.TabIndex = 0;
-            this.label17.Text = "Address";
+            label17.AutoSize = true;
+            label17.Location = new System.Drawing.Point(3, 0);
+            label17.Name = "label17";
+            label17.Size = new System.Drawing.Size(49, 15);
+            label17.TabIndex = 0;
+            label17.Text = "Address";
             // 
             // textBoxCoilsAddress
             // 
-            this.textBoxCoilsAddress.Location = new System.Drawing.Point(3, 18);
-            this.textBoxCoilsAddress.Name = "textBoxCoilsAddress";
-            this.textBoxCoilsAddress.Size = new System.Drawing.Size(90, 23);
-            this.textBoxCoilsAddress.TabIndex = 3;
+            textBoxCoilsAddress.Location = new System.Drawing.Point(3, 18);
+            textBoxCoilsAddress.Name = "textBoxCoilsAddress";
+            textBoxCoilsAddress.Size = new System.Drawing.Size(90, 23);
+            textBoxCoilsAddress.TabIndex = 3;
             // 
             // flowLayoutPanel25
             // 
-            this.flowLayoutPanel25.AutoSize = true;
-            this.flowLayoutPanel25.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.flowLayoutPanel25.Controls.Add(this.label18);
-            this.flowLayoutPanel25.Controls.Add(this.textBoxCoilsCount);
-            this.flowLayoutPanel25.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel25.Location = new System.Drawing.Point(3, 53);
-            this.flowLayoutPanel25.Name = "flowLayoutPanel25";
-            this.flowLayoutPanel25.Size = new System.Drawing.Size(96, 44);
-            this.flowLayoutPanel25.TabIndex = 8;
+            flowLayoutPanel25.AutoSize = true;
+            flowLayoutPanel25.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            flowLayoutPanel25.Controls.Add(label18);
+            flowLayoutPanel25.Controls.Add(textBoxCoilsCount);
+            flowLayoutPanel25.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            flowLayoutPanel25.Location = new System.Drawing.Point(3, 53);
+            flowLayoutPanel25.Name = "flowLayoutPanel25";
+            flowLayoutPanel25.Size = new System.Drawing.Size(96, 44);
+            flowLayoutPanel25.TabIndex = 8;
             // 
             // label18
             // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(3, 0);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(40, 15);
-            this.label18.TabIndex = 0;
-            this.label18.Text = "Count";
+            label18.AutoSize = true;
+            label18.Location = new System.Drawing.Point(3, 0);
+            label18.Name = "label18";
+            label18.Size = new System.Drawing.Size(40, 15);
+            label18.TabIndex = 0;
+            label18.Text = "Count";
             // 
             // textBoxCoilsCount
             // 
-            this.textBoxCoilsCount.Location = new System.Drawing.Point(3, 18);
-            this.textBoxCoilsCount.Name = "textBoxCoilsCount";
-            this.textBoxCoilsCount.Size = new System.Drawing.Size(90, 23);
-            this.textBoxCoilsCount.TabIndex = 3;
+            textBoxCoilsCount.Location = new System.Drawing.Point(3, 18);
+            textBoxCoilsCount.Name = "textBoxCoilsCount";
+            textBoxCoilsCount.Size = new System.Drawing.Size(90, 23);
+            textBoxCoilsCount.TabIndex = 3;
             // 
             // buttonCoilsRead
             // 
-            this.buttonCoilsRead.Location = new System.Drawing.Point(3, 103);
-            this.buttonCoilsRead.Name = "buttonCoilsRead";
-            this.buttonCoilsRead.Size = new System.Drawing.Size(90, 23);
-            this.buttonCoilsRead.TabIndex = 4;
-            this.buttonCoilsRead.Text = "Read";
-            this.buttonCoilsRead.UseVisualStyleBackColor = true;
+            buttonCoilsRead.Location = new System.Drawing.Point(3, 103);
+            buttonCoilsRead.Name = "buttonCoilsRead";
+            buttonCoilsRead.Size = new System.Drawing.Size(90, 23);
+            buttonCoilsRead.TabIndex = 4;
+            buttonCoilsRead.Text = "Read";
+            buttonCoilsRead.UseVisualStyleBackColor = true;
             // 
             // buttonCoilsWrite
             // 
-            this.buttonCoilsWrite.Location = new System.Drawing.Point(3, 132);
-            this.buttonCoilsWrite.Name = "buttonCoilsWrite";
-            this.buttonCoilsWrite.Size = new System.Drawing.Size(90, 23);
-            this.buttonCoilsWrite.TabIndex = 10;
-            this.buttonCoilsWrite.Text = "Write";
-            this.buttonCoilsWrite.UseVisualStyleBackColor = true;
+            buttonCoilsWrite.Location = new System.Drawing.Point(3, 132);
+            buttonCoilsWrite.Name = "buttonCoilsWrite";
+            buttonCoilsWrite.Size = new System.Drawing.Size(90, 23);
+            buttonCoilsWrite.TabIndex = 10;
+            buttonCoilsWrite.Text = "Write";
+            buttonCoilsWrite.UseVisualStyleBackColor = true;
             // 
             // dataGridViewCoilsValues
             // 
-            this.dataGridViewCoilsValues.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dataGridViewCoilsValues.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewCoilsValues.ColumnHeadersVisible = false;
-            this.dataGridViewCoilsValues.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.columnCoils});
-            this.dataGridViewCoilsValues.Location = new System.Drawing.Point(111, 3);
-            this.dataGridViewCoilsValues.Name = "dataGridViewCoilsValues";
-            this.dataGridViewCoilsValues.RowHeadersVisible = false;
-            this.dataGridViewCoilsValues.RowTemplate.Height = 25;
-            this.dataGridViewCoilsValues.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dataGridViewCoilsValues.Size = new System.Drawing.Size(45, 265);
-            this.dataGridViewCoilsValues.TabIndex = 0;
+            dataGridViewCoilsValues.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            dataGridViewCoilsValues.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCoilsValues.ColumnHeadersVisible = false;
+            dataGridViewCoilsValues.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { columnCoils });
+            dataGridViewCoilsValues.Location = new System.Drawing.Point(111, 3);
+            dataGridViewCoilsValues.Name = "dataGridViewCoilsValues";
+            dataGridViewCoilsValues.RowHeadersVisible = false;
+            dataGridViewCoilsValues.RowTemplate.Height = 25;
+            dataGridViewCoilsValues.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            dataGridViewCoilsValues.Size = new System.Drawing.Size(45, 265);
+            dataGridViewCoilsValues.TabIndex = 0;
             // 
             // columnCoils
             // 
-            this.columnCoils.HeaderText = "Column1";
-            this.columnCoils.Name = "columnCoils";
-            this.columnCoils.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.columnCoils.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.columnCoils.Width = 21;
+            columnCoils.HeaderText = "Column1";
+            columnCoils.Name = "columnCoils";
+            columnCoils.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            columnCoils.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            columnCoils.Width = 21;
             // 
             // groupBox2
             // 
-            this.groupBox2.AutoSize = true;
-            this.groupBox2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.groupBox2.Controls.Add(this.flowLayoutPanel20);
-            this.groupBox2.Location = new System.Drawing.Point(174, 3);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(108, 126);
-            this.groupBox2.TabIndex = 9;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Coil";
+            groupBox2.AutoSize = true;
+            groupBox2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            groupBox2.Controls.Add(flowLayoutPanel20);
+            groupBox2.Location = new System.Drawing.Point(174, 3);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Size = new System.Drawing.Size(108, 126);
+            groupBox2.TabIndex = 9;
+            groupBox2.TabStop = false;
+            groupBox2.Text = "Coil";
             // 
             // flowLayoutPanel20
             // 
-            this.flowLayoutPanel20.AutoSize = true;
-            this.flowLayoutPanel20.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.flowLayoutPanel20.Controls.Add(this.flowLayoutPanel21);
-            this.flowLayoutPanel20.Controls.Add(this.checkBoxCoilValue);
-            this.flowLayoutPanel20.Controls.Add(this.buttonCoilWrite);
-            this.flowLayoutPanel20.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel20.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel20.Location = new System.Drawing.Point(3, 19);
-            this.flowLayoutPanel20.Name = "flowLayoutPanel20";
-            this.flowLayoutPanel20.Size = new System.Drawing.Size(102, 104);
-            this.flowLayoutPanel20.TabIndex = 1;
+            flowLayoutPanel20.AutoSize = true;
+            flowLayoutPanel20.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            flowLayoutPanel20.Controls.Add(flowLayoutPanel21);
+            flowLayoutPanel20.Controls.Add(checkBoxCoilValue);
+            flowLayoutPanel20.Controls.Add(buttonCoilWrite);
+            flowLayoutPanel20.Dock = System.Windows.Forms.DockStyle.Fill;
+            flowLayoutPanel20.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            flowLayoutPanel20.Location = new System.Drawing.Point(3, 19);
+            flowLayoutPanel20.Name = "flowLayoutPanel20";
+            flowLayoutPanel20.Size = new System.Drawing.Size(102, 104);
+            flowLayoutPanel20.TabIndex = 1;
             // 
             // flowLayoutPanel21
             // 
-            this.flowLayoutPanel21.AutoSize = true;
-            this.flowLayoutPanel21.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.flowLayoutPanel21.Controls.Add(this.label11);
-            this.flowLayoutPanel21.Controls.Add(this.textBoxCoilAddress);
-            this.flowLayoutPanel21.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel21.Location = new System.Drawing.Point(3, 3);
-            this.flowLayoutPanel21.Name = "flowLayoutPanel21";
-            this.flowLayoutPanel21.Size = new System.Drawing.Size(96, 44);
-            this.flowLayoutPanel21.TabIndex = 7;
+            flowLayoutPanel21.AutoSize = true;
+            flowLayoutPanel21.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            flowLayoutPanel21.Controls.Add(label11);
+            flowLayoutPanel21.Controls.Add(textBoxCoilAddress);
+            flowLayoutPanel21.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            flowLayoutPanel21.Location = new System.Drawing.Point(3, 3);
+            flowLayoutPanel21.Name = "flowLayoutPanel21";
+            flowLayoutPanel21.Size = new System.Drawing.Size(96, 44);
+            flowLayoutPanel21.TabIndex = 7;
             // 
             // label11
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(3, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(49, 15);
-            this.label11.TabIndex = 0;
-            this.label11.Text = "Address";
+            label11.AutoSize = true;
+            label11.Location = new System.Drawing.Point(3, 0);
+            label11.Name = "label11";
+            label11.Size = new System.Drawing.Size(49, 15);
+            label11.TabIndex = 0;
+            label11.Text = "Address";
             // 
             // textBoxCoilAddress
             // 
-            this.textBoxCoilAddress.Location = new System.Drawing.Point(3, 18);
-            this.textBoxCoilAddress.Name = "textBoxCoilAddress";
-            this.textBoxCoilAddress.Size = new System.Drawing.Size(90, 23);
-            this.textBoxCoilAddress.TabIndex = 3;
+            textBoxCoilAddress.Location = new System.Drawing.Point(3, 18);
+            textBoxCoilAddress.Name = "textBoxCoilAddress";
+            textBoxCoilAddress.Size = new System.Drawing.Size(90, 23);
+            textBoxCoilAddress.TabIndex = 3;
             // 
             // checkBoxCoilValue
             // 
-            this.checkBoxCoilValue.AutoSize = true;
-            this.checkBoxCoilValue.Location = new System.Drawing.Point(3, 53);
-            this.checkBoxCoilValue.Name = "checkBoxCoilValue";
-            this.checkBoxCoilValue.Size = new System.Drawing.Size(54, 19);
-            this.checkBoxCoilValue.TabIndex = 11;
-            this.checkBoxCoilValue.Text = "Value";
-            this.checkBoxCoilValue.UseVisualStyleBackColor = true;
+            checkBoxCoilValue.AutoSize = true;
+            checkBoxCoilValue.Location = new System.Drawing.Point(3, 53);
+            checkBoxCoilValue.Name = "checkBoxCoilValue";
+            checkBoxCoilValue.Size = new System.Drawing.Size(54, 19);
+            checkBoxCoilValue.TabIndex = 11;
+            checkBoxCoilValue.Text = "Value";
+            checkBoxCoilValue.UseVisualStyleBackColor = true;
             // 
             // buttonCoilWrite
             // 
-            this.buttonCoilWrite.Location = new System.Drawing.Point(3, 78);
-            this.buttonCoilWrite.Name = "buttonCoilWrite";
-            this.buttonCoilWrite.Size = new System.Drawing.Size(90, 23);
-            this.buttonCoilWrite.TabIndex = 10;
-            this.buttonCoilWrite.Text = "Write";
-            this.buttonCoilWrite.UseVisualStyleBackColor = true;
+            buttonCoilWrite.Location = new System.Drawing.Point(3, 78);
+            buttonCoilWrite.Name = "buttonCoilWrite";
+            buttonCoilWrite.Size = new System.Drawing.Size(90, 23);
+            buttonCoilWrite.TabIndex = 10;
+            buttonCoilWrite.Text = "Write";
+            buttonCoilWrite.UseVisualStyleBackColor = true;
             // 
             // groupBox3
             // 
-            this.groupBox3.AutoSize = true;
-            this.groupBox3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.groupBox3.Controls.Add(this.flowLayoutPanel16);
-            this.groupBox3.Location = new System.Drawing.Point(288, 3);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(165, 293);
-            this.groupBox3.TabIndex = 10;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Discrete inputs";
+            groupBox3.AutoSize = true;
+            groupBox3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            groupBox3.Controls.Add(flowLayoutPanel16);
+            groupBox3.Location = new System.Drawing.Point(288, 3);
+            groupBox3.Name = "groupBox3";
+            groupBox3.Size = new System.Drawing.Size(165, 293);
+            groupBox3.TabIndex = 10;
+            groupBox3.TabStop = false;
+            groupBox3.Text = "Discrete inputs";
             // 
             // flowLayoutPanel16
             // 
-            this.flowLayoutPanel16.AutoSize = true;
-            this.flowLayoutPanel16.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.flowLayoutPanel16.Controls.Add(this.flowLayoutPanel26);
-            this.flowLayoutPanel16.Controls.Add(this.dataGridViewDiscreteInputsValues);
-            this.flowLayoutPanel16.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel16.Location = new System.Drawing.Point(3, 19);
-            this.flowLayoutPanel16.Name = "flowLayoutPanel16";
-            this.flowLayoutPanel16.Size = new System.Drawing.Size(159, 271);
-            this.flowLayoutPanel16.TabIndex = 0;
+            flowLayoutPanel16.AutoSize = true;
+            flowLayoutPanel16.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            flowLayoutPanel16.Controls.Add(flowLayoutPanel26);
+            flowLayoutPanel16.Controls.Add(dataGridViewDiscreteInputsValues);
+            flowLayoutPanel16.Dock = System.Windows.Forms.DockStyle.Fill;
+            flowLayoutPanel16.Location = new System.Drawing.Point(3, 19);
+            flowLayoutPanel16.Name = "flowLayoutPanel16";
+            flowLayoutPanel16.Size = new System.Drawing.Size(159, 271);
+            flowLayoutPanel16.TabIndex = 0;
             // 
             // flowLayoutPanel26
             // 
-            this.flowLayoutPanel26.AutoSize = true;
-            this.flowLayoutPanel26.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.flowLayoutPanel26.Controls.Add(this.flowLayoutPanel27);
-            this.flowLayoutPanel26.Controls.Add(this.flowLayoutPanel28);
-            this.flowLayoutPanel26.Controls.Add(this.buttonDiscreteInputsRead);
-            this.flowLayoutPanel26.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel26.Location = new System.Drawing.Point(3, 3);
-            this.flowLayoutPanel26.Name = "flowLayoutPanel26";
-            this.flowLayoutPanel26.Size = new System.Drawing.Size(102, 129);
-            this.flowLayoutPanel26.TabIndex = 1;
+            flowLayoutPanel26.AutoSize = true;
+            flowLayoutPanel26.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            flowLayoutPanel26.Controls.Add(flowLayoutPanel27);
+            flowLayoutPanel26.Controls.Add(flowLayoutPanel28);
+            flowLayoutPanel26.Controls.Add(buttonDiscreteInputsRead);
+            flowLayoutPanel26.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            flowLayoutPanel26.Location = new System.Drawing.Point(3, 3);
+            flowLayoutPanel26.Name = "flowLayoutPanel26";
+            flowLayoutPanel26.Size = new System.Drawing.Size(102, 129);
+            flowLayoutPanel26.TabIndex = 1;
             // 
             // flowLayoutPanel27
             // 
-            this.flowLayoutPanel27.AutoSize = true;
-            this.flowLayoutPanel27.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.flowLayoutPanel27.Controls.Add(this.label12);
-            this.flowLayoutPanel27.Controls.Add(this.textBoxDiscreteInputsAddress);
-            this.flowLayoutPanel27.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel27.Location = new System.Drawing.Point(3, 3);
-            this.flowLayoutPanel27.Name = "flowLayoutPanel27";
-            this.flowLayoutPanel27.Size = new System.Drawing.Size(96, 44);
-            this.flowLayoutPanel27.TabIndex = 7;
+            flowLayoutPanel27.AutoSize = true;
+            flowLayoutPanel27.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            flowLayoutPanel27.Controls.Add(label12);
+            flowLayoutPanel27.Controls.Add(textBoxDiscreteInputsAddress);
+            flowLayoutPanel27.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            flowLayoutPanel27.Location = new System.Drawing.Point(3, 3);
+            flowLayoutPanel27.Name = "flowLayoutPanel27";
+            flowLayoutPanel27.Size = new System.Drawing.Size(96, 44);
+            flowLayoutPanel27.TabIndex = 7;
             // 
             // label12
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(3, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(49, 15);
-            this.label12.TabIndex = 0;
-            this.label12.Text = "Address";
+            label12.AutoSize = true;
+            label12.Location = new System.Drawing.Point(3, 0);
+            label12.Name = "label12";
+            label12.Size = new System.Drawing.Size(49, 15);
+            label12.TabIndex = 0;
+            label12.Text = "Address";
             // 
             // textBoxDiscreteInputsAddress
             // 
-            this.textBoxDiscreteInputsAddress.Location = new System.Drawing.Point(3, 18);
-            this.textBoxDiscreteInputsAddress.Name = "textBoxDiscreteInputsAddress";
-            this.textBoxDiscreteInputsAddress.Size = new System.Drawing.Size(90, 23);
-            this.textBoxDiscreteInputsAddress.TabIndex = 3;
+            textBoxDiscreteInputsAddress.Location = new System.Drawing.Point(3, 18);
+            textBoxDiscreteInputsAddress.Name = "textBoxDiscreteInputsAddress";
+            textBoxDiscreteInputsAddress.Size = new System.Drawing.Size(90, 23);
+            textBoxDiscreteInputsAddress.TabIndex = 3;
             // 
             // flowLayoutPanel28
             // 
-            this.flowLayoutPanel28.AutoSize = true;
-            this.flowLayoutPanel28.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.flowLayoutPanel28.Controls.Add(this.label16);
-            this.flowLayoutPanel28.Controls.Add(this.textBoxDiscreteInputsCount);
-            this.flowLayoutPanel28.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel28.Location = new System.Drawing.Point(3, 53);
-            this.flowLayoutPanel28.Name = "flowLayoutPanel28";
-            this.flowLayoutPanel28.Size = new System.Drawing.Size(96, 44);
-            this.flowLayoutPanel28.TabIndex = 8;
+            flowLayoutPanel28.AutoSize = true;
+            flowLayoutPanel28.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            flowLayoutPanel28.Controls.Add(label16);
+            flowLayoutPanel28.Controls.Add(textBoxDiscreteInputsCount);
+            flowLayoutPanel28.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            flowLayoutPanel28.Location = new System.Drawing.Point(3, 53);
+            flowLayoutPanel28.Name = "flowLayoutPanel28";
+            flowLayoutPanel28.Size = new System.Drawing.Size(96, 44);
+            flowLayoutPanel28.TabIndex = 8;
             // 
             // label16
             // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(3, 0);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(40, 15);
-            this.label16.TabIndex = 0;
-            this.label16.Text = "Count";
+            label16.AutoSize = true;
+            label16.Location = new System.Drawing.Point(3, 0);
+            label16.Name = "label16";
+            label16.Size = new System.Drawing.Size(40, 15);
+            label16.TabIndex = 0;
+            label16.Text = "Count";
             // 
             // textBoxDiscreteInputsCount
             // 
-            this.textBoxDiscreteInputsCount.Location = new System.Drawing.Point(3, 18);
-            this.textBoxDiscreteInputsCount.Name = "textBoxDiscreteInputsCount";
-            this.textBoxDiscreteInputsCount.Size = new System.Drawing.Size(90, 23);
-            this.textBoxDiscreteInputsCount.TabIndex = 3;
+            textBoxDiscreteInputsCount.Location = new System.Drawing.Point(3, 18);
+            textBoxDiscreteInputsCount.Name = "textBoxDiscreteInputsCount";
+            textBoxDiscreteInputsCount.Size = new System.Drawing.Size(90, 23);
+            textBoxDiscreteInputsCount.TabIndex = 3;
             // 
             // buttonDiscreteInputsRead
             // 
-            this.buttonDiscreteInputsRead.Location = new System.Drawing.Point(3, 103);
-            this.buttonDiscreteInputsRead.Name = "buttonDiscreteInputsRead";
-            this.buttonDiscreteInputsRead.Size = new System.Drawing.Size(90, 23);
-            this.buttonDiscreteInputsRead.TabIndex = 4;
-            this.buttonDiscreteInputsRead.Text = "Read";
-            this.buttonDiscreteInputsRead.UseVisualStyleBackColor = true;
+            buttonDiscreteInputsRead.Location = new System.Drawing.Point(3, 103);
+            buttonDiscreteInputsRead.Name = "buttonDiscreteInputsRead";
+            buttonDiscreteInputsRead.Size = new System.Drawing.Size(90, 23);
+            buttonDiscreteInputsRead.TabIndex = 4;
+            buttonDiscreteInputsRead.Text = "Read";
+            buttonDiscreteInputsRead.UseVisualStyleBackColor = true;
             // 
             // dataGridViewDiscreteInputsValues
             // 
-            this.dataGridViewDiscreteInputsValues.AllowUserToAddRows = false;
-            this.dataGridViewDiscreteInputsValues.AllowUserToDeleteRows = false;
-            this.dataGridViewDiscreteInputsValues.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dataGridViewDiscreteInputsValues.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewDiscreteInputsValues.ColumnHeadersVisible = false;
-            this.dataGridViewDiscreteInputsValues.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.columnDiscreteInputs});
-            this.dataGridViewDiscreteInputsValues.Location = new System.Drawing.Point(111, 3);
-            this.dataGridViewDiscreteInputsValues.Name = "dataGridViewDiscreteInputsValues";
-            this.dataGridViewDiscreteInputsValues.ReadOnly = true;
-            this.dataGridViewDiscreteInputsValues.RowHeadersVisible = false;
-            this.dataGridViewDiscreteInputsValues.RowTemplate.Height = 25;
-            this.dataGridViewDiscreteInputsValues.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dataGridViewDiscreteInputsValues.Size = new System.Drawing.Size(45, 265);
-            this.dataGridViewDiscreteInputsValues.TabIndex = 0;
+            dataGridViewDiscreteInputsValues.AllowUserToAddRows = false;
+            dataGridViewDiscreteInputsValues.AllowUserToDeleteRows = false;
+            dataGridViewDiscreteInputsValues.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            dataGridViewDiscreteInputsValues.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewDiscreteInputsValues.ColumnHeadersVisible = false;
+            dataGridViewDiscreteInputsValues.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { columnDiscreteInputs });
+            dataGridViewDiscreteInputsValues.Location = new System.Drawing.Point(111, 3);
+            dataGridViewDiscreteInputsValues.Name = "dataGridViewDiscreteInputsValues";
+            dataGridViewDiscreteInputsValues.ReadOnly = true;
+            dataGridViewDiscreteInputsValues.RowHeadersVisible = false;
+            dataGridViewDiscreteInputsValues.RowTemplate.Height = 25;
+            dataGridViewDiscreteInputsValues.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            dataGridViewDiscreteInputsValues.Size = new System.Drawing.Size(45, 265);
+            dataGridViewDiscreteInputsValues.TabIndex = 0;
             // 
             // columnDiscreteInputs
             // 
-            this.columnDiscreteInputs.HeaderText = "Column1";
-            this.columnDiscreteInputs.Name = "columnDiscreteInputs";
-            this.columnDiscreteInputs.ReadOnly = true;
-            this.columnDiscreteInputs.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.columnDiscreteInputs.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.columnDiscreteInputs.Width = 5;
+            columnDiscreteInputs.HeaderText = "Column1";
+            columnDiscreteInputs.Name = "columnDiscreteInputs";
+            columnDiscreteInputs.ReadOnly = true;
+            columnDiscreteInputs.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            columnDiscreteInputs.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            columnDiscreteInputs.Width = 5;
             // 
             // groupBox4
             // 
-            this.groupBox4.AutoSize = true;
-            this.groupBox4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.groupBox4.Controls.Add(this.flowLayoutPanel29);
-            this.groupBox4.Location = new System.Drawing.Point(459, 3);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(180, 293);
-            this.groupBox4.TabIndex = 11;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Holding registers";
+            groupBox4.AutoSize = true;
+            groupBox4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            groupBox4.Controls.Add(flowLayoutPanel29);
+            groupBox4.Location = new System.Drawing.Point(459, 3);
+            groupBox4.Name = "groupBox4";
+            groupBox4.Size = new System.Drawing.Size(180, 293);
+            groupBox4.TabIndex = 11;
+            groupBox4.TabStop = false;
+            groupBox4.Text = "Holding registers";
             // 
             // flowLayoutPanel29
             // 
-            this.flowLayoutPanel29.AutoSize = true;
-            this.flowLayoutPanel29.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.flowLayoutPanel29.Controls.Add(this.flowLayoutPanel30);
-            this.flowLayoutPanel29.Controls.Add(this.dataGridViewHoldingRegistersValues);
-            this.flowLayoutPanel29.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel29.Location = new System.Drawing.Point(3, 19);
-            this.flowLayoutPanel29.Name = "flowLayoutPanel29";
-            this.flowLayoutPanel29.Size = new System.Drawing.Size(174, 271);
-            this.flowLayoutPanel29.TabIndex = 0;
+            flowLayoutPanel29.AutoSize = true;
+            flowLayoutPanel29.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            flowLayoutPanel29.Controls.Add(flowLayoutPanel30);
+            flowLayoutPanel29.Controls.Add(dataGridViewHoldingRegistersValues);
+            flowLayoutPanel29.Dock = System.Windows.Forms.DockStyle.Fill;
+            flowLayoutPanel29.Location = new System.Drawing.Point(3, 19);
+            flowLayoutPanel29.Name = "flowLayoutPanel29";
+            flowLayoutPanel29.Size = new System.Drawing.Size(174, 271);
+            flowLayoutPanel29.TabIndex = 0;
             // 
             // flowLayoutPanel30
             // 
-            this.flowLayoutPanel30.AutoSize = true;
-            this.flowLayoutPanel30.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.flowLayoutPanel30.Controls.Add(this.flowLayoutPanel31);
-            this.flowLayoutPanel30.Controls.Add(this.flowLayoutPanel32);
-            this.flowLayoutPanel30.Controls.Add(this.buttonHoldingRegistersRead);
-            this.flowLayoutPanel30.Controls.Add(this.buttonHoldingRegistersWrite);
-            this.flowLayoutPanel30.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel30.Location = new System.Drawing.Point(3, 3);
-            this.flowLayoutPanel30.Name = "flowLayoutPanel30";
-            this.flowLayoutPanel30.Size = new System.Drawing.Size(102, 158);
-            this.flowLayoutPanel30.TabIndex = 1;
+            flowLayoutPanel30.AutoSize = true;
+            flowLayoutPanel30.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            flowLayoutPanel30.Controls.Add(flowLayoutPanel31);
+            flowLayoutPanel30.Controls.Add(flowLayoutPanel32);
+            flowLayoutPanel30.Controls.Add(buttonHoldingRegistersRead);
+            flowLayoutPanel30.Controls.Add(buttonHoldingRegistersWrite);
+            flowLayoutPanel30.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            flowLayoutPanel30.Location = new System.Drawing.Point(3, 3);
+            flowLayoutPanel30.Name = "flowLayoutPanel30";
+            flowLayoutPanel30.Size = new System.Drawing.Size(102, 158);
+            flowLayoutPanel30.TabIndex = 1;
             // 
             // flowLayoutPanel31
             // 
-            this.flowLayoutPanel31.AutoSize = true;
-            this.flowLayoutPanel31.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.flowLayoutPanel31.Controls.Add(this.label19);
-            this.flowLayoutPanel31.Controls.Add(this.textBoxHoldingRegistersAddress);
-            this.flowLayoutPanel31.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel31.Location = new System.Drawing.Point(3, 3);
-            this.flowLayoutPanel31.Name = "flowLayoutPanel31";
-            this.flowLayoutPanel31.Size = new System.Drawing.Size(96, 44);
-            this.flowLayoutPanel31.TabIndex = 7;
+            flowLayoutPanel31.AutoSize = true;
+            flowLayoutPanel31.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            flowLayoutPanel31.Controls.Add(label19);
+            flowLayoutPanel31.Controls.Add(textBoxHoldingRegistersAddress);
+            flowLayoutPanel31.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            flowLayoutPanel31.Location = new System.Drawing.Point(3, 3);
+            flowLayoutPanel31.Name = "flowLayoutPanel31";
+            flowLayoutPanel31.Size = new System.Drawing.Size(96, 44);
+            flowLayoutPanel31.TabIndex = 7;
             // 
             // label19
             // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(3, 0);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(49, 15);
-            this.label19.TabIndex = 0;
-            this.label19.Text = "Address";
+            label19.AutoSize = true;
+            label19.Location = new System.Drawing.Point(3, 0);
+            label19.Name = "label19";
+            label19.Size = new System.Drawing.Size(49, 15);
+            label19.TabIndex = 0;
+            label19.Text = "Address";
             // 
             // textBoxHoldingRegistersAddress
             // 
-            this.textBoxHoldingRegistersAddress.Location = new System.Drawing.Point(3, 18);
-            this.textBoxHoldingRegistersAddress.Name = "textBoxHoldingRegistersAddress";
-            this.textBoxHoldingRegistersAddress.Size = new System.Drawing.Size(90, 23);
-            this.textBoxHoldingRegistersAddress.TabIndex = 3;
+            textBoxHoldingRegistersAddress.Location = new System.Drawing.Point(3, 18);
+            textBoxHoldingRegistersAddress.Name = "textBoxHoldingRegistersAddress";
+            textBoxHoldingRegistersAddress.Size = new System.Drawing.Size(90, 23);
+            textBoxHoldingRegistersAddress.TabIndex = 3;
             // 
             // flowLayoutPanel32
             // 
-            this.flowLayoutPanel32.AutoSize = true;
-            this.flowLayoutPanel32.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.flowLayoutPanel32.Controls.Add(this.label20);
-            this.flowLayoutPanel32.Controls.Add(this.textBoxHoldingRegistersCount);
-            this.flowLayoutPanel32.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel32.Location = new System.Drawing.Point(3, 53);
-            this.flowLayoutPanel32.Name = "flowLayoutPanel32";
-            this.flowLayoutPanel32.Size = new System.Drawing.Size(96, 44);
-            this.flowLayoutPanel32.TabIndex = 8;
+            flowLayoutPanel32.AutoSize = true;
+            flowLayoutPanel32.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            flowLayoutPanel32.Controls.Add(label20);
+            flowLayoutPanel32.Controls.Add(textBoxHoldingRegistersCount);
+            flowLayoutPanel32.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            flowLayoutPanel32.Location = new System.Drawing.Point(3, 53);
+            flowLayoutPanel32.Name = "flowLayoutPanel32";
+            flowLayoutPanel32.Size = new System.Drawing.Size(96, 44);
+            flowLayoutPanel32.TabIndex = 8;
             // 
             // label20
             // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(3, 0);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(40, 15);
-            this.label20.TabIndex = 0;
-            this.label20.Text = "Count";
+            label20.AutoSize = true;
+            label20.Location = new System.Drawing.Point(3, 0);
+            label20.Name = "label20";
+            label20.Size = new System.Drawing.Size(40, 15);
+            label20.TabIndex = 0;
+            label20.Text = "Count";
             // 
             // textBoxHoldingRegistersCount
             // 
-            this.textBoxHoldingRegistersCount.Location = new System.Drawing.Point(3, 18);
-            this.textBoxHoldingRegistersCount.Name = "textBoxHoldingRegistersCount";
-            this.textBoxHoldingRegistersCount.Size = new System.Drawing.Size(90, 23);
-            this.textBoxHoldingRegistersCount.TabIndex = 3;
+            textBoxHoldingRegistersCount.Location = new System.Drawing.Point(3, 18);
+            textBoxHoldingRegistersCount.Name = "textBoxHoldingRegistersCount";
+            textBoxHoldingRegistersCount.Size = new System.Drawing.Size(90, 23);
+            textBoxHoldingRegistersCount.TabIndex = 3;
             // 
             // buttonHoldingRegistersRead
             // 
-            this.buttonHoldingRegistersRead.Location = new System.Drawing.Point(3, 103);
-            this.buttonHoldingRegistersRead.Name = "buttonHoldingRegistersRead";
-            this.buttonHoldingRegistersRead.Size = new System.Drawing.Size(90, 23);
-            this.buttonHoldingRegistersRead.TabIndex = 4;
-            this.buttonHoldingRegistersRead.Text = "Read";
-            this.buttonHoldingRegistersRead.UseVisualStyleBackColor = true;
+            buttonHoldingRegistersRead.Location = new System.Drawing.Point(3, 103);
+            buttonHoldingRegistersRead.Name = "buttonHoldingRegistersRead";
+            buttonHoldingRegistersRead.Size = new System.Drawing.Size(90, 23);
+            buttonHoldingRegistersRead.TabIndex = 4;
+            buttonHoldingRegistersRead.Text = "Read";
+            buttonHoldingRegistersRead.UseVisualStyleBackColor = true;
             // 
             // buttonHoldingRegistersWrite
             // 
-            this.buttonHoldingRegistersWrite.Location = new System.Drawing.Point(3, 132);
-            this.buttonHoldingRegistersWrite.Name = "buttonHoldingRegistersWrite";
-            this.buttonHoldingRegistersWrite.Size = new System.Drawing.Size(90, 23);
-            this.buttonHoldingRegistersWrite.TabIndex = 10;
-            this.buttonHoldingRegistersWrite.Text = "Write";
-            this.buttonHoldingRegistersWrite.UseVisualStyleBackColor = true;
+            buttonHoldingRegistersWrite.Location = new System.Drawing.Point(3, 132);
+            buttonHoldingRegistersWrite.Name = "buttonHoldingRegistersWrite";
+            buttonHoldingRegistersWrite.Size = new System.Drawing.Size(90, 23);
+            buttonHoldingRegistersWrite.TabIndex = 10;
+            buttonHoldingRegistersWrite.Text = "Write";
+            buttonHoldingRegistersWrite.UseVisualStyleBackColor = true;
             // 
             // dataGridViewHoldingRegistersValues
             // 
-            this.dataGridViewHoldingRegistersValues.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dataGridViewHoldingRegistersValues.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewHoldingRegistersValues.ColumnHeadersVisible = false;
-            this.dataGridViewHoldingRegistersValues.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.columnHoldingRegisters});
-            this.dataGridViewHoldingRegistersValues.Location = new System.Drawing.Point(111, 3);
-            this.dataGridViewHoldingRegistersValues.Name = "dataGridViewHoldingRegistersValues";
-            this.dataGridViewHoldingRegistersValues.RowHeadersVisible = false;
-            this.dataGridViewHoldingRegistersValues.RowTemplate.Height = 25;
-            this.dataGridViewHoldingRegistersValues.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dataGridViewHoldingRegistersValues.Size = new System.Drawing.Size(60, 265);
-            this.dataGridViewHoldingRegistersValues.TabIndex = 0;
+            dataGridViewHoldingRegistersValues.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            dataGridViewHoldingRegistersValues.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewHoldingRegistersValues.ColumnHeadersVisible = false;
+            dataGridViewHoldingRegistersValues.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { columnHoldingRegisters });
+            dataGridViewHoldingRegistersValues.Location = new System.Drawing.Point(111, 3);
+            dataGridViewHoldingRegistersValues.Name = "dataGridViewHoldingRegistersValues";
+            dataGridViewHoldingRegistersValues.RowHeadersVisible = false;
+            dataGridViewHoldingRegistersValues.RowTemplate.Height = 25;
+            dataGridViewHoldingRegistersValues.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            dataGridViewHoldingRegistersValues.Size = new System.Drawing.Size(60, 265);
+            dataGridViewHoldingRegistersValues.TabIndex = 0;
             // 
             // columnHoldingRegisters
             // 
-            this.columnHoldingRegisters.HeaderText = "Column1";
-            this.columnHoldingRegisters.Name = "columnHoldingRegisters";
-            this.columnHoldingRegisters.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.columnHoldingRegisters.Width = 21;
+            columnHoldingRegisters.HeaderText = "Column1";
+            columnHoldingRegisters.Name = "columnHoldingRegisters";
+            columnHoldingRegisters.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            columnHoldingRegisters.Width = 21;
             // 
             // groupBox5
             // 
-            this.groupBox5.AutoSize = true;
-            this.groupBox5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.groupBox5.Controls.Add(this.flowLayoutPanel33);
-            this.groupBox5.Location = new System.Drawing.Point(645, 3);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(108, 151);
-            this.groupBox5.TabIndex = 12;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Holding register";
+            groupBox5.AutoSize = true;
+            groupBox5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            groupBox5.Controls.Add(flowLayoutPanel33);
+            groupBox5.Location = new System.Drawing.Point(645, 3);
+            groupBox5.Name = "groupBox5";
+            groupBox5.Size = new System.Drawing.Size(108, 151);
+            groupBox5.TabIndex = 12;
+            groupBox5.TabStop = false;
+            groupBox5.Text = "Holding register";
             // 
             // flowLayoutPanel33
             // 
-            this.flowLayoutPanel33.AutoSize = true;
-            this.flowLayoutPanel33.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.flowLayoutPanel33.Controls.Add(this.flowLayoutPanel34);
-            this.flowLayoutPanel33.Controls.Add(this.flowLayoutPanel39);
-            this.flowLayoutPanel33.Controls.Add(this.buttonHoldingRegisterWrite);
-            this.flowLayoutPanel33.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel33.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel33.Location = new System.Drawing.Point(3, 19);
-            this.flowLayoutPanel33.Name = "flowLayoutPanel33";
-            this.flowLayoutPanel33.Size = new System.Drawing.Size(102, 129);
-            this.flowLayoutPanel33.TabIndex = 1;
+            flowLayoutPanel33.AutoSize = true;
+            flowLayoutPanel33.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            flowLayoutPanel33.Controls.Add(flowLayoutPanel34);
+            flowLayoutPanel33.Controls.Add(flowLayoutPanel39);
+            flowLayoutPanel33.Controls.Add(buttonHoldingRegisterWrite);
+            flowLayoutPanel33.Dock = System.Windows.Forms.DockStyle.Fill;
+            flowLayoutPanel33.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            flowLayoutPanel33.Location = new System.Drawing.Point(3, 19);
+            flowLayoutPanel33.Name = "flowLayoutPanel33";
+            flowLayoutPanel33.Size = new System.Drawing.Size(102, 129);
+            flowLayoutPanel33.TabIndex = 1;
             // 
             // flowLayoutPanel34
             // 
-            this.flowLayoutPanel34.AutoSize = true;
-            this.flowLayoutPanel34.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.flowLayoutPanel34.Controls.Add(this.label21);
-            this.flowLayoutPanel34.Controls.Add(this.textBoxHoldingRegisterAddress);
-            this.flowLayoutPanel34.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel34.Location = new System.Drawing.Point(3, 3);
-            this.flowLayoutPanel34.Name = "flowLayoutPanel34";
-            this.flowLayoutPanel34.Size = new System.Drawing.Size(96, 44);
-            this.flowLayoutPanel34.TabIndex = 7;
+            flowLayoutPanel34.AutoSize = true;
+            flowLayoutPanel34.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            flowLayoutPanel34.Controls.Add(label21);
+            flowLayoutPanel34.Controls.Add(textBoxHoldingRegisterAddress);
+            flowLayoutPanel34.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            flowLayoutPanel34.Location = new System.Drawing.Point(3, 3);
+            flowLayoutPanel34.Name = "flowLayoutPanel34";
+            flowLayoutPanel34.Size = new System.Drawing.Size(96, 44);
+            flowLayoutPanel34.TabIndex = 7;
             // 
             // label21
             // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(3, 0);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(49, 15);
-            this.label21.TabIndex = 0;
-            this.label21.Text = "Address";
+            label21.AutoSize = true;
+            label21.Location = new System.Drawing.Point(3, 0);
+            label21.Name = "label21";
+            label21.Size = new System.Drawing.Size(49, 15);
+            label21.TabIndex = 0;
+            label21.Text = "Address";
             // 
             // textBoxHoldingRegisterAddress
             // 
-            this.textBoxHoldingRegisterAddress.Location = new System.Drawing.Point(3, 18);
-            this.textBoxHoldingRegisterAddress.Name = "textBoxHoldingRegisterAddress";
-            this.textBoxHoldingRegisterAddress.Size = new System.Drawing.Size(90, 23);
-            this.textBoxHoldingRegisterAddress.TabIndex = 3;
+            textBoxHoldingRegisterAddress.Location = new System.Drawing.Point(3, 18);
+            textBoxHoldingRegisterAddress.Name = "textBoxHoldingRegisterAddress";
+            textBoxHoldingRegisterAddress.Size = new System.Drawing.Size(90, 23);
+            textBoxHoldingRegisterAddress.TabIndex = 3;
             // 
             // flowLayoutPanel39
             // 
-            this.flowLayoutPanel39.AutoSize = true;
-            this.flowLayoutPanel39.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.flowLayoutPanel39.Controls.Add(this.label24);
-            this.flowLayoutPanel39.Controls.Add(this.textBoxHoldingRegisterValue);
-            this.flowLayoutPanel39.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel39.Location = new System.Drawing.Point(3, 53);
-            this.flowLayoutPanel39.Name = "flowLayoutPanel39";
-            this.flowLayoutPanel39.Size = new System.Drawing.Size(96, 44);
-            this.flowLayoutPanel39.TabIndex = 12;
+            flowLayoutPanel39.AutoSize = true;
+            flowLayoutPanel39.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            flowLayoutPanel39.Controls.Add(label24);
+            flowLayoutPanel39.Controls.Add(textBoxHoldingRegisterValue);
+            flowLayoutPanel39.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            flowLayoutPanel39.Location = new System.Drawing.Point(3, 53);
+            flowLayoutPanel39.Name = "flowLayoutPanel39";
+            flowLayoutPanel39.Size = new System.Drawing.Size(96, 44);
+            flowLayoutPanel39.TabIndex = 12;
             // 
             // label24
             // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(3, 0);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(35, 15);
-            this.label24.TabIndex = 0;
-            this.label24.Text = "Value";
+            label24.AutoSize = true;
+            label24.Location = new System.Drawing.Point(3, 0);
+            label24.Name = "label24";
+            label24.Size = new System.Drawing.Size(35, 15);
+            label24.TabIndex = 0;
+            label24.Text = "Value";
             // 
             // textBoxHoldingRegisterValue
             // 
-            this.textBoxHoldingRegisterValue.Location = new System.Drawing.Point(3, 18);
-            this.textBoxHoldingRegisterValue.Name = "textBoxHoldingRegisterValue";
-            this.textBoxHoldingRegisterValue.Size = new System.Drawing.Size(90, 23);
-            this.textBoxHoldingRegisterValue.TabIndex = 3;
+            textBoxHoldingRegisterValue.Location = new System.Drawing.Point(3, 18);
+            textBoxHoldingRegisterValue.Name = "textBoxHoldingRegisterValue";
+            textBoxHoldingRegisterValue.Size = new System.Drawing.Size(90, 23);
+            textBoxHoldingRegisterValue.TabIndex = 3;
             // 
             // buttonHoldingRegisterWrite
             // 
-            this.buttonHoldingRegisterWrite.Location = new System.Drawing.Point(3, 103);
-            this.buttonHoldingRegisterWrite.Name = "buttonHoldingRegisterWrite";
-            this.buttonHoldingRegisterWrite.Size = new System.Drawing.Size(90, 23);
-            this.buttonHoldingRegisterWrite.TabIndex = 10;
-            this.buttonHoldingRegisterWrite.Text = "Write";
-            this.buttonHoldingRegisterWrite.UseVisualStyleBackColor = true;
+            buttonHoldingRegisterWrite.Location = new System.Drawing.Point(3, 103);
+            buttonHoldingRegisterWrite.Name = "buttonHoldingRegisterWrite";
+            buttonHoldingRegisterWrite.Size = new System.Drawing.Size(90, 23);
+            buttonHoldingRegisterWrite.TabIndex = 10;
+            buttonHoldingRegisterWrite.Text = "Write";
+            buttonHoldingRegisterWrite.UseVisualStyleBackColor = true;
             // 
             // groupBox6
             // 
-            this.groupBox6.AutoSize = true;
-            this.groupBox6.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.groupBox6.Controls.Add(this.flowLayoutPanel35);
-            this.groupBox6.Location = new System.Drawing.Point(759, 3);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(180, 293);
-            this.groupBox6.TabIndex = 13;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "Input registers";
+            groupBox6.AutoSize = true;
+            groupBox6.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            groupBox6.Controls.Add(flowLayoutPanel35);
+            groupBox6.Location = new System.Drawing.Point(759, 3);
+            groupBox6.Name = "groupBox6";
+            groupBox6.Size = new System.Drawing.Size(180, 293);
+            groupBox6.TabIndex = 13;
+            groupBox6.TabStop = false;
+            groupBox6.Text = "Input registers";
             // 
             // flowLayoutPanel35
             // 
-            this.flowLayoutPanel35.AutoSize = true;
-            this.flowLayoutPanel35.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.flowLayoutPanel35.Controls.Add(this.flowLayoutPanel36);
-            this.flowLayoutPanel35.Controls.Add(this.dataGridViewInputRegistersValues);
-            this.flowLayoutPanel35.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel35.Location = new System.Drawing.Point(3, 19);
-            this.flowLayoutPanel35.Name = "flowLayoutPanel35";
-            this.flowLayoutPanel35.Size = new System.Drawing.Size(174, 271);
-            this.flowLayoutPanel35.TabIndex = 0;
+            flowLayoutPanel35.AutoSize = true;
+            flowLayoutPanel35.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            flowLayoutPanel35.Controls.Add(flowLayoutPanel36);
+            flowLayoutPanel35.Controls.Add(dataGridViewInputRegistersValues);
+            flowLayoutPanel35.Dock = System.Windows.Forms.DockStyle.Fill;
+            flowLayoutPanel35.Location = new System.Drawing.Point(3, 19);
+            flowLayoutPanel35.Name = "flowLayoutPanel35";
+            flowLayoutPanel35.Size = new System.Drawing.Size(174, 271);
+            flowLayoutPanel35.TabIndex = 0;
             // 
             // flowLayoutPanel36
             // 
-            this.flowLayoutPanel36.AutoSize = true;
-            this.flowLayoutPanel36.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.flowLayoutPanel36.Controls.Add(this.flowLayoutPanel37);
-            this.flowLayoutPanel36.Controls.Add(this.flowLayoutPanel38);
-            this.flowLayoutPanel36.Controls.Add(this.buttonInputRegistersRead);
-            this.flowLayoutPanel36.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel36.Location = new System.Drawing.Point(3, 3);
-            this.flowLayoutPanel36.Name = "flowLayoutPanel36";
-            this.flowLayoutPanel36.Size = new System.Drawing.Size(102, 129);
-            this.flowLayoutPanel36.TabIndex = 1;
+            flowLayoutPanel36.AutoSize = true;
+            flowLayoutPanel36.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            flowLayoutPanel36.Controls.Add(flowLayoutPanel37);
+            flowLayoutPanel36.Controls.Add(flowLayoutPanel38);
+            flowLayoutPanel36.Controls.Add(buttonInputRegistersRead);
+            flowLayoutPanel36.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            flowLayoutPanel36.Location = new System.Drawing.Point(3, 3);
+            flowLayoutPanel36.Name = "flowLayoutPanel36";
+            flowLayoutPanel36.Size = new System.Drawing.Size(102, 129);
+            flowLayoutPanel36.TabIndex = 1;
             // 
             // flowLayoutPanel37
             // 
-            this.flowLayoutPanel37.AutoSize = true;
-            this.flowLayoutPanel37.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.flowLayoutPanel37.Controls.Add(this.label22);
-            this.flowLayoutPanel37.Controls.Add(this.textBoxInputRegistersAddress);
-            this.flowLayoutPanel37.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel37.Location = new System.Drawing.Point(3, 3);
-            this.flowLayoutPanel37.Name = "flowLayoutPanel37";
-            this.flowLayoutPanel37.Size = new System.Drawing.Size(96, 44);
-            this.flowLayoutPanel37.TabIndex = 7;
+            flowLayoutPanel37.AutoSize = true;
+            flowLayoutPanel37.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            flowLayoutPanel37.Controls.Add(label22);
+            flowLayoutPanel37.Controls.Add(textBoxInputRegistersAddress);
+            flowLayoutPanel37.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            flowLayoutPanel37.Location = new System.Drawing.Point(3, 3);
+            flowLayoutPanel37.Name = "flowLayoutPanel37";
+            flowLayoutPanel37.Size = new System.Drawing.Size(96, 44);
+            flowLayoutPanel37.TabIndex = 7;
             // 
             // label22
             // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(3, 0);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(49, 15);
-            this.label22.TabIndex = 0;
-            this.label22.Text = "Address";
+            label22.AutoSize = true;
+            label22.Location = new System.Drawing.Point(3, 0);
+            label22.Name = "label22";
+            label22.Size = new System.Drawing.Size(49, 15);
+            label22.TabIndex = 0;
+            label22.Text = "Address";
             // 
             // textBoxInputRegistersAddress
             // 
-            this.textBoxInputRegistersAddress.Location = new System.Drawing.Point(3, 18);
-            this.textBoxInputRegistersAddress.Name = "textBoxInputRegistersAddress";
-            this.textBoxInputRegistersAddress.Size = new System.Drawing.Size(90, 23);
-            this.textBoxInputRegistersAddress.TabIndex = 3;
+            textBoxInputRegistersAddress.Location = new System.Drawing.Point(3, 18);
+            textBoxInputRegistersAddress.Name = "textBoxInputRegistersAddress";
+            textBoxInputRegistersAddress.Size = new System.Drawing.Size(90, 23);
+            textBoxInputRegistersAddress.TabIndex = 3;
             // 
             // flowLayoutPanel38
             // 
-            this.flowLayoutPanel38.AutoSize = true;
-            this.flowLayoutPanel38.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.flowLayoutPanel38.Controls.Add(this.label23);
-            this.flowLayoutPanel38.Controls.Add(this.textBoxInputRegistersCount);
-            this.flowLayoutPanel38.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel38.Location = new System.Drawing.Point(3, 53);
-            this.flowLayoutPanel38.Name = "flowLayoutPanel38";
-            this.flowLayoutPanel38.Size = new System.Drawing.Size(96, 44);
-            this.flowLayoutPanel38.TabIndex = 8;
+            flowLayoutPanel38.AutoSize = true;
+            flowLayoutPanel38.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            flowLayoutPanel38.Controls.Add(label23);
+            flowLayoutPanel38.Controls.Add(textBoxInputRegistersCount);
+            flowLayoutPanel38.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            flowLayoutPanel38.Location = new System.Drawing.Point(3, 53);
+            flowLayoutPanel38.Name = "flowLayoutPanel38";
+            flowLayoutPanel38.Size = new System.Drawing.Size(96, 44);
+            flowLayoutPanel38.TabIndex = 8;
             // 
             // label23
             // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(3, 0);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(40, 15);
-            this.label23.TabIndex = 0;
-            this.label23.Text = "Count";
+            label23.AutoSize = true;
+            label23.Location = new System.Drawing.Point(3, 0);
+            label23.Name = "label23";
+            label23.Size = new System.Drawing.Size(40, 15);
+            label23.TabIndex = 0;
+            label23.Text = "Count";
             // 
             // textBoxInputRegistersCount
             // 
-            this.textBoxInputRegistersCount.Location = new System.Drawing.Point(3, 18);
-            this.textBoxInputRegistersCount.Name = "textBoxInputRegistersCount";
-            this.textBoxInputRegistersCount.Size = new System.Drawing.Size(90, 23);
-            this.textBoxInputRegistersCount.TabIndex = 3;
+            textBoxInputRegistersCount.Location = new System.Drawing.Point(3, 18);
+            textBoxInputRegistersCount.Name = "textBoxInputRegistersCount";
+            textBoxInputRegistersCount.Size = new System.Drawing.Size(90, 23);
+            textBoxInputRegistersCount.TabIndex = 3;
             // 
             // buttonInputRegistersRead
             // 
-            this.buttonInputRegistersRead.Location = new System.Drawing.Point(3, 103);
-            this.buttonInputRegistersRead.Name = "buttonInputRegistersRead";
-            this.buttonInputRegistersRead.Size = new System.Drawing.Size(90, 23);
-            this.buttonInputRegistersRead.TabIndex = 4;
-            this.buttonInputRegistersRead.Text = "Read";
-            this.buttonInputRegistersRead.UseVisualStyleBackColor = true;
+            buttonInputRegistersRead.Location = new System.Drawing.Point(3, 103);
+            buttonInputRegistersRead.Name = "buttonInputRegistersRead";
+            buttonInputRegistersRead.Size = new System.Drawing.Size(90, 23);
+            buttonInputRegistersRead.TabIndex = 4;
+            buttonInputRegistersRead.Text = "Read";
+            buttonInputRegistersRead.UseVisualStyleBackColor = true;
             // 
             // dataGridViewInputRegistersValues
             // 
-            this.dataGridViewInputRegistersValues.AllowUserToAddRows = false;
-            this.dataGridViewInputRegistersValues.AllowUserToDeleteRows = false;
-            this.dataGridViewInputRegistersValues.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dataGridViewInputRegistersValues.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewInputRegistersValues.ColumnHeadersVisible = false;
-            this.dataGridViewInputRegistersValues.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.columnInputRegisters});
-            this.dataGridViewInputRegistersValues.Location = new System.Drawing.Point(111, 3);
-            this.dataGridViewInputRegistersValues.Name = "dataGridViewInputRegistersValues";
-            this.dataGridViewInputRegistersValues.ReadOnly = true;
-            this.dataGridViewInputRegistersValues.RowHeadersVisible = false;
-            this.dataGridViewInputRegistersValues.RowTemplate.Height = 25;
-            this.dataGridViewInputRegistersValues.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dataGridViewInputRegistersValues.Size = new System.Drawing.Size(60, 265);
-            this.dataGridViewInputRegistersValues.TabIndex = 0;
+            dataGridViewInputRegistersValues.AllowUserToAddRows = false;
+            dataGridViewInputRegistersValues.AllowUserToDeleteRows = false;
+            dataGridViewInputRegistersValues.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            dataGridViewInputRegistersValues.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewInputRegistersValues.ColumnHeadersVisible = false;
+            dataGridViewInputRegistersValues.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { columnInputRegisters });
+            dataGridViewInputRegistersValues.Location = new System.Drawing.Point(111, 3);
+            dataGridViewInputRegistersValues.Name = "dataGridViewInputRegistersValues";
+            dataGridViewInputRegistersValues.ReadOnly = true;
+            dataGridViewInputRegistersValues.RowHeadersVisible = false;
+            dataGridViewInputRegistersValues.RowTemplate.Height = 25;
+            dataGridViewInputRegistersValues.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            dataGridViewInputRegistersValues.Size = new System.Drawing.Size(60, 265);
+            dataGridViewInputRegistersValues.TabIndex = 0;
             // 
             // columnInputRegisters
             // 
-            this.columnInputRegisters.HeaderText = "Column1";
-            this.columnInputRegisters.Name = "columnInputRegisters";
-            this.columnInputRegisters.ReadOnly = true;
-            this.columnInputRegisters.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.columnInputRegisters.Width = 5;
+            columnInputRegisters.HeaderText = "Column1";
+            columnInputRegisters.Name = "columnInputRegisters";
+            columnInputRegisters.ReadOnly = true;
+            columnInputRegisters.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            columnInputRegisters.Width = 5;
             // 
             // dummy
             // 
-            this.dummy.Location = new System.Drawing.Point(0, 0);
-            this.dummy.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.dummy.Name = "dummy";
-            this.dummy.Size = new System.Drawing.Size(0, 0);
-            this.dummy.TabIndex = 1;
-            this.dummy.Text = "button1";
-            this.dummy.UseVisualStyleBackColor = true;
+            dummy.Location = new System.Drawing.Point(0, 0);
+            dummy.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            dummy.Name = "dummy";
+            dummy.Size = new System.Drawing.Size(0, 0);
+            dummy.TabIndex = 1;
+            dummy.Text = "button1";
+            dummy.UseVisualStyleBackColor = true;
             // 
             // Form
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSize = true;
-            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(984, 504);
-            this.Controls.Add(this.dummy);
-            this.Controls.Add(this.flowLayoutPanel1);
-            this.Name = "Form";
-            this.Text = "Modbus Client";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form_FormClosing);
-            this.Load += new System.EventHandler(this.Form_Load);
-            this.flowLayoutPanel1.ResumeLayout(false);
-            this.flowLayoutPanel1.PerformLayout();
-            this.flowLayoutPanel5.ResumeLayout(false);
-            this.flowLayoutPanel5.PerformLayout();
-            this.flowLayoutPanel6.ResumeLayout(false);
-            this.flowLayoutPanel6.PerformLayout();
-            this.flowLayoutPanel8.ResumeLayout(false);
-            this.flowLayoutPanel8.PerformLayout();
-            this.flowLayoutPanel7.ResumeLayout(false);
-            this.flowLayoutPanel7.PerformLayout();
-            this.flowLayoutPanelSerialSettings.ResumeLayout(false);
-            this.flowLayoutPanelSerialSettings.PerformLayout();
-            this.flowLayoutPanel9.ResumeLayout(false);
-            this.flowLayoutPanel9.PerformLayout();
-            this.flowLayoutPanel11.ResumeLayout(false);
-            this.flowLayoutPanel11.PerformLayout();
-            this.flowLayoutPanel10.ResumeLayout(false);
-            this.flowLayoutPanel10.PerformLayout();
-            this.flowLayoutPanel2.ResumeLayout(false);
-            this.flowLayoutPanel2.PerformLayout();
-            this.flowLayoutPanel3.ResumeLayout(false);
-            this.flowLayoutPanel3.PerformLayout();
-            this.flowLayoutPanel4.ResumeLayout(false);
-            this.flowLayoutPanel4.PerformLayout();
-            this.flowLayoutPanel12.ResumeLayout(false);
-            this.flowLayoutPanel12.PerformLayout();
-            this.flowLayoutPanel13.ResumeLayout(false);
-            this.flowLayoutPanel13.PerformLayout();
-            this.flowLayoutPanelNetworkSettings.ResumeLayout(false);
-            this.flowLayoutPanelNetworkSettings.PerformLayout();
-            this.flowLayoutPanel17.ResumeLayout(false);
-            this.flowLayoutPanel17.PerformLayout();
-            this.flowLayoutPanel18.ResumeLayout(false);
-            this.flowLayoutPanel18.PerformLayout();
-            this.flowLayoutPanel19.ResumeLayout(false);
-            this.flowLayoutPanel19.PerformLayout();
-            this.flowLayoutPanel15.ResumeLayout(false);
-            this.flowLayoutPanel15.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.flowLayoutPanel22.ResumeLayout(false);
-            this.flowLayoutPanel22.PerformLayout();
-            this.flowLayoutPanel23.ResumeLayout(false);
-            this.flowLayoutPanel23.PerformLayout();
-            this.flowLayoutPanel24.ResumeLayout(false);
-            this.flowLayoutPanel24.PerformLayout();
-            this.flowLayoutPanel25.ResumeLayout(false);
-            this.flowLayoutPanel25.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCoilsValues)).EndInit();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.flowLayoutPanel20.ResumeLayout(false);
-            this.flowLayoutPanel20.PerformLayout();
-            this.flowLayoutPanel21.ResumeLayout(false);
-            this.flowLayoutPanel21.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
-            this.flowLayoutPanel16.ResumeLayout(false);
-            this.flowLayoutPanel16.PerformLayout();
-            this.flowLayoutPanel26.ResumeLayout(false);
-            this.flowLayoutPanel26.PerformLayout();
-            this.flowLayoutPanel27.ResumeLayout(false);
-            this.flowLayoutPanel27.PerformLayout();
-            this.flowLayoutPanel28.ResumeLayout(false);
-            this.flowLayoutPanel28.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDiscreteInputsValues)).EndInit();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
-            this.flowLayoutPanel29.ResumeLayout(false);
-            this.flowLayoutPanel29.PerformLayout();
-            this.flowLayoutPanel30.ResumeLayout(false);
-            this.flowLayoutPanel30.PerformLayout();
-            this.flowLayoutPanel31.ResumeLayout(false);
-            this.flowLayoutPanel31.PerformLayout();
-            this.flowLayoutPanel32.ResumeLayout(false);
-            this.flowLayoutPanel32.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHoldingRegistersValues)).EndInit();
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
-            this.flowLayoutPanel33.ResumeLayout(false);
-            this.flowLayoutPanel33.PerformLayout();
-            this.flowLayoutPanel34.ResumeLayout(false);
-            this.flowLayoutPanel34.PerformLayout();
-            this.flowLayoutPanel39.ResumeLayout(false);
-            this.flowLayoutPanel39.PerformLayout();
-            this.groupBox6.ResumeLayout(false);
-            this.groupBox6.PerformLayout();
-            this.flowLayoutPanel35.ResumeLayout(false);
-            this.flowLayoutPanel35.PerformLayout();
-            this.flowLayoutPanel36.ResumeLayout(false);
-            this.flowLayoutPanel36.PerformLayout();
-            this.flowLayoutPanel37.ResumeLayout(false);
-            this.flowLayoutPanel37.PerformLayout();
-            this.flowLayoutPanel38.ResumeLayout(false);
-            this.flowLayoutPanel38.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInputRegistersValues)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            AutoSize = true;
+            AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            ClientSize = new System.Drawing.Size(984, 504);
+            Controls.Add(dummy);
+            Controls.Add(flowLayoutPanel1);
+            Name = "Form";
+            Text = "Modbus Client";
+            FormClosing += this.Form_FormClosing;
+            Load += this.Form_Load;
+            flowLayoutPanel1.ResumeLayout(false);
+            flowLayoutPanel1.PerformLayout();
+            flowLayoutPanel5.ResumeLayout(false);
+            flowLayoutPanel5.PerformLayout();
+            flowLayoutPanel6.ResumeLayout(false);
+            flowLayoutPanel6.PerformLayout();
+            flowLayoutPanel8.ResumeLayout(false);
+            flowLayoutPanel8.PerformLayout();
+            flowLayoutPanel7.ResumeLayout(false);
+            flowLayoutPanel7.PerformLayout();
+            flowLayoutPanelSerialSettings.ResumeLayout(false);
+            flowLayoutPanelSerialSettings.PerformLayout();
+            flowLayoutPanel9.ResumeLayout(false);
+            flowLayoutPanel9.PerformLayout();
+            flowLayoutPanel11.ResumeLayout(false);
+            flowLayoutPanel11.PerformLayout();
+            flowLayoutPanel10.ResumeLayout(false);
+            flowLayoutPanel10.PerformLayout();
+            flowLayoutPanel2.ResumeLayout(false);
+            flowLayoutPanel2.PerformLayout();
+            flowLayoutPanel3.ResumeLayout(false);
+            flowLayoutPanel3.PerformLayout();
+            flowLayoutPanel4.ResumeLayout(false);
+            flowLayoutPanel4.PerformLayout();
+            flowLayoutPanel12.ResumeLayout(false);
+            flowLayoutPanel12.PerformLayout();
+            flowLayoutPanel13.ResumeLayout(false);
+            flowLayoutPanel13.PerformLayout();
+            flowLayoutPanelNetworkSettings.ResumeLayout(false);
+            flowLayoutPanelNetworkSettings.PerformLayout();
+            flowLayoutPanel17.ResumeLayout(false);
+            flowLayoutPanel17.PerformLayout();
+            flowLayoutPanel18.ResumeLayout(false);
+            flowLayoutPanel18.PerformLayout();
+            flowLayoutPanel14.ResumeLayout(false);
+            flowLayoutPanel14.PerformLayout();
+            flowLayoutPanel19.ResumeLayout(false);
+            flowLayoutPanel19.PerformLayout();
+            flowLayoutPanel15.ResumeLayout(false);
+            flowLayoutPanel15.PerformLayout();
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
+            flowLayoutPanel22.ResumeLayout(false);
+            flowLayoutPanel22.PerformLayout();
+            flowLayoutPanel23.ResumeLayout(false);
+            flowLayoutPanel23.PerformLayout();
+            flowLayoutPanel24.ResumeLayout(false);
+            flowLayoutPanel24.PerformLayout();
+            flowLayoutPanel25.ResumeLayout(false);
+            flowLayoutPanel25.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewCoilsValues).EndInit();
+            groupBox2.ResumeLayout(false);
+            groupBox2.PerformLayout();
+            flowLayoutPanel20.ResumeLayout(false);
+            flowLayoutPanel20.PerformLayout();
+            flowLayoutPanel21.ResumeLayout(false);
+            flowLayoutPanel21.PerformLayout();
+            groupBox3.ResumeLayout(false);
+            groupBox3.PerformLayout();
+            flowLayoutPanel16.ResumeLayout(false);
+            flowLayoutPanel16.PerformLayout();
+            flowLayoutPanel26.ResumeLayout(false);
+            flowLayoutPanel26.PerformLayout();
+            flowLayoutPanel27.ResumeLayout(false);
+            flowLayoutPanel27.PerformLayout();
+            flowLayoutPanel28.ResumeLayout(false);
+            flowLayoutPanel28.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewDiscreteInputsValues).EndInit();
+            groupBox4.ResumeLayout(false);
+            groupBox4.PerformLayout();
+            flowLayoutPanel29.ResumeLayout(false);
+            flowLayoutPanel29.PerformLayout();
+            flowLayoutPanel30.ResumeLayout(false);
+            flowLayoutPanel30.PerformLayout();
+            flowLayoutPanel31.ResumeLayout(false);
+            flowLayoutPanel31.PerformLayout();
+            flowLayoutPanel32.ResumeLayout(false);
+            flowLayoutPanel32.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewHoldingRegistersValues).EndInit();
+            groupBox5.ResumeLayout(false);
+            groupBox5.PerformLayout();
+            flowLayoutPanel33.ResumeLayout(false);
+            flowLayoutPanel33.PerformLayout();
+            flowLayoutPanel34.ResumeLayout(false);
+            flowLayoutPanel34.PerformLayout();
+            flowLayoutPanel39.ResumeLayout(false);
+            flowLayoutPanel39.PerformLayout();
+            groupBox6.ResumeLayout(false);
+            groupBox6.PerformLayout();
+            flowLayoutPanel35.ResumeLayout(false);
+            flowLayoutPanel35.PerformLayout();
+            flowLayoutPanel36.ResumeLayout(false);
+            flowLayoutPanel36.PerformLayout();
+            flowLayoutPanel37.ResumeLayout(false);
+            flowLayoutPanel37.PerformLayout();
+            flowLayoutPanel38.ResumeLayout(false);
+            flowLayoutPanel38.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewInputRegistersValues).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -1534,7 +1550,7 @@
         private ComboBox comboBoxSerialSettingsPortName;
         private FlowLayoutPanel flowLayoutPanel11;
         private Label label7;
-        private ComboBox comboBoxSerialSettingsProtocol;
+        private ComboBox comboBoxSerialSettingsProtocol1;
         private FlowLayoutPanel flowLayoutPanel10;
         private Label label6;
         private TextBox textBoxSerialSettingsStationAddress;
@@ -1634,5 +1650,8 @@
         private FlowLayoutPanel flowLayoutPanel8;
         private Label label25;
         private TextBox textBoxConnectTimeout;
+        private FlowLayoutPanel flowLayoutPanel14;
+        private Label label26;
+        private ComboBox comboBoxSerialSettingsProtocol2;
     }
 }

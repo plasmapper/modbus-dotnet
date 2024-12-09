@@ -8,7 +8,6 @@ namespace ModbusClient
     internal class SerialSettings : ClassNode
     {
         public ValueNode<string> PortName { get; } = new("");
-        public ValueNode<Protocol> Protocol { get; } = new(PL.Modbus.Protocol.Rtu);
         public ValueNode<byte> StationAddress { get; } = new(1);
         public ValueNode<int> BaudRate { get; } = new(9600);
         public ValueNode<ushort> DataBits { get; } = new(8);
@@ -46,6 +45,7 @@ namespace ModbusClient
 
         public static SerialSettings SerialSettings { get; } = new();
         public static NetworkSettings NetworkSettings { get; } = new();
+        public static ValueNode<Protocol> Protocol { get; } = new(PL.Modbus.Protocol.Rtu);
 
         public static MultipleElements<bool> Coils { get; } = new();
         public static SingleElement<bool> Coil { get; } = new();
@@ -93,10 +93,10 @@ namespace ModbusClient
                         Parameters.SerialSettings.DataBits.Value,
                         Parameters.SerialSettings.StopBits.Value);
                     serialPort.Handshake = Parameters.SerialSettings.Handshake.Value;
-                    client = new(serialPort, Parameters.SerialSettings.Protocol.Value, Parameters.SerialSettings.StationAddress.Value);
+                    client = new(serialPort, Parameters.Protocol.Value, Parameters.SerialSettings.StationAddress.Value);
                 }
                 else
-                    client = new(Parameters.NetworkSettings.IpAddress.Value, Parameters.NetworkSettings.Port.Value, Protocol.Tcp, Parameters.NetworkSettings.StationAddress.Value);
+                    client = new(Parameters.NetworkSettings.IpAddress.Value, Parameters.NetworkSettings.Port.Value, Parameters.Protocol.Value, Parameters.NetworkSettings.StationAddress.Value);
 
                 client.ConnectTimeout = Parameters.ConnectTimeout.Value;
                 client.ReadTimeout = Parameters.ReadTimeout.Value;

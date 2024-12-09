@@ -58,7 +58,8 @@ namespace ModbusClient
                 comboBoxSerialSettingsPortName.Items.Clear();
                 comboBoxSerialSettingsPortName.Items.AddRange(SerialPort.GetPortNames());
             };
-            _bindings.Add(Parameters.SerialSettings.Protocol, comboBoxSerialSettingsProtocol);
+            _bindings.Add(Parameters.Protocol, comboBoxSerialSettingsProtocol1);
+            _bindings.Add(Parameters.Protocol, comboBoxSerialSettingsProtocol2);
             _bindings.Add(Parameters.SerialSettings.StationAddress, textBoxSerialSettingsStationAddress);
             _bindings.Add(Parameters.SerialSettings.BaudRate, textBoxSerialSettingsBaudRate);
             _bindings.Add(Parameters.SerialSettings.DataBits, textBoxSerialSettingsDataBits);
