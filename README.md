@@ -26,5 +26,5 @@ Tests Modbus server by writing to random memory locations, reading back and comp
 
 ## Documentation
 [Modbus (Wikipedia)](https://en.wikipedia.org/wiki/Modbus)  
-[Modbus Protocol Specification](https://modbus.org/docs/Modbus_Application_Protocol_V1_1b3.pdf)  
-[Modbus Serial Line Protocol and Implementation Guide](https://modbus.org/docs/Modbus_over_serial_line_V1_02.pdf)
+[Modbus Protocol Specification](https://www.modbus.org/file/secure/modbusprotocolspecification.pdf)  
+[Modbus Serial Line Protocol and Implementation Guide](https://www.modbus.org/file/secure/modbusoverserial.pdf)

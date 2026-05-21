@@ -5,14 +5,13 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.IO.Ports;
-using System.Net;
 
 namespace PL.Modbus
 {
     /// <summary>
     /// Modbus client.
     /// </summary>
-    public class Client : IDisposable
+    public class Client : IClient
     {
         private bool _disposed = false;
         private Stream _stream;
@@ -48,9 +47,6 @@ namespace PL.Modbus
             Stream = new NetworkStream(ipAddress, port);
         }
 
-        /// <summary>
-        /// Gets and sets the data stream.
-        /// </summary>
         public Stream Stream
         {
             get => _stream;
@@ -71,9 +67,6 @@ namespace PL.Modbus
             }
         }
 
-        /// <summary>
-        /// Gets and sets the protocol.
-        /// </summary>
         public Protocol Protocol
         {
             get => _protocol;
@@ -86,9 +79,6 @@ namespace PL.Modbus
             }
         }
 
-        /// <summary>
-        /// Gets and sets the server station address.
-        /// </summary>
         public byte StationAddress
         {
             get => _stationAddress;
@@ -101,24 +91,12 @@ namespace PL.Modbus
             }
         }
 
-        /// <summary>
-        /// Gets and sets connect timeout, ms.
-        /// </summary>
         public int ConnectTimeout { get; set; } = 1000;
 
-        /// <summary>
-        /// Gets and sets read timeout, ms.
-        /// </summary>
         public int ReadTimeout { get; set; } = 300;
 
-        /// <summary>
-        /// Gets and sets write timeout, ms.
-        /// </summary>
         public int WriteTimeout { get; set; } = 300;
 
-        /// <summary>
-        /// Gets and sets the delay between the end of the read operation and unlocking the stream, ms.
-        /// </summary>
         public int DelayAfterRead { get; set; } = 0;
 
         public void Dispose()
@@ -138,12 +116,6 @@ namespace PL.Modbus
             _disposed = true;
         }
 
-        /// <summary>
-        /// Executes Modbus command.
-        /// </summary>
-        /// <param name="functionCode">Modbus function code.</param>
-        /// <param name="data">Request data.</param>
-        /// <returns>Response data.</returns>
         public virtual byte[] Command(byte functionCode, byte[] data)
         {
             lock (this)
@@ -260,14 +232,6 @@ namespace PL.Modbus
             }
         }
 
-        /// <summary>
-        /// Reads coils.
-        /// </summary>
-        /// <param name="address">First coil address.</param>
-        /// <param name="count">Number of coils to read.</param>
-        /// <returns>Coil values.</returns>
-        /// <exception cref="ArgumentOutOfRangeException">Count is 0.</exception>
-        /// <exception cref="ArgumentException">(Address + count) > 65536.</exception>
         public List<bool> ReadCoils(ushort address, ushort count)
         {
             if (count == 0)
@@ -277,14 +241,6 @@ namespace PL.Modbus
             return ReadBits(1, address, count);
         }
 
-        /// <summary>
-        /// Reads discrete inputs.
-        /// </summary>
-        /// <param name="address">First discrete input address.</param>
-        /// <param name="count">Number of discrete inputs to read.</param>
-        /// <returns>Discrete inputs.</returns>
-        /// <exception cref="ArgumentOutOfRangeException">Count is 0.</exception>
-        /// <exception cref="ArgumentException">(Address + count) > 65536.</exception>
         public List<bool> ReadDiscreteInputs(ushort address, ushort count)
         {
             if (count == 0)
@@ -294,14 +250,6 @@ namespace PL.Modbus
             return ReadBits(2, address, count);
         }
 
-        /// <summary>
-        /// Reads holding registers.
-        /// </summary>
-        /// <param name="address">First holding register address.</param>
-        /// <param name="count">Number of holding registers to read.</param>
-        /// <returns>Holding registers.</returns>
-        /// <exception cref="ArgumentOutOfRangeException">Count is 0.</exception>
-        /// <exception cref="ArgumentException">(Address + count) > 65536.</exception>
         public List<ushort> ReadHoldingRegisters(ushort address, ushort count)
         {
             if (count == 0)
@@ -311,14 +259,6 @@ namespace PL.Modbus
             return ReadRegisters(3, address, count);
         }
 
-        /// <summary>
-        /// Reads input registers.
-        /// </summary>
-        /// <param name="address">First input register address.</param>
-        /// <param name="count">Number of input registers to read.</param>
-        /// <returns>Input registers.</returns>
-        /// <exception cref="ArgumentOutOfRangeException">Count is 0.</exception>
-        /// <exception cref="ArgumentException">(Address + count) > 65536.</exception>
         public List<ushort> ReadInputRegisters(ushort address, ushort count)
         {
             if (count == 0)
@@ -328,11 +268,6 @@ namespace PL.Modbus
             return ReadRegisters(4, address, count);
         }
 
-        /// <summary>
-        /// Writes single coil.
-        /// </summary>
-        /// <param name="address">Coil address.</param>
-        /// <param name="value">Coil value.</param>
         public void WriteSingleCoil(ushort address, bool value)
         {
             byte[] commandData = new byte[4];
@@ -343,11 +278,6 @@ namespace PL.Modbus
             Command(5, commandData);
         }
 
-        /// <summary>
-        /// Writes single holding register.
-        /// </summary>
-        /// <param name="address">Holding register address.</param>
-        /// <param name="value">Holding register value.</param>
         public void WriteSingleHoldingRegister(ushort address, ushort value)
         {
             byte[] commandData = new byte[4];
@@ -358,13 +288,6 @@ namespace PL.Modbus
             Command(6, commandData);
         }
 
-        /// <summary>
-        /// Writes multiple coils.
-        /// </summary>
-        /// <param name="address">First coil address.</param>
-        /// <param name="values">Coil values.</param>
-        /// <exception cref="ArgumentOutOfRangeException">Values.Count is 0.</exception>
-        /// <exception cref="ArgumentException">(Address + count) > 65536.</exception>
         public void WriteMultipleCoils(ushort address, List<bool> values)
         {
             if (values.Count == 0)
@@ -392,13 +315,6 @@ namespace PL.Modbus
             }
         }
 
-        /// <summary>
-        /// Writes multiple holding registers.
-        /// </summary>
-        /// <param name="address">First holding register address.</param>
-        /// <param name="values">Holding register values.</param>
-        /// <exception cref="ArgumentOutOfRangeException">VAlues.Count is 0.</exception>
-        /// <exception cref="ArgumentException">(Address + count) > 65536.</exception>
         public void WriteMultipleHoldingRegisters(ushort address, List<ushort> values)
         {
             if (values.Count == 0)
