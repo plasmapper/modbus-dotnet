@@ -24,6 +24,11 @@ namespace PL.Modbus
             _port = port;
         }
 
+        /// <summary>
+        /// Reads a sequence of bytes from the stream.
+        /// </summary>
+        /// <param name="byteCount">The number of bytes to be read from the stream.</param>
+        /// <returns>Bytes read from the stream.</returns>
         public override byte[] Read(int byteCount)
         {
             byte[] buffer = new byte[byteCount];
@@ -32,6 +37,9 @@ namespace PL.Modbus
             return buffer;
         }
 
+        /// <summary>
+        /// Reads all available bytes from the stream.
+        /// </summary>
         public override void ReadAvailableData()
         {
             if (!_tcpClient.GetStream().DataAvailable)
@@ -45,6 +53,10 @@ namespace PL.Modbus
             catch { }
         }
 
+        /// <summary>
+        /// Writes a sequence of bytes to the stream.
+        /// </summary>
+        /// <param name="buffer">Bytes to write to the stream.</param>
         public override void Write(byte[] buffer)
         {
             ReadAvailableData();
@@ -54,6 +66,9 @@ namespace PL.Modbus
             _tcpClient.GetStream().Write(buffer, 0, buffer.Length);
         }
 
+        /// <summary>
+        /// Opens the stream.
+        /// </summary>
         public override void Open()
         {
             if (!_tcpClient.Connected)
@@ -66,14 +81,21 @@ namespace PL.Modbus
             }                
         }
 
+        /// <summary>
+        /// Closes the stream.
+        /// </summary>
         public override void Close() =>
             _tcpClient.Dispose();
 
+        /// <summary>
+        /// Acquires an exclusive lock on the stream and returns an object that releases the lock when disposed.
+        /// </summary>
+        /// <returns>Disposable lock.</returns>
         public override IDisposable Lock() => new NetworkStreamLock(this);
 
         private class NetworkStreamLock : IDisposable
         {
-            NetworkStream _networkStream;
+            private readonly NetworkStream _networkStream;
 
             public NetworkStreamLock(NetworkStream networkStream)
             {

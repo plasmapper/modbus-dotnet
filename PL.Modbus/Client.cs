@@ -47,6 +47,7 @@ namespace PL.Modbus
             Stream = new NetworkStream(ipAddress, port);
         }
 
+        /// <inheritdoc />
         public Stream Stream
         {
             get => _stream;
@@ -67,6 +68,7 @@ namespace PL.Modbus
             }
         }
 
+        /// <inheritdoc />
         public Protocol Protocol
         {
             get => _protocol;
@@ -79,6 +81,7 @@ namespace PL.Modbus
             }
         }
 
+        /// <inheritdoc />
         public byte StationAddress
         {
             get => _stationAddress;
@@ -91,31 +94,26 @@ namespace PL.Modbus
             }
         }
 
+        /// <inheritdoc />
         public int ConnectTimeout { get; set; } = 1000;
 
+        /// <inheritdoc />
         public int ReadTimeout { get; set; } = 300;
 
+        /// <inheritdoc />
         public int WriteTimeout { get; set; } = 300;
 
+        /// <inheritdoc />
         public int DelayAfterRead { get; set; } = 0;
 
+        /// <inheritdoc />
         public void Dispose()
         {
             Dispose(true);
             GC.SuppressFinalize(this);
         }
 
-        protected virtual void Dispose(bool disposing)
-        {
-            if (_disposed)
-                return;
-
-            if (disposing)
-                _stream.Dispose();
-
-            _disposed = true;
-        }
-
+        /// <inheritdoc />
         public virtual byte[] Command(byte functionCode, byte[] data)
         {
             lock (this)
@@ -232,6 +230,7 @@ namespace PL.Modbus
             }
         }
 
+        /// <inheritdoc />
         public List<bool> ReadCoils(ushort address, ushort count)
         {
             if (count == 0)
@@ -241,6 +240,7 @@ namespace PL.Modbus
             return ReadBits(1, address, count);
         }
 
+        /// <inheritdoc />
         public List<bool> ReadDiscreteInputs(ushort address, ushort count)
         {
             if (count == 0)
@@ -250,6 +250,7 @@ namespace PL.Modbus
             return ReadBits(2, address, count);
         }
 
+        /// <inheritdoc />
         public List<ushort> ReadHoldingRegisters(ushort address, ushort count)
         {
             if (count == 0)
@@ -259,6 +260,7 @@ namespace PL.Modbus
             return ReadRegisters(3, address, count);
         }
 
+        /// <inheritdoc />
         public List<ushort> ReadInputRegisters(ushort address, ushort count)
         {
             if (count == 0)
@@ -268,6 +270,7 @@ namespace PL.Modbus
             return ReadRegisters(4, address, count);
         }
 
+        /// <inheritdoc />
         public void WriteSingleCoil(ushort address, bool value)
         {
             byte[] commandData = new byte[4];
@@ -278,6 +281,7 @@ namespace PL.Modbus
             Command(5, commandData);
         }
 
+        /// <inheritdoc />
         public void WriteSingleHoldingRegister(ushort address, ushort value)
         {
             byte[] commandData = new byte[4];
@@ -288,6 +292,7 @@ namespace PL.Modbus
             Command(6, commandData);
         }
 
+        /// <inheritdoc />
         public void WriteMultipleCoils(ushort address, List<bool> values)
         {
             if (values.Count == 0)
@@ -315,6 +320,7 @@ namespace PL.Modbus
             }
         }
 
+        /// <inheritdoc />
         public void WriteMultipleHoldingRegisters(ushort address, List<ushort> values)
         {
             if (values.Count == 0)
@@ -344,6 +350,21 @@ namespace PL.Modbus
                     }
                 }
             }
+        }
+
+        /// <summary>
+        /// Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+        /// </summary>
+        /// <param name="disposing">True if the method call comes from a Dispose method and false if it comes from a finalizer.</param>
+        protected virtual void Dispose(bool disposing)
+        {
+            if (_disposed)
+                return;
+
+            if (disposing)
+                _stream.Dispose();
+
+            _disposed = true;
         }
 
         /// <summary>

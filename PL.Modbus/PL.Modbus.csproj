@@ -2,7 +2,6 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Authors>plasmapper</Authors>
     <Description>Modbus client library for .NET</Description>
     <Copyright>Copyright (c) plasmapper 2022</Copyright>
@@ -11,22 +10,16 @@
     <RepositoryUrl>https://github.com/plasmapper/modbus-dotnet</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>modbus;client</PackageTags>
-    <PackageReleaseNotes>Added
-- IClient interface.</PackageReleaseNotes>
+    <PackageReleaseNotes>Fixed
+- Package documentation.</PackageReleaseNotes>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <VersionPrefix>2.5.0</VersionPrefix>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <Optimize>False</Optimize>
-    <DebugType>full</DebugType>
-    <DebugSymbols>true</DebugSymbols>
+    <VersionPrefix>2.5.1</VersionPrefix>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <Optimize>True</Optimize>
-    <DebugType>none</DebugType>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <DebugType>none</DebugType>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <PackageOutputPath>../../build</PackageOutputPath>
   </PropertyGroup>
 
